@@ -1021,9 +1021,17 @@ header {
 
 /* NAV - MOBILE */
 /* general navigation menu styles */
+#primary-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 #primary-menu li {
 	text-transform: uppercase;
 	font-size: 12px;
+	margin: 30px 0;
 }
 
 #primary-menu li a {
@@ -1043,20 +1051,24 @@ header {
     padding: 20px;
     position: fixed;
     top: 125px;
-    left: -100%;
+    right: -100%;
     width: 100%;
 	height: 100vh;
     background-color: var(--background-color);
     z-index: 2;
     box-sizing: border-box;
-    transform: translateX(-100%);
+    transform: translateX(0%);
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+/* make mobile nav cover entire screen when open */
+.main-navigation.toggled .menu-header-nav-container {
+	height: 100vh;
 }
 
 /* slide in from the right */
 .main-navigation.toggled ul {
-	right: 0;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 }
 
 .main-navigation button {
@@ -1067,24 +1079,24 @@ header {
 	font-size: 2rem;
 	padding: 10px;
 	position: absolute;
-    top: 60px;
+    top: 0;
     right: 0px;
-    width: 55px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
 	cursor: pointer;
 	z-index: 2;
 }
 
 /* hamburger menu styles */
-
 /* style the spans */
 .main-navigation span {
 	display: block;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    height: 3px;
 	width: 33px;
-	height: 4px;
 	margin-left: 20px;
-	margin-bottom: 5px;
-	position: relative;
 	background: var(--font-color);
 	border-radius: 3px;
 	z-index: 1;
@@ -1096,26 +1108,37 @@ header {
 }
 
 /* first span */
-.main-navigation span:first-child {
-  transform-origin: 40% 0%;
+.main-navigation span:first-of-type {
+	transform-origin: 40% 0%;
 }
 
 /* second span */
-.main-navigation span:nth-child(2) {
-  transform-origin: 0% 100%;
+.main-navigation span:nth-child(3)  {
+  	top: 32px;
 }
 
-/* transform the hamburger */
-.main-navigation.toggled span:first-child {
-   opacity: 1;
-   transform: rotate(45deg) translate(-5px, 0px);
-   background: #232323;
+/* third span */
+.main-navigation span:nth-child(4) {
+	transform-origin: 0% 100%;
+	top: 40px;
 }
+
+/* second span disappears when menu opens */
+.main-navigation.toggled span:nth-child(3) {
+	display: none;
+}
+
+/* transform the first span */
+.main-navigation.toggled span:first-of-type  {
+	transform: rotate(45deg) translate(0, 0);
+	top: 27px;
+ }
  
- /* second one goes opposite direction */
-.main-navigation.toggled span:nth-child(2) {
-   transform: rotate(-45deg) translate(0, 0);
-}
+ /* third one goes opposite direction */
+.main-navigation.toggled span:nth-child(4) {
+	transform: rotate(-45deg) translate(0, 0);
+	right: 11px;
+ }
 
 /* FOOTER - MOBILE */
 
