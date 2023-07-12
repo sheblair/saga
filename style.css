@@ -1,19 +1,14 @@
 /*!
 Theme Name: saga
-Theme URI: http://underscores.me/
+Theme URI: 
 Author: Sheila Blair
 Author URI: https://www.sheilablair.com
-Description: Society of American Graphic Artists
+Description: Custom WordPress theme for the Society of American Graphic Artists
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
 Text Domain: saga
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
 
 saga is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -966,4 +961,195 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+/* ------------------------------------------------------------ 
+### SAGA Custom Styles -------------------------------------- 
+------------------------------------------------------------ */
+/* BASE STYLES */
+/* 
+*
+*
+CSS variables commented out here and instead included as "Additional CSS" in the Customize menu of the WP editor,
+kept here for record of original color choices made during initial site construction, July 2023
+*
+*
+:root {
+	--accent-color: #2726261a;
+	--font-color: #000000;
+	--background-color: white;
+	--link-color: blue;
+	--link-visited: purple;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	color: var(--font-color);
+    background: var(--background-color);
+}
+
+.hidden {
+	overflow: hidden;
+}
+
+/* 
+*
+*
+*
+MOBILE STYLES
+*
+*
+*
+*/
+
+/* BASE STYLES - MOBILE */
+main {
+	margin: 20px;
+}
+
+/* HEADER - MOBILE */
+header {
+	margin: 10px;
+	display: flex;
+	align-items: center;
+}
+
+/* NAV - MOBILE */
+/* general navigation menu styles */
+#primary-menu li {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#primary-menu li a {
+	color: var(--font-color);
+}
+
+/* mobile toggle menu styles */
+/* nav menu and button styles */
+.main-navigation {
+	display: block;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.main-navigation ul {
+	list-style: none;
+    padding: 20px;
+    position: fixed;
+    top: 125px;
+    left: -100%;
+    width: 100%;
+	height: 100vh;
+    background-color: var(--background-color);
+    z-index: 2;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+/* slide in from the right */
+.main-navigation.toggled ul {
+	right: 0;
+	transform: translateX(100%);
+}
+
+.main-navigation button {
+	border: none;
+	opacity: 0;
+	background-color: var(--background-color);
+	color: var(--font-color);
+	font-size: 2rem;
+	padding: 10px;
+	position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 55px;
+    height: 50px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+/* hamburger menu styles */
+
+/* style the spans */
+.main-navigation span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	position: relative;
+	background: var(--font-color);
+	border-radius: 3px;
+	z-index: 1;
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+				opacity 0.55s ease; 
+				
+	cursor: pointer;
+}
+
+/* first span */
+.main-navigation span:first-child {
+  transform-origin: 40% 0%;
+}
+
+/* second span */
+.main-navigation span:nth-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* transform the hamburger */
+.main-navigation.toggled span:first-child {
+   opacity: 1;
+   transform: rotate(45deg) translate(-5px, 0px);
+   background: #232323;
+}
+ 
+ /* second one goes opposite direction */
+.main-navigation.toggled span:nth-child(2) {
+   transform: rotate(-45deg) translate(0, 0);
+}
+
+/* FOOTER - MOBILE */
+
+/* 
+*
+*
+*
+TABLET STYLES
+*
+*
+*
+*/
+
+@media screen and (min-width: 600px) {
+
+	/* HEADER - TABLET */
+	header {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* NAVIGATION - TABLET */
+	.main-navigation span {
+		display: none;
+	}
+
+	.main-navigation ul {
+		position: static;
+		transform: none;
+		margin: 0;
+	}
+
+	.main-navigation {
+		display: flex;
+		justify-content: center;
+	}
 }
