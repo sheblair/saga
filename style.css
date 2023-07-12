@@ -229,12 +229,12 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-button,
+/* button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
-}
+} */
 
 /**
  * Remove the inner border and padding in Firefox.
@@ -315,10 +315,10 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+/* [type="search"] {
 	-webkit-appearance: textfield;
 	outline-offset: -2px;
-}
+} */
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
