@@ -642,7 +642,7 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
+/* .main-navigation {
 	display: block;
 	width: 100%;
 }
@@ -690,10 +690,10 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-}
+} */
 
 /* Small menu. */
-.menu-toggle,
+/* .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
@@ -707,7 +707,7 @@ textarea {
 	.main-navigation ul {
 		display: flex;
 	}
-}
+} */
 
 .site-main .comment-navigation,
 .site-main
@@ -1009,7 +1009,7 @@ MOBILE STYLES
 
 /* BASE STYLES - MOBILE */
 main {
-	margin: 20px;
+	margin: 25px;
 }
 
 /* HEADER - MOBILE */
@@ -1017,6 +1017,10 @@ header {
 	margin: 10px;
 	display: flex;
 	align-items: center;
+}
+
+.site-branding {
+	width: 80%;
 }
 
 /* NAV - MOBILE */
@@ -1030,19 +1034,20 @@ header {
 
 #primary-menu li {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 1rem;
 	margin: 30px 0;
 }
 
 #primary-menu li a {
 	color: var(--font-color);
+	text-decoration: none;
+	letter-spacing: .05em;
 }
 
 /* mobile toggle menu styles */
 /* nav menu and button styles */
 .main-navigation {
 	display: block;
-	width: 100%;
 	padding-top: 20px;
 }
 
@@ -1079,10 +1084,10 @@ header {
 	font-size: 2rem;
 	padding: 10px;
 	position: absolute;
-    top: 0;
-    right: 0px;
+    top: 11px;
+    right: 11px;
     width: 60px;
-    height: 40px;
+    height: 42px;
 	cursor: pointer;
 	z-index: 2;
 }
@@ -1093,7 +1098,7 @@ header {
 	display: block;
     position: absolute;
     top: 25px;
-    right: 15px;
+    right: 25px;
     height: 3px;
 	width: 33px;
 	margin-left: 20px;
@@ -1114,13 +1119,13 @@ header {
 
 /* second span */
 .main-navigation span:nth-child(3)  {
-  	top: 32px;
+  	top: 30px;
 }
 
 /* third span */
 .main-navigation span:nth-child(4) {
 	transform-origin: 0% 100%;
-	top: 40px;
+	top: 35px;
 }
 
 /* second span disappears when menu opens */
@@ -1131,13 +1136,14 @@ header {
 /* transform the first span */
 .main-navigation.toggled span:first-of-type  {
 	transform: rotate(45deg) translate(0, 0);
-	top: 27px;
+	top: 30px;
  }
  
  /* third one goes opposite direction */
 .main-navigation.toggled span:nth-child(4) {
 	transform: rotate(-45deg) translate(0, 0);
-	right: 11px;
+	right: 21px;
+    top: 43px;
  }
 
 /* FOOTER - MOBILE */
