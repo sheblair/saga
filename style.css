@@ -1238,8 +1238,8 @@ TABLET STYLES
 	}
 
 	.custom-logo {
-		width: 80%;
-		max-width: 80%;
+		width: 60%;
+		max-width: 60%;
 	}
 
 	/* NAVIGATION - TABLET */
@@ -1254,7 +1254,7 @@ TABLET STYLES
 
 	#primary-menu li a {
 		letter-spacing: normal;
-		font-size: .75rem;
+		font-size: .85rem;
 	}
 
 	.main-navigation {
@@ -1272,7 +1272,7 @@ TABLET STYLES
 		margin: 0;
 	}
 
-	/* FOOTER - MOBILE */
+	/* FOOTER - TABLET */
 	.site-footer {
 		margin-top: 40px;
 	}
@@ -1298,4 +1298,72 @@ TABLET STYLES
 	.footer-lower {
 		margin-top: 30px;
 	}
+}
+
+/* intermediate tablet styles */
+@media screen and (min-width: 900px) {
+	.custom-logo {
+		width: 50%;
+		max-width: 50%;
+	}
+}
+
+/* 
+*
+*
+*
+DESKTOP STYLES
+*
+*
+*
+*/
+
+@media screen and (min-width: 1200px) {
+	/* HEADER - DESKTOP */
+	.custom-logo {
+		width: 30%;
+		max-width: 30%;
+	}
+
+	/* FOOTER - DESKTOP */
+	.footer-upper {
+		margin-top: 60px;
+	}
+	
+	.footer-lower {
+		margin-top: 0;
+	}
+
+	.contact-info p {
+		font-size: 1rem;
+	}
+
+	#menu-footer-menu a {
+		font-size: 1.5rem;
+	}
+	
+	.copyright {
+		font-size: .875rem;
+	}
+
+	.contact-info {
+		margin-left: 60px;
+	}
+
+	.donate-button {
+		font-size: 1rem;
+		width: 131px;
+		height: 58px;
+	}
+
+	.donate-button-wrapper {
+		margin-right: 60px;
+	}
+
+	/* MAIN PAGE - DESKTOP */
+	main {
+		margin: 45px;
+	}
+
+
 }
