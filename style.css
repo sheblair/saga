@@ -1272,5 +1272,30 @@ TABLET STYLES
 		margin: 0;
 	}
 
-	
+	/* FOOTER - MOBILE */
+	.site-footer {
+		margin-top: 40px;
+	}
+
+	.footer-upper {
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 40px;
+	}
+
+	.contact-info {
+		margin-left: 40px;
+		align-items: flex-start;
+	}
+
+	.donate-button-wrapper {
+		margin-top: 0;
+		margin-right: 40px;
+	}
+
+	.footer-lower {
+		margin-top: 30px;
+	}
 }
