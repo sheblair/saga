@@ -20,7 +20,7 @@
 				<p>saga@sagaprints.com</p>
 			</div>
 			<div class="donate-button-wrapper">
-				<button class="donate-button">Donate</button>
+				<a href="https://www.paypal.com" target="_blank"><button class="donate-button">Donate</button></a>
 			</div>
 		</div>
 		<div class="footer-lower">

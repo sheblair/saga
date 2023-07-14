@@ -1181,6 +1181,7 @@ header {
 	width: 121px;
 	height: 53px;
 	font-size: .875rem;
+	cursor: pointer;
 }
 
 .copyright {
