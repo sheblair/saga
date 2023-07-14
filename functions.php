@@ -134,6 +134,12 @@ function saga_widgets_init() {
 }
 add_action( 'widgets_init', 'saga_widgets_init' );
 
+/* Register footer nav menu */
+function register_my_menu() {
+	register_nav_menu('footer-menu',__( 'Footer Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );
+
 /**
  * Enqueue scripts and styles.
  */

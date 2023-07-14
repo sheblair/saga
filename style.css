@@ -535,11 +535,11 @@ a:visited {
 	color: #800080;
 }
 
-a:hover,
+/* a:hover,
 a:focus,
 a:active {
 	color: #191970;
-}
+} */
 
 a:focus {
 	outline: thin dotted;
@@ -1170,7 +1170,12 @@ header {
 
 .contact-info p {
 	margin: 0;
-	font-size: 1rem;
+	font-size: .875rem;
+}
+
+.footer-email-link {
+	color: var(--font-light);
+	cursor: pointer;
 }
 
 .donate-button {
@@ -1186,7 +1191,26 @@ header {
 
 .copyright {
 	font-size: .8rem;
+	margin-top: 5px;
 	margin-bottom: 10px;
+}
+
+/* footer menu */
+#menu-footer-menu {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+
+#menu-footer-menu li {
+	margin: 0 10px;
+}
+
+#menu-footer-menu a {
+	color: var(--font-light);
+	cursor: pointer;
+	font-size: 1rem;
 }
 
 /* 
