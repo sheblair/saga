@@ -12,19 +12,21 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'saga' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'saga' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'saga' ), 'saga', '<a href="https://www.sheilablair.com">Sheila Blair</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="footer-upper">
+			<div class="contact-info">
+				<p>SAGA Gallery</p>
+				<p>32 Union Sq E, Suite 1214</p>
+				<p>New York, NY 10003</p>
+				<p>saga@sagaprints.com</p>
+			</div>
+			<div class="donate-button-wrapper">
+				<button class="donate-button">Donate</button>
+			</div>
+		</div>
+		<div class="footer-lower">
+			<!-- footer menu goes here -->
+			<p class="copyright">© 2023 Society of American Graphic Artists</p>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

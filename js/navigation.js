@@ -6,8 +6,15 @@
  */
 ( function() {
 
-	const body = document.querySelector('body');
+	// Automatically update copyright year to current year
+	const copyright = document.querySelector('.copyright');
+    const currentYear = new Date().getFullYear();
+    copyright.innerText = `© ${currentYear} Society of American Graphic Artists`;
 
+
+	// Start navigation handling
+	const body = document.querySelector('body');
+	
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation doesn't exist.

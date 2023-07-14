@@ -742,8 +742,7 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
+.post {
 	margin: 0 0 1.5em;
 }
 
@@ -976,7 +975,8 @@ kept here for record of original color choices made during initial site construc
 *
 :root {
 	--accent-color: #2726261a;
-	--font-color: #000000;
+	--font-dark: #000000;
+	--font-light: #F8F8F8;
 	--background-color: white;
 	--link-color: blue;
 	--link-visited: purple;
@@ -989,7 +989,7 @@ kept here for record of original color choices made during initial site construc
 }
 
 body {
-	color: var(--font-color);
+	color: var(--font-dark);
     background: var(--background-color);
 }
 
@@ -1039,7 +1039,7 @@ header {
 }
 
 #primary-menu li a {
-	color: var(--font-color);
+	color: var(--font-dark);
 	text-decoration: none;
 	letter-spacing: .05em;
 }
@@ -1080,7 +1080,7 @@ header {
 	border: none;
 	opacity: 0;
 	background-color: var(--background-color);
-	color: var(--font-color);
+	color: var(--font-dark);
 	font-size: 2rem;
 	padding: 10px;
 	position: absolute;
@@ -1102,7 +1102,7 @@ header {
     height: 3px;
 	width: 33px;
 	margin-left: 20px;
-	background: var(--font-color);
+	background: var(--font-dark);
 	border-radius: 3px;
 	z-index: 1;
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -1147,6 +1147,46 @@ header {
  }
 
 /* FOOTER - MOBILE */
+.site-footer {
+	background-color: var(--accent-color);
+	color: var(--font-light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer-upper, .footer-lower, .donate-button-wrapper {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-info p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.donate-button {
+	background-color: var(--font-light);
+	border-radius: 30px;
+	border: none;
+	padding: 20px;
+	width: 121px;
+	height: 53px;
+	font-size: .875rem;
+}
+
+.copyright {
+	font-size: .8rem;
+	margin-bottom: 10px;
+}
 
 /* 
 *
