@@ -15,10 +15,8 @@
 
     while ( $loop -> have_posts() ) { $loop->the_post(); ?>
 
-        <div class="front-page-post">
-            <figure class="block-img"><?php the_post_thumbnail(); ?></figure>
-            <h2 class="block-title"><?php the_title(); ?></h2>
-            <p class="block-paragraph"><?php the_content(); ?></p>
+        <div class="block front-page-post">
+            <?php the_content(); ?>
         </div>
 
-<?php } ?>
+<?php }
