@@ -1364,14 +1364,32 @@ TABLET STYLES
 	.footer-lower {
 		margin-top: 30px;
 	}
+
+	/* GENERAL BLOCK STYLES - TABLET */
+	.block {
+		width: 60%;
+	}
 }
 
-/* intermediate tablet styles */
+/* INTERMEDIATE TABLET STYLES */
 @media screen and (min-width: 900px) {
 	.custom-logo {
 		width: 50%;
 		max-width: 50%;
 	}
+
+	.block {
+		width: 25%;
+		margin: 10px 30px;
+	}
+
+	.front-page-posts {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
 }
 
 /* 
@@ -1437,7 +1455,27 @@ DESKTOP STYLES
 		margin: 45px;
 	}
 
-	/* HOME PAGE - DESKTOP */
+	.front-page-posts {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* GENERAL BLOCK STYLES - DESKTOP */
+	.block {
+		width: 23%;
+	}
+
+	.block.front-page-post .wp-block-heading {
+		font-size: 1.125rem;
+	}
+
+	.block p {
+		font-size: 1rem;
+	}
+
+	.block-link a {
+		font-size: .875rem;
+	}
 
 
 }
