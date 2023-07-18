@@ -1044,6 +1044,11 @@ header {
 	letter-spacing: .05em;
 }
 
+#primary-menu li a:hover {
+	color: var(--accent-color);
+	font-weight: bold;
+}
+
 /* mobile toggle menu styles */
 /* nav menu and button styles */
 .main-navigation {
