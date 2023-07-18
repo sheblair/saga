@@ -1248,7 +1248,7 @@ header {
 	margin-bottom: 15px;
 }
 
-.block.front-page-post .wp-block-heading {
+.block .wp-block-heading {
 	font-size: 1rem;
 	margin-bottom: 10px;
 }
@@ -1289,12 +1289,25 @@ header {
   	object-fit: cover; /* Crop the image to cover the entire figure while maintaining aspect ratio */
 }
 
-/* FRONT PAGE - MOBILE */
 .blocks-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+}
+
+/* ABOUT PAGE - MOBILE */
+.about-page-block > h2 > a {
+	text-decoration: none;
+}
+
+.about-page-block figure {
+	margin-bottom: 10px;
+}
+
+.about-page-purpose {
+	width: 90%;
+	margin: 50px auto;
 }
 
 /* smallest phone screen size block styles */
@@ -1319,7 +1332,7 @@ TABLET STYLES
 *
 */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 
 	/* HEADER - TABLET */
 	header {
@@ -1368,6 +1381,11 @@ TABLET STYLES
 		margin: 0;
 	}
 
+	/* GENERAL PAGE STYLES - TABLET */
+	.page-heading-wrapper {
+		margin-top: 50px;
+	}
+
 	/* FOOTER - TABLET */
 	.site-footer {
 		margin-top: 40px;
@@ -1408,7 +1426,7 @@ TABLET STYLES
 
 	.blocks-container {
 		width: 100%;
-		margin: 0 auto;
+		margin: 0 auto 50px auto;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -1426,6 +1444,10 @@ TABLET STYLES
 	.block-img-container {
 		width: 300px;
 		height: 300px;
+	}
+
+	.about-page-purpose {
+		width: 70%;
 	}
 }
 @media screen and (min-width: 920px) {
@@ -1535,6 +1557,16 @@ DESKTOP STYLES
 		font-size: .875rem;
 	}
 
+	/* ABOUT PAGE - DESKTOP */
+	.about-page-purpose {
+		width: 55%;
+		margin: 75px auto;
+	}
+
+	.blocks-container {
+		margin: 100px auto;
+	}
+
 }
 
 /* larger desktop styles */
@@ -1546,5 +1578,14 @@ DESKTOP STYLES
 	.block-img-container {
 		width: 300px;
 		height: 300px;
+	}
+
+	.block.about-page-block {
+		width: 250px;
+	}
+
+	.block.about-page-block .block-img-container {
+		width: 250px;
+		height: 250px;
 	}
 }
