@@ -1411,6 +1411,15 @@ header {
 		width: 240px;
 		height: 188px;
 	}
+
+	.block.past-show-block {
+		width: 220px;
+	}
+	
+	.block.past-show-block .block-img-container {
+		width: 220px;
+		height: 185px;
+	}
 }
 
 /* 
@@ -1504,18 +1513,20 @@ TABLET STYLES
 		margin-top: 30px;
 	}
 
-	/* GENERAL BLOCK STYLES - TABLET */
-	.block {
+	/* BLOCK STYLES - TABLET */
+	/* front page blocks */
+	.block.front-page-block {
 		width: 250px;
-		margin: 10px 20px;
+		margin: 10px;
 	}
 
-	.block-img-container {
+	.block.front-page-block .block-img-container {
 		width: 250px;
-		height: 250px;
+		height: 235px;
 	}
 
-	.blocks-container {
+	#front-page-blocks.blocks-container,
+	#about-page-blocks.blocks-container {
 		width: 100%;
 		margin: 0 auto 50px auto;
 		flex-direction: row;
@@ -1523,6 +1534,19 @@ TABLET STYLES
 		justify-content: center;
 		align-items: flex-start;
 	}
+
+	/* about page blocks */
+	.block.about-page-block {
+		width: 220px;
+		margin: 20px;
+	}
+
+	.block.about-page-block .block-img-container {
+		width: 220px;
+		height: 220px;
+	}
+
+	/* exhibitions page blocks */
 
 	/* EXHIBITIONS PAGE - TABLET */
 	.wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
@@ -1536,35 +1560,36 @@ TABLET STYLES
 
 /* INTERMEDIATE TABLET STYLES */
 @media screen and (min-width: 800px) {
-	.block {
+	.custom-logo {
+		width: 40%;
+		max-width: 40%;
+	}
+	/* front page blocks */
+	.block.front-page-block {
 		width: 300px;
-		margin: 10px 30px
+		margin: 0 20px;
 	}
 
-	.block-img-container {
+	.block.front-page-block .block-img-container {
 		width: 300px;
-		height: 300px;
+		height: 283px;
 	}
 
+	/* about page blocks */
+	.block.about-page-block {
+		width: 250px;
+		margin: 20px;
+	}
+
+	.block.about-page-block .block-img-container {
+		width: 250px;
+		height: 250px;
+	}
+
+	/* about page */
 	.about-page-purpose {
 		width: 70%;
 	}
-}
-@media screen and (min-width: 920px) {
-	.custom-logo {
-		width: 50%;
-		max-width: 50%;
-	}
-
-	.block {
-		width: 230px;
-	}
-
-	.block-img-container {
-		width: 230px;
-		height: 230px;
-	}
-
 }
 
 /* 
@@ -1577,7 +1602,7 @@ DESKTOP STYLES
 *
 */
 
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1000px) {
 	/* HEADER - DESKTOP */
 	header {
 		margin-bottom: 50px;
