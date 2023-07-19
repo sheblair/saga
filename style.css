@@ -1009,7 +1009,7 @@ MOBILE STYLES
 
 /* BASE STYLES - MOBILE */
 main {
-	margin: 25px;
+	margin: 20px;
 }
 
 /* HEADER - MOBILE */
@@ -1242,9 +1242,8 @@ header {
 	margin-top: 38px;
 }
 
-/* GENERAL BLOCK STYLES - MOBILE */
+/* BLOCK STYLES - MOBILE */
 .block {
-	width: 250px;
 	margin-bottom: 15px;
 }
 
@@ -1276,7 +1275,6 @@ header {
 	font-weight: normal;
 }
 
-/* block image styles */
 .block-img-container {
 	width: 250px; /* Set the desired width of the figure element */
   	height: 250px; /* Set the desired height of the figure element */
@@ -1295,6 +1293,31 @@ header {
 	align-items: center;
 	width: 100%;
 }
+
+/* FRONT PAGE BLOCKS - MOBILE (ratio: 1.060) */
+.block.front-page-block {
+	width: 300px;
+}
+
+.block.front-page-block .block-img-container {
+	width: 300px;
+	height: 283px;
+}
+
+/* ABOUT PAGE BLOCKS - MOBILE (ratio: 1) */
+
+/* EXHIBITIONS BLOCKS - MOBILE (ratio: 1.2727 for current/upcoming, 1.185 for past) */
+.block.current-show-block,
+.block.upcoming-show-block {
+	width: 300px;
+}
+
+.block.current-show-block .block-img-container,
+.block.upcoming-show-block .block-img-container {
+	width: 300px;
+	height: 235px;
+}
+
 
 /* ABOUT PAGE - MOBILE */
 .about-page-block > h2 > a {
@@ -1338,15 +1361,30 @@ header {
 	max-width: 40%;
 }
 
-/* smallest phone screen size block styles */
-@media screen and (max-width: 300px) {
-	.block {
-		width: 200px;
+/* smallest phone screen size */
+@media screen and (max-width: 374px) {
+	/* front page blocks */
+	.block.front-page-block {
+		width: 240px;
 	}
 
-	.block-img-container {
-		width: 200px;
-		height: 200px;
+	.block.front-page-block .block-img-container {
+		width: 240px;
+		height: 225px;
+	}
+
+	/* about page blocks */
+
+	/* exhibitions blocks */
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 240px;
+	}
+
+	.block.current-show-block .block-img-container,
+	.block.upcoming-show-block .block-img-container {
+		width: 240px;
+		height: 188px;
 	}
 }
 
