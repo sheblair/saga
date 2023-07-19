@@ -1242,8 +1242,9 @@ header {
 	margin-top: 38px;
 }
 
-/* BLOCK STYLES - MOBILE */
+/* BASE BLOCK STYLES - MOBILE */
 .block {
+	width: 250px;
 	margin-bottom: 15px;
 }
 
@@ -1305,6 +1306,14 @@ header {
 }
 
 /* ABOUT PAGE BLOCKS - MOBILE (ratio: 1) */
+.block.about-page-block {
+	width: 280px;
+}
+
+.block.about-page-block .block-img-container {
+	width: 280px;
+	height: 280px;
+}
 
 /* EXHIBITIONS BLOCKS - MOBILE (ratio: 1.2727 for current/upcoming, 1.185 for past) */
 .block.current-show-block,
@@ -1374,6 +1383,14 @@ header {
 	}
 
 	/* about page blocks */
+	.block.about-page-block {
+		width: 240px;
+	}
+
+	.block.about-page-block .block-img-container {
+		width: 240px;
+		height: 240px;
+	}
 
 	/* exhibitions blocks */
 	.block.current-show-block,
