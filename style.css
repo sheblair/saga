@@ -1318,15 +1318,23 @@ header {
 /* EXHIBITIONS BLOCKS - MOBILE (ratio: 1.2727 for current/upcoming, 1.185 for past) */
 .block.current-show-block,
 .block.upcoming-show-block {
-	width: 300px;
+	width: 335px;
 }
 
 .block.current-show-block .block-img-container,
 .block.upcoming-show-block .block-img-container {
-	width: 300px;
-	height: 235px;
+	width: 335px;
+	height: 263px;
 }
 
+.block.past-show-block {
+	width: 275px;
+}
+
+.block.past-show-block .block-img-container {
+	width: 300px;
+	height: 253px;
+}
 
 /* ABOUT PAGE - MOBILE */
 .about-page-block > h2 > a {
@@ -1359,7 +1367,7 @@ header {
 }
 
 .partners {
-	margin-top: 50px;
+	margin: 70px 0;
 }
 
 .partners-gallery figure.wp-block-gallery.has-nested-images {
@@ -1367,7 +1375,7 @@ header {
 }
 
 .partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
-	max-width: 40%;
+	max-width: 35%;
 }
 
 /* smallest phone screen size */

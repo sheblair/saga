@@ -20,7 +20,7 @@
 
     if ($loop->have_posts()) { ?>
 
-        <h2 class="shows-title">Past Shows</h2>
+        <h2 class="shows-title">Past Exhibitions</h2>
 
     <?php while ($loop->have_posts()) { $loop->the_post(); ?>
 
