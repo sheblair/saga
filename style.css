@@ -1295,6 +1295,12 @@ header {
 	width: 100%;
 }
 
+#current-show-blocks.blocks-container,
+#upcoming-show-blocks.blocks-container,
+#past-show-blocks.blocks-container {
+	align-items: flex-start;
+}
+
 /* FRONT PAGE BLOCKS - MOBILE (ratio: 1.060) */
 .block.front-page-block {
 	width: 300px;
@@ -1617,6 +1623,33 @@ TABLET STYLES
 	.about-page-purpose {
 		width: 70%;
 	}
+
+	/* exhibitions page blocks */
+	main#exhibitions {
+		margin: 50px;
+	}
+	#upcoming-show-blocks.blocks-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.block.upcoming-show-block,
+	.block.past-show-block {
+		margin-right: 10px;
+	}
+
+	.block.past-show-block {
+		width: 220px;
+	}
+	
+	.block.past-show-block .block-img-container {
+		width: 220px;
+		height: 185px;
+	}
 }
 
 /* 
@@ -1629,7 +1662,7 @@ DESKTOP STYLES
 *
 */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1070px) {
 	/* HEADER - DESKTOP */
 	header {
 		margin-bottom: 50px;
@@ -1715,9 +1748,9 @@ DESKTOP STYLES
 		margin: 75px auto;
 	}
 
-	.blocks-container {
+	/* .blocks-container {
 		margin: 100px auto;
-	}
+	} */
 
 }
 

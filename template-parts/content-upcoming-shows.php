@@ -20,18 +20,20 @@
 
     if ($loop->have_posts()) { ?>
 
-        <h2 class="shows-title">Upcoming</h2>
+    <h2 class="shows-title">Upcoming</h2>
 
-    <?php while ($loop->have_posts()) { $loop->the_post(); ?>
+    <div id="upcoming-show-blocks" class="blocks-container">
+    
+        <?php while ($loop->have_posts()) { $loop->the_post(); ?>
 
-        <div class="block upcoming-show-block">
-            <?php the_content(); ?>
-        </div>
+            <div class="block upcoming-show-block">
+                <?php the_content(); ?>
+            </div>
 
-<?php }
-        wp_reset_postdata();
-        
-    } else {
-        // If no posts are found, do nothing (leave this block empty).
-    }
-
+        <?php }
+            wp_reset_postdata();
+            
+        } else {
+            // If no posts are found, do nothing (leave this block empty).
+        } ?>
+    </div>

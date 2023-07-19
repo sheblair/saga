@@ -22,16 +22,19 @@
 
         <h2 class="shows-title">Current</h2>
         
-    <?php while ($loop->have_posts()) { $loop->the_post(); ?>
+        <div id="current-show-blocks" class="blocks-container">
+        
+            <?php while ($loop->have_posts()) { $loop->the_post(); ?>
 
-        <div class="block current-show-block">
-            <?php the_content(); ?>
+                <div class="block current-show-block">
+                    <?php the_content(); ?>
+                </div>
+
+        <?php }
+                wp_reset_postdata();
+
+            } else {
+                // If no posts are found, do nothing (leave this block empty).
+            } ?>
         </div>
-
-<?php }
-        wp_reset_postdata();
-
-    } else {
-        // If no posts are found, do nothing (leave this block empty).
-    }
 
