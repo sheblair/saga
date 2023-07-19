@@ -21,7 +21,7 @@ get_header();
 			<div class="accent-strip"></div>
 		</div>
 
-		<main id="primary" class="site-main">
+		<main id="about" class="site-main">
             <div class="about-page-purpose">
                 <?php the_content(); ?>
             </div>
