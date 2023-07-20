@@ -1385,6 +1385,21 @@ header {
 	max-width: 35%;
 }
 
+/*
+*
+*
+*
+* ARTISTS PAGE - MOBILE
+*
+*
+*
+*
+*/
+
+#artists-page-list {
+	display: none;
+}
+
 /* smallest phone screen size */
 @media screen and (max-width: 374px) {
 	/* front page blocks */

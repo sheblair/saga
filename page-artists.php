@@ -19,8 +19,8 @@ get_header();
         </div>
         <!-- Thumbnails or List selection here -->
         <div class="view-selector">
-            <p class="view-option">Thumbnails</p>
-            <p class="view-option">List</p>
+            <p id="thumbnail" class="view-option">Thumbnails</p>
+            <p id="list" class="view-option">List</p>
         </div>
 
         <!-- Use JS to conditionally display either one of these: -->

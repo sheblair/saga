@@ -17,10 +17,12 @@
     
     $loop = new WP_Query($args);
 
-    if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); ?>
+    if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); 
+                $artist_title = get_field('artist_title');
+    ?>
     
         <div class="artist-page-list">
-            <a href="<?php the_permalink(); ?>" ><p><?php the_title(); ?></p></a>
+            <a href="<?php the_permalink(); ?>" ><p><?php echo $artist_title; ?></p></a>
         </div>
 
 <?php }

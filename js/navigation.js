@@ -83,8 +83,8 @@
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
-	function toggleFocus() {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
+	function toggleFocus(e) {
+		if ( e.type === 'focus' || e.type === 'blur' ) {
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
 			while ( ! self.classList.contains( 'nav-menu' ) ) {
@@ -96,9 +96,9 @@
 			}
 		}
 
-		if ( event.type === 'touchstart' ) {
+		if ( e.type === 'touchstart' ) {
 			const menuItem = this.parentNode;
-			event.preventDefault();
+			e.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
 				if ( menuItem !== link ) {
 					link.classList.remove( 'focus' );
