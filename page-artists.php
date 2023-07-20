@@ -15,8 +15,10 @@ get_header();
 	<main id="artists-page" class="site-main">
         <!-- Search form here -->
         <div class="search-bar">
-            <?php get_search_form(); ?>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search by name" />
         </div>
+        
         <!-- Thumbnails or List selection here -->
         <div class="view-selector">
             <p id="thumbnail" class="view-option">Thumbnails</p>

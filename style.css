@@ -997,6 +997,11 @@ body {
 	overflow: hidden;
 }
 
+.hide {
+    /* '!important' is to make sure that when we add the class using JS, it takes precendence */
+    display: none !important;
+}
+
 /* 
 *
 *

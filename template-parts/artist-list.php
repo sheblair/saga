@@ -22,10 +22,11 @@
     if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); 
                 $artist_title = get_field('artist_title');
     ?>
-    
-        <div class="artist-page-list">
-            <a href="<?php the_permalink(); ?>" ><p><?php echo $artist_title; ?></p></a>
-        </div>
+        <ul class="artists-list">
+            <li class="list-item artist">
+                <a href="<?php the_permalink(); ?>" ><p class="artist-name"><?php echo $artist_title; ?></p></a>
+            </li>
+        </ul>   
 
 <?php }
         wp_reset_postdata();

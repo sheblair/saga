@@ -23,9 +23,9 @@
                 $artist_title = get_field('artist_title');
     ?>
     
-        <div class="block artist-page-block">
+        <div class="artist">
             <a href="<?php the_permalink(); ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
-            <a href="<?php the_permalink(); ?>" ><h2><?php echo $artist_title; ?></h2></a>
+            <a href="<?php the_permalink(); ?>"><h2 class="artist-name"><?php echo $artist_title; ?></h2></a>
         </div>
 
 <?php }
