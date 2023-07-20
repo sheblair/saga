@@ -1025,26 +1025,26 @@ header {
 
 /* NAV - MOBILE */
 /* general navigation menu styles */
-#primary-menu {
+#header-menu {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#primary-menu li {
+#header-menu li {
 	text-transform: uppercase;
 	font-size: 1rem;
 	margin: 30px 0;
 }
 
-#primary-menu li a {
+#header-menu li a {
 	color: var(--font-dark);
 	text-decoration: none;
 	letter-spacing: .05em;
 }
 
-#primary-menu li a:hover {
+#header-menu li a:hover {
 	color: var(--accent-color);
 	font-weight: bold;
 }
@@ -1459,16 +1459,16 @@ TABLET STYLES
 	}
 
 	/* NAVIGATION - TABLET */
-	#primary-menu {
+	#header-menu {
 		flex-direction: row;
 		padding: 0;
 	}
 
-	#primary-menu li {
+	#header-menu li {
 		margin: 0 10px;
 	}
 
-	#primary-menu li a {
+	#header-menu li a {
 		letter-spacing: normal;
 		font-size: .85rem;
 	}

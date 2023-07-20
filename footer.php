@@ -24,11 +24,11 @@
 			</div>
 		</div>
 		<div class="footer-lower">
-			<?php wp_nav_menu( array( 'footer_menu' => 'footer-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'footer-menu' => 'footer-menu' ) ); ?>
 			<p class="copyright">© 2023 Society of American Graphic Artists</p>
 		</div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 

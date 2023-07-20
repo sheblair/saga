@@ -46,10 +46,11 @@ function saga_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'saga' ),
+			'header-menu' => __( 'Header', 'saga' ),
+			'footer-menu' => __( 'Footer', 'saga' )
 		)
 	);
 
@@ -134,11 +135,27 @@ function saga_widgets_init() {
 }
 add_action( 'widgets_init', 'saga_widgets_init' );
 
-/* Register footer nav menu */
-function register_my_menu() {
-	register_nav_menu('footer-menu',__( 'Footer Menu' ));
-  }
-  add_action( 'init', 'register_my_menu' );
+
+/* Register Artist Page post type */
+function create_custom_post_types() {
+    register_post_type( 'artist',
+        array(
+            'labels' => array(
+                'name' => __( 'Artist Pages' ),
+                'singular_name' => __( 'Artist Page' )
+            ),
+            'public' => true,
+            'has_archive' => false,
+			'show_in_rest' => true,
+            'rewrite' => array( 'slug' => 'artists' ),
+			'menu_position' => 20,
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+        )
+    );
+}
+add_action( 'init', 'create_custom_post_types' );
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -148,6 +165,7 @@ function saga_scripts() {
 	wp_style_add_data( 'saga-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'saga-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'saga-index', get_template_directory_uri() . '/js/index.js', array(), _S_VERSION, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
