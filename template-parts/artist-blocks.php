@@ -13,6 +13,8 @@
     $args = array( 
         'post_type'      => 'artist',
         'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
+        'orderby' => 'title',
+        'order'   => 'ASC',
     );
     
     $loop = new WP_Query($args);
