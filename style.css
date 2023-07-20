@@ -1299,6 +1299,7 @@ header {
 #upcoming-show-blocks.blocks-container,
 #past-show-blocks.blocks-container {
 	align-items: flex-start;
+	margin: 0;
 }
 
 /* FRONT PAGE BLOCKS - MOBILE (ratio: 1.060) */
@@ -1583,7 +1584,6 @@ TABLET STYLES
 
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 		max-width: 15%;
-		margin: 0 5px;
 	}
 }
 
@@ -1624,6 +1624,8 @@ TABLET STYLES
 		width: 70%;
 	}
 
+	/* exhibitions page */
+	
 	/* exhibitions page blocks */
 	main#exhibitions {
 		margin: 50px;
@@ -1662,7 +1664,7 @@ DESKTOP STYLES
 *
 */
 
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1000px) {
 	/* HEADER - DESKTOP */
 	header {
 		margin-bottom: 50px;
@@ -1709,27 +1711,21 @@ DESKTOP STYLES
 	}
 
 	/* GENERAL PAGE STYLES - DESKTOP */
-
-	/* main content styles */
 	main {
 		margin: 45px;
 	}
 
-	.blocks-container {
-		max-width: 1200px;
+	main#exhibitions {
+		margin: 65px 75px;
+	}
+
+	#about-page-blocks.blocks-container,
+	#front-page-blocks.blocks-container {
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
 	/* GENERAL BLOCK STYLES - DESKTOP */
-	.block {
-		width: 250px;
-	}
-
-	.block-img-container {
-		width: 250px;
-		height: 250px;
-	}
-
 	.block.front-page-post .wp-block-heading {
 		font-size: 1.125rem;
 	}
@@ -1748,29 +1744,33 @@ DESKTOP STYLES
 		margin: 75px auto;
 	}
 
-	/* .blocks-container {
-		margin: 100px auto;
-	} */
+	/* exhibition page blocks */
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 419px;
+	}
 
+	.block.current-show-block .block-img-container,
+	.block.upcoming-show-block .block-img-container {
+		width: 419px;
+		height: 303px;
+	}
+
+	.block.past-show-block {
+		width: 275px;
+	}
+
+	.block.past-show-block .block-img-container {
+		width: 275px;
+		height: 232px;
+	}
+
+	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
+		max-width: 10%;
+	}
 }
 
 /* larger desktop styles */
 @media screen and (min-width: 1200px) {
-	.block {
-		width: 300px;
-	}
 
-	.block-img-container {
-		width: 300px;
-		height: 300px;
-	}
-
-	.block.about-page-block {
-		width: 250px;
-	}
-
-	.block.about-page-block .block-img-container {
-		width: 250px;
-		height: 250px;
-	}
 }
