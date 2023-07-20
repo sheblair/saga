@@ -10,7 +10,10 @@
 
 get_header();
 ?>
-    <div class="accent-strip"></div>
+    <div class="page-heading-wrapper">
+			<h1 class="page-heading"><?php the_title(); ?></h1>
+			<div class="accent-strip"></div>
+	</div>
 	
 	<main id="artists-page" class="site-main">
         <!-- Search form here -->
@@ -18,7 +21,7 @@ get_header();
             <label for="search">Search:</label>
             <input type="text" id="search" name="search" placeholder="Search by name" />
         </div>
-        
+
         <!-- Thumbnails or List selection here -->
         <div class="view-selector">
             <p id="thumbnail" class="view-option">Thumbnails</p>
