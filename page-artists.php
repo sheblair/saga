@@ -24,7 +24,7 @@ get_header();
 
         <!-- Thumbnails or List selection here -->
         <div class="view-selector">
-            <p id="thumbnail" class="view-option">Thumbnails</p>
+            <p id="thumbnail" class="view-option bold">Thumbnails</p>
             <p id="list" class="view-option">List</p>
         </div>
 

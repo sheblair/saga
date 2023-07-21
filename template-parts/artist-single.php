@@ -51,8 +51,8 @@
 				<div class="artist-featured-image">
 					<?php the_post_thumbnail(); ?>
 				</div>
-				<div class="view-selector view-selector-desktop">
-					<p id="prints" class="view-option">Prints</p>
+				<div class="view-selector">
+					<p id="prints" class="view-option bold">Prints</p>
             		<p id="bio" class="view-option">Biography</p>
 				</div>
 			</div> <!-- End Upper Section Left -->
@@ -89,18 +89,12 @@
 			</div> <!-- end Upper Section Right -->
 		</div> <!-- end Upper Section -->
 
-		<!-- View selector moves here on mobile and tablet screen sizes -->
-		<div class="view-selector view-selector-mobile">
-			<p id="prints" class="view-option">Prints</p>
-			<p id="bio" class="view-option">Biography</p>
-		</div>
-
 		<div class="accent-strip accent-strip-artist"></div>
 
 		<!-- Lower Section - prints or biography -->
 		<div class="artist-single-lower">
 			<!-- Conditionally render either the images or the bio -->
-			<div class="artist-single-bio">
+			<div id="artist-bio" class="artist-single-bio">
 				<?php if ($bio) : ?>
 					<?php echo $bio ?>
 				<?php endif; ?>
@@ -111,7 +105,7 @@
 				<?php endif; ?>
 			</div>
 			
-			<div class="artist-single-prints">
+			<div id="artist-prints" class="artist-single-prints">
 				<?php if ($image_1) : ?>
 					<?php echo wp_get_attachment_image( $image_1 ); ?>
 					<?php if ($image_1_caption) : ?>

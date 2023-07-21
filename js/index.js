@@ -6,41 +6,86 @@
  */
 ( function() {
 
-    // Switch view from thumbnails to list when selectors are clicked
+    // Switch view and selector appearance when selectors are clicked
     const thumbnailSelector = document.querySelector('#thumbnail');
     const listSelector = document.querySelector('#list');
+    const printsSelector = document.querySelector('#prints');
+    const bioSelector = document.querySelector('#bio');
     const artistBlocks = document.querySelector('#artists-page-blocks');
     const artistList = document.querySelector('#artists-page-list');
+    const artistPrints = document.querySelector('#artist-prints');
+    const artistBio = document.querySelector('#artist-bio');
 
-    thumbnailSelector.addEventListener('click', () => {
-        artistList.style.display = 'none';
-        artistBlocks.style.display = 'block';
+    if (thumbnailSelector) {
+        console.log(thumbnailSelector);
 
-    })
+        thumbnailSelector.addEventListener('click', () => {
+            artistList.style.display = 'none';
+            artistBlocks.style.display = 'block';
+            
+            listSelector.classList.remove('bold');
+            thumbnailSelector.classList.add('bold');
+        })    
+    }
+  
 
-    listSelector.addEventListener('click', () => {
-        artistList.style.display = 'block';
-        artistBlocks.style.display = 'none';
-    })
+    if (listSelector) {
+        console.log(listSelector);
+
+        listSelector.addEventListener('click', () => {
+            artistList.style.display = 'block';
+            artistBlocks.style.display = 'none';
+    
+            listSelector.classList.add('bold');
+            thumbnailSelector.classList.remove('bold');
+        })   
+    }
+
+    if (printsSelector) {
+        console.log(printsSelector);
+
+        printsSelector.addEventListener('click', () => {
+            artistBio.style.display = 'none';
+            artistPrints.style.display = 'block';
+            
+            bioSelector.classList.remove('bold');
+            printsSelector.classList.add('bold');
+        })
+    }
+
+    if (bioSelector) {
+        console.log(bioSelector);
+
+        bioSelector.addEventListener('click', () => {
+            artistPrints.style.display = 'none';
+            artistBio.style.display = 'block';
+            
+            printsSelector.classList.remove('bold');
+            bioSelector.classList.add('bold');
+        })
+    }    
 
     // Artists page dynamic search
     const filterInput = document.querySelector('#search');
     const allArtists = document.querySelectorAll('.artist');
     const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.innerText.toLowerCase());
     
-    filterInput.addEventListener('input', function (e) {
-        const userInput = e.target.value.toLowerCase().trim(); // Trim leading and trailing spaces
-    
-        for (let i = 0; i < allArtists.length; i++) {
-            const artistNameText = artistNames[i];
-    
-            if (artistNameText.includes(userInput)) {
-                allArtists[i].classList.remove('hide');
-            } else {
-                allArtists[i].classList.add('hide');
+    if (filterInput) {
+        filterInput.addEventListener('input', function (e) {
+            const userInput = e.target.value.toLowerCase().trim(); // Trim leading and trailing spaces
+        
+            for (let i = 0; i < allArtists.length; i++) {
+                const artistNameText = artistNames[i];
+        
+                if (artistNameText.includes(userInput)) {
+                    allArtists[i].classList.remove('hide');
+                } else {
+                    allArtists[i].classList.add('hide');
+                }
             }
-        }
-    });
+        });
+    }
+  
 
 
     // function fetchAllArtists() {
