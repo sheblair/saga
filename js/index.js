@@ -19,7 +19,7 @@
     if (thumbnailSelector) {
         thumbnailSelector.addEventListener('click', () => {
             artistList.style.display = 'none';
-            artistBlocks.style.display = 'block';
+            artistBlocks.style.display = 'flex';
             
             listSelector.classList.remove('bold');
             thumbnailSelector.classList.add('bold');
@@ -29,7 +29,7 @@
 
     if (listSelector) {
         listSelector.addEventListener('click', () => {
-            artistList.style.display = 'block';
+            artistList.style.display = 'flex';
             artistBlocks.style.display = 'none';
     
             listSelector.classList.add('bold');
@@ -40,7 +40,7 @@
     if (printsSelector) {
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
-            artistPrints.style.display = 'block';
+            artistPrints.style.display = 'flex';
             
             bioSelector.classList.remove('bold');
             printsSelector.classList.add('bold');
@@ -50,7 +50,7 @@
     if (bioSelector) {
         bioSelector.addEventListener('click', () => {
             artistPrints.style.display = 'none';
-            artistBio.style.display = 'block';
+            artistBio.style.display = 'flex';
             
             printsSelector.classList.remove('bold');
             bioSelector.classList.add('bold');

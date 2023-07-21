@@ -26,7 +26,7 @@
                 $name = get_field('name');
     ?>
     
-        <div class="artist">
+        <div class="block artist-block">
             <a href="<?php the_permalink(); ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
             <a href="<?php the_permalink(); ?>"><h2 class="artist-name"><?php echo $name; ?></h2></a>
         </div>

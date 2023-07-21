@@ -51,36 +51,38 @@
 				<?php the_post_thumbnail(); ?>
 			</div>
 
+			<div class="artist-info">
+				<h3 class="artist-single-title"><?php echo $name ?></h3>
 
-			<h3 class="artist-single-title"><?php echo $name ?></h3>
+				<?php if ($location) : ?>
+					<p class="artist-single-location"><?php echo $location ?></p>
+				<?php endif; ?>
 
-			<?php if ($location) : ?>
-				<p class="artist-single-location"><?php echo $location ?></p>
-			<?php endif; ?>
+				<?php if ($website) : ?>
+					<a class="artist-single-link" target="_blank" href="<?php echo $website ?>"><p class="artist-single-link-label"><?php echo $website_label ?></p></a>
+				<?php endif; ?>
 
-			<?php if ($website) : ?>
-				<a class="artist-single-link" target="_blank" href="<?php echo $website ?>"><p class="artist-single-link-label"><?php echo $website_label ?></p></a>
-			<?php endif; ?>
+				<?php if ($email) : ?>
+					<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Contact</p></a>
+				<?php endif; ?>
 
-			<?php if ($email) : ?>
-				<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Contact</p></a>
-			<?php endif; ?>
+				<?php if ($link_1) : ?>
+					<a class="artist-single-link" target="_blank" href="<?php echo $link_1 ?>"><p class="artist-single-link-label"><?php echo $link_1_label ?> </p></a>
+				<?php endif; ?>
 
-			<?php if ($link_1) : ?>
-				<a class="artist-single-link" target="_blank" href="<?php echo $link_1 ?>"><p class="artist-single-link-label"><?php echo $link_1_label ?> </p></a>
-			<?php endif; ?>
+				<?php if ($link_2) : ?>
+					<a class="artist-single-link" target="_blank" href="<?php echo $link_2 ?>"><p class="artist-single-link-label"><?php echo $link_2_label ?> </p></a>
+				<?php endif; ?>
 
-			<?php if ($link_2) : ?>
-				<a class="artist-single-link" target="_blank" href="<?php echo $link_2 ?>"><p class="artist-single-link-label"><?php echo $link_2_label ?> </p></a>
-			<?php endif; ?>
-
-			<?php if ($link_3) : ?>
-				<a class="artist-single-link" target="_blank" href="<?php echo $link_3 ?>"><p class="artist-single-link-label"><?php echo $link_3_label ?> </p></a>
-			<?php endif; ?>
+				<?php if ($link_3) : ?>
+					<a class="artist-single-link" target="_blank" href="<?php echo $link_3 ?>"><p class="artist-single-link-label"><?php echo $link_3_label ?> </p></a>
+				<?php endif; ?>
+			</div>
+			
 
 			<div class="view-selector">
-					<p id="prints" class="view-option bold">Prints</p>
-            		<p id="bio" class="view-option">Biography</p>
+				<p id="prints" class="view-option bold">Prints</p>
+            	<p id="bio" class="view-option">Biography</p>
 			</div>
 
 		</div> <!-- end Upper Section -->
