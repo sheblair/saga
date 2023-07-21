@@ -1405,17 +1405,42 @@ header {
 *
 */
 
-#artists-page-blocks {
+/* display artist thumbnails and artist prints by default */
+#artists-page-blocks,
+#artist-prints {
 	display: block;
 }
 
-/* hide list view by default */
-#artists-page-list {
+/* hide list view and biography by default */
+#artists-page-list,
+#artist-bio {
 	display: none;
 }
 
-/* SINGLE ARTISTS PAGE - MOBILE */
+/* style view selector */
+.view-selector {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
 
+.view-option {
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
+/* SINGLE ARTIST - MOBILE */
+.artist-container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* style accent strip */
+.accent-strip.accent-strip-artist {
+	margin: 20px auto;
+}
+
+/* style back to artists link */
 .back-to-artists {
 	margin: 20px 0;
 }
@@ -1432,6 +1457,7 @@ header {
 	text-decoration: underline;
 }
 
+/* style artist featured image and contact info */
 .artist-featured-image {
 	width: 100%;
 	margin-bottom: 10px;
@@ -1469,28 +1495,16 @@ header {
 	margin-bottom: 5px;
 }
 
-.accent-strip-artist {
-	margin: 20px auto;
-	width: 90%;
-}
-
-/* view-selector */
-.view-selector.view-selector-mobile {
+/* style prints gallery */
+#artist-prints,
+.artist-print {
 	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+	flex-direction: column;
 }
 
-.view-option {
-	margin-bottom: 0;
-	margin-right: 20px;
+.artist-print {
+	width: 100%;
 }
-
-/* hide bio and artist statement by default */
-.artist-single-bio {
-	display: none;
-}
-
 
 /* smallest phone screen size */
 @media screen and (max-width: 374px) {
