@@ -18,7 +18,7 @@ get_header();
 	<main id="artists-page" class="site-main">
         <!-- Search form here -->
         <div class="search-bar">
-            <label for="search">Search:</label>
+            <label for="search"></label>
             <input type="text" id="search" name="search" placeholder="Search by name" />
         </div>
 
@@ -34,7 +34,9 @@ get_header();
 		</div>
 
         <div id="artists-page-list">
-            <?php get_template_part( 'template-parts/artist', 'list' ); ?>
+            <ul class="artists-list">
+                <?php get_template_part( 'template-parts/artist', 'list' ); ?>
+            </ul>
         </div>
 	</main>
 

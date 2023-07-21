@@ -1401,8 +1401,69 @@ header {
 *
 */
 
+/* hide list view by default */
 #artists-page-list {
 	display: none;
+}
+
+/* SINGLE ARTISTS PAGE - MOBILE */
+/*  hide view selector desktop position */
+.view-selector-desktop {
+	display: none;
+}
+
+.back-to-artists {
+	margin: 20px 0;
+}
+
+.back-to-artists a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: .875rem;
+	color: var(--font-dark);
+}
+
+.back-to-artists a:hover {
+	text-decoration: underline;
+}
+
+.artist-featured-image {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.artist-featured-image img {
+	width: 100%;
+
+}
+
+.artist-single-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.artist-single-location {
+	font-size: .875rem;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.artist-single-link {
+	color: var(--font-dark);
+	font-size: 0.875rem;
+	font-weight: 400;
+	letter-spacing: 0.0225rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.artist-single-link:hover {
+	text-decoration: underline;
+}
+
+.artist-single-link p {
+	margin-bottom: 5px;
 }
 
 /* smallest phone screen size */
