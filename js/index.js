@@ -17,8 +17,6 @@
     const artistBio = document.querySelector('#artist-bio');
 
     if (thumbnailSelector) {
-        console.log(thumbnailSelector);
-
         thumbnailSelector.addEventListener('click', () => {
             artistList.style.display = 'none';
             artistBlocks.style.display = 'block';
@@ -30,8 +28,6 @@
   
 
     if (listSelector) {
-        console.log(listSelector);
-
         listSelector.addEventListener('click', () => {
             artistList.style.display = 'block';
             artistBlocks.style.display = 'none';
@@ -42,8 +38,6 @@
     }
 
     if (printsSelector) {
-        console.log(printsSelector);
-
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
             artistPrints.style.display = 'block';
@@ -54,8 +48,6 @@
     }
 
     if (bioSelector) {
-        console.log(bioSelector);
-
         bioSelector.addEventListener('click', () => {
             artistPrints.style.display = 'none';
             artistBio.style.display = 'block';

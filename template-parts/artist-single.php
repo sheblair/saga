@@ -46,47 +46,42 @@
 
 		<!-- Upper Section -->
 		<div class="artist-single-upper">
-			<!-- Upper Section Left - Featured image and view switcher -->
-			<div class="artist-single-upper-left">
-				<div class="artist-featured-image">
-					<?php the_post_thumbnail(); ?>
-				</div>
-				<div class="view-selector">
+			<div class="artist-featured-image">
+				<?php the_post_thumbnail(); ?>
+			</div>
+
+
+			<h3 class="artist-single-title"><?php echo $name ?></h3>
+
+			<?php if ($location) : ?>
+				<p class="artist-single-location"><?php echo $location ?></p>
+			<?php endif; ?>
+
+			<?php if ($website) : ?>
+				<a class="artist-single-link" target="_blank" href="<?php echo $website ?>"><p class="artist-single-link-label"><?php echo $website_label ?></p></a>
+			<?php endif; ?>
+
+			<?php if ($email) : ?>
+				<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Contact</p></a>
+			<?php endif; ?>
+
+			<?php if ($link_1) : ?>
+				<a class="artist-single-link" target="_blank" href="<?php echo $link_1 ?>"><p class="artist-single-link-label"><?php echo $link_1_label ?> </p></a>
+			<?php endif; ?>
+
+			<?php if ($link_2) : ?>
+				<a class="artist-single-link" target="_blank" href="<?php echo $link_2 ?>"><p class="artist-single-link-label"><?php echo $link_2_label ?> </p></a>
+			<?php endif; ?>
+
+			<?php if ($link_3) : ?>
+				<a class="artist-single-link" target="_blank" href="<?php echo $link_3 ?>"><p class="artist-single-link-label"><?php echo $link_3_label ?> </p></a>
+			<?php endif; ?>
+
+			<div class="view-selector">
 					<p id="prints" class="view-option bold">Prints</p>
             		<p id="bio" class="view-option">Biography</p>
-				</div>
-			</div> <!-- End Upper Section Left -->
+			</div>
 
-			<!-- Upper Section Right - Artist information -->
-			<div class="artist-single-upper-right">
-
-				<h3 class="artist-single-title"><?php echo $name ?></h3>
-
-				<?php if ($location) : ?>
-					<p class="artist-single-location"><?php echo $location ?></p>
-				<?php endif; ?>
-
-				<?php if ($website) : ?>
-					<a class="artist-single-link" target="_blank" href="<?php echo $website ?>"><p class="artist-single-link-label"><?php echo $website_label ?></p></a>
-				<?php endif; ?>
-
-				<?php if ($email) : ?>
-					<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Contact</p></a>
-				<?php endif; ?>
-
-				<?php if ($link_1) : ?>
-					<a class="artist-single-link" target="_blank" href="<?php echo $link_1 ?>"><p class="artist-single-link-label"><?php echo $link_1_label ?> </p></a>
-				<?php endif; ?>
-
-				<?php if ($link_2) : ?>
-					<a class="artist-single-link" target="_blank" href="<?php echo $link_2 ?>"><p class="artist-single-link-label"><?php echo $link_2_label ?> </p></a>
-				<?php endif; ?>
-
-				<?php if ($link_3) : ?>
-					<a class="artist-single-link" target="_blank" href="<?php echo $link_3 ?>"><p class="artist-single-link-label"><?php echo $link_3_label ?> </p></a>
-				<?php endif; ?>
-
-			</div> <!-- end Upper Section Right -->
 		</div> <!-- end Upper Section -->
 
 		<div class="accent-strip accent-strip-artist"></div>
