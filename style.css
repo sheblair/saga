@@ -1003,7 +1003,7 @@ body {
 }
 
 .bold {
-	font-weight: 700;
+	font-weight: 700 !important;
 }
 
 /* 
@@ -1456,7 +1456,6 @@ header {
 .artist-single-link, .view-option {
 	color: var(--font-dark);
 	font-size: 0.875rem;
-	font-weight: 400;
 	letter-spacing: 0.0225rem;
 	text-decoration: none;
 	text-transform: uppercase;
