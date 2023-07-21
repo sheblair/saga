@@ -1417,6 +1417,26 @@ header {
 	display: none;
 }
 
+/* style upper toolbar of artists page */
+.artists-page-toolbar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* style search bar */
+#search {
+	border: none;
+	background-color: #d9d9d9;
+	padding: 5px 10px;
+}
+
+#search::placeholder {
+	font-family: 'Helvetica Neue', sans-serif;
+	text-transform: uppercase;
+	font-size: .75rem;
+}
+
 /* style view selector */
 .view-selector {
 	display: flex;

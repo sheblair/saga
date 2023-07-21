@@ -16,16 +16,18 @@ get_header();
 	</div>
 	
 	<main id="artists-page" class="site-main">
-        <!-- Search form here -->
-        <div class="search-bar">
-            <label for="search"></label>
-            <input type="text" id="search" name="search" placeholder="Search by name" />
-        </div>
+        <div class="artists-page-toolbar">
+            <!-- Search form here -->
+            <div class="search-bar">
+                <label for="search"></label>
+                <input type="text" id="search" name="search" placeholder="Search by name" />
+            </div>
 
-        <!-- Thumbnails or List selection here -->
-        <div class="view-selector">
-            <p id="thumbnail" class="view-option bold">Thumbnails</p>
-            <p id="list" class="view-option">List</p>
+            <!-- Thumbnails or List selection here -->
+            <div class="view-selector">
+                <p id="thumbnail" class="view-option bold">Thumbnails</p>
+                <p id="list" class="view-option">List</p>
+            </div>
         </div>
 
         <!-- Use JS to conditionally display either one of these: -->
