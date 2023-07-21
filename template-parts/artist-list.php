@@ -50,7 +50,7 @@
                     $image_7_caption = get_field('image_7_caption');
                     $image_8_caption = get_field('image_8_caption');
     ?>
-        <li class="artist-list-item">
+        <li class="artist-list-item artist">
             <a href="<?php the_permalink(); ?>" ><p class="artist-name"><?php echo $name; ?></p></a>
         </li>
    

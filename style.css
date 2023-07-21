@@ -412,9 +412,9 @@ h6 {
 	clear: both;
 }
 
-p {
+/* p {
 	margin-bottom: 1.5em;
-}
+} */
 
 dfn,
 cite,
@@ -1423,7 +1423,7 @@ header {
 .artists-page-toolbar {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 }
 
 /* style search bar */
@@ -1431,6 +1431,10 @@ header {
 	border: none;
 	background-color: #d9d9d9;
 	padding: 5px 10px;
+	outline: none;
+	margin-bottom: 10px;
+	height: 40px;
+    width: 250px;
 }
 
 #search::placeholder {
@@ -1443,19 +1447,15 @@ header {
 .view-selector {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin: 15px 0;
 }
 
 .view-option {
-	margin-bottom: 0;
 	margin-right: 20px;
+	cursor: pointer;
 }
 
 /* style blocks view of artists */
-#artists-page-blocks {
-	margin-top: 30px;
-}
-
 .block.artist-block {
 	width: 335px;
 }
@@ -1469,16 +1469,21 @@ header {
 	text-decoration: none;
 }
 
+.block.artist-block a:hover {
+	text-decoration: underline;
+}
+
 .block.artist-block .artist-name {
 	font-family: 'Helvetica', sans-serif;
 	font-size: 1.2rem;
 	font-weight: 400;
+	margin: 15px 0;
 }
 
 /* style list view of artists */
 #artists-page-list {
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .artists-list {
@@ -1486,19 +1491,20 @@ header {
 	margin: 20px 0;
 }
 
-.artist-list-item a {
-	text-decoration: none;
+.artist-list-item {
 	font-family: 'Helvetica', sans-serif;
 	font-size: 1.2rem;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.artist-list-item a {
+	text-decoration: none;
 	color: var(--font-dark);
 }
 
 .artist-list-item a:hover {
 	text-decoration: underline;
-}
-
-.artist-name {
-	margin: 15px 0;
 }
 
 /* SINGLE ARTIST - MOBILE */
@@ -1795,6 +1801,18 @@ TABLET STYLES
 		max-width: 15%;
 	}
 
+	/* ARTISTS PAGE - TABLET */
+	/* style the toolbar */
+	.artists-page-toolbar {
+		flex-flow: row wrap;
+    	align-items: center;
+    	justify-content: space-between;
+	}
+
+	#search {
+		margin-bottom: 0;
+	}
+
 	/* SINGLE ARTIST PAGE - TABLET */
 	.artist-single-upper {
 		display: flex;
@@ -1808,10 +1826,6 @@ TABLET STYLES
 
 	.artist-info {
 		width: 48%;
-	}
-
-	.view-selector {
-		margin: 15px auto 0 auto;
 	}
 }
 
