@@ -135,7 +135,6 @@ function saga_widgets_init() {
 }
 add_action( 'widgets_init', 'saga_widgets_init' );
 
-
 /* Register Artist Page post type */
 function create_custom_post_types() {
     register_post_type( 'artist',
@@ -148,12 +147,31 @@ function create_custom_post_types() {
             'has_archive' => false,
 			'show_in_rest' => true,
             'rewrite' => array( 'slug' => 'artists' ),
-			'menu_position' => 20,
+			'menu_position' => 5,
 			'supports' => array( 'title', 'editor', 'thumbnail' ),
         )
     );
 }
 add_action( 'init', 'create_custom_post_types' );
+
+
+function custom_artist_title($title) {
+    // Check if it's the 'artist' custom post type (singular name)
+    if (is_singular('artist')) {
+        // Get the custom field value for "name"
+        $artist_name = get_post_meta(get_the_ID(), 'name', true);
+
+        if ($artist_name) {
+            // Replace the title with the artist name
+            $title = $artist_name . ' - Society of American Graphic Artists';
+        }
+    }
+
+    return $title;
+}
+
+add_filter('pre_get_document_title', 'custom_artist_title');
+
 
 /**
  * Enqueue scripts and styles.
