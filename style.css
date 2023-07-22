@@ -1825,7 +1825,8 @@ TABLET STYLES
 
 	/* style the blocks view */
 	#artists-page-blocks {
-		margin-top: 40px;
+		margin: 40px 20px;
+		width: 100%;
 	}
 	
 	.block.artist-block {
@@ -1835,6 +1836,24 @@ TABLET STYLES
 	.block.artist-block .block-img-container {
 		width: 520px;
 		height: 446px;
+	}
+
+	/* style the list view */
+	#artists-page-list {
+		margin: 20px;
+	}
+
+	.artists-list {
+		display: grid;
+    	grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 15px;
+		width: 100%;
+	}
+
+	.artist-list-item {
+		text-align: left;
+		font-size: 1.015rem;
+		margin: 10px 0;
 	}
 
 	/* SINGLE ARTIST PAGE - TABLET */
@@ -1917,6 +1936,28 @@ TABLET STYLES
 	.block.past-show-block .block-img-container {
 		width: 220px;
 		height: 185px;
+	}
+
+	/* two rows of artist blocks in blocks view */
+	#artists-page-blocks {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: auto;
+	}
+
+	.block.artist-block {
+		width: 330px;
+		margin-right: 30px;
+	}
+
+	.block.artist-block .block-img-container {
+		width: 330px;
+		height: 283px;
+	}
+
+	/* larger artist names in list view */
+	.artist-list-item {
+		font-size: 1.115rem;
 	}
 }
 

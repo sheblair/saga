@@ -31,7 +31,7 @@ get_header();
         </div>
 
         <!-- Use JS to conditionally display either one of these: -->
-		<div id="artists-page-blocks" class="blocks-container">
+		<div id="artists-page-blocks">
 			<?php get_template_part( 'template-parts/artist', 'blocks' ); ?>
 		</div>
 
