@@ -1807,10 +1807,34 @@ TABLET STYLES
 		flex-flow: row wrap;
     	align-items: center;
     	justify-content: space-between;
+		margin: 40px 20px 20px 20px;
 	}
 
 	#search {
 		margin-bottom: 0;
+	}
+
+	.view-selector {
+		justify-content: flex-end;
+	}
+
+	.view-option {
+		margin-left: 20px;
+		margin-right: 0;
+	}
+
+	/* style the blocks view */
+	#artists-page-blocks {
+		margin-top: 40px;
+	}
+	
+	.block.artist-block {
+		width: 520px;
+	}
+
+	.block.artist-block .block-img-container {
+		width: 520px;
+		height: 446px;
 	}
 
 	/* SINGLE ARTIST PAGE - TABLET */
