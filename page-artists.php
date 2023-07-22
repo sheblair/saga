@@ -32,7 +32,9 @@ get_header();
 
         <!-- Use JS to conditionally display either one of these: -->
 		<div id="artists-page-blocks">
-			<?php get_template_part( 'template-parts/artist', 'blocks' ); ?>
+            <div class="artists-page-blocks-grid">
+			    <?php get_template_part( 'template-parts/artist', 'blocks' ); ?>
+            </div>
 		</div>
 
         <div id="artists-page-list">
