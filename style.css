@@ -1999,6 +1999,10 @@ TABLET STYLES
 	}
 
 	/* single artist page */
+	.accent-strip.accent-strip.accent-strip-artist {
+		width: 90%;
+	}
+
 	.artist-single-upper {
 		margin-top: 50px;
 	}
@@ -2020,8 +2024,10 @@ TABLET STYLES
 	}
 
 	#artist-prints figure {
-		width: 48%;
+		width: 35%;
+		max-width: 48%;
 		margin: 5px;
+		flex-grow: 1;
 	}
 }
 
