@@ -26,8 +26,8 @@
 				$size = 'full';
     ?>
     
-        <div class="block artist-block artist">
-            <a href="<?php the_permalink(); ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $thumbnail, $size ); ?></figure></a>
+        <div class="artist">
+            <a href="<?php the_permalink(); ?>"><figure class=""><?php echo wp_get_attachment_image( $thumbnail, $size ); ?></figure></a>
             <a href="<?php the_permalink(); ?>"><h2 class="artist-name"><?php echo $name; ?></h2></a>
         </div>
 

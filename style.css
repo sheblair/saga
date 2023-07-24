@@ -1456,24 +1456,18 @@ header {
 }
 
 /* style blocks view of artists */
-.block.artist-block {
-	width: 335px;
-}
 
-.block.artist-block .block-img-container {
-	width: 335px;
-	height: 287px;
-}
 
-.block.artist-block a {
+.artist a {
 	text-decoration: none;
+	color: var(--font-dark);
 }
 
-.block.artist-block a:hover {
+.artist a:hover {
 	text-decoration: underline;
 }
 
-.block.artist-block .artist-name {
+.artist .artist-name {
 	font-family: 'Helvetica', sans-serif;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -1643,14 +1637,7 @@ header {
 	}
 
 	/* artist blocks */
-	.block.artist-block {
-		width: 250px;
-	}
-
-	.block.artist-block .block-img-container {
-		width: 250px;
-		height: 215px;
-	}
+	
 }
 
 /* 
@@ -1836,15 +1823,6 @@ TABLET STYLES
 	#artists-page-blocks {
 		margin: 40px 20px;
 	}
-	
-	.block.artist-block {
-		width: 520px;
-	}
-
-	.block.artist-block .block-img-container {
-		width: 520px;
-		height: 446px;
-	}
 
 	/* style the list view */
 	#artists-page-list {
@@ -1982,15 +1960,6 @@ TABLET STYLES
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 20px;
 		margin: 0 auto;
-	}
-
-	.block.artist-block {
-		width: 360px;
-	}
-
-	.block.artist-block .block-img-container {
-		width: 360px;
-		height: 309px;
 	}
 
 	/* larger artist names in list view */
