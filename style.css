@@ -1456,7 +1456,16 @@ header {
 }
 
 /* style blocks view of artists */
+.artists-page-blocks-grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.artist {
+	margin-bottom: 15px;
+	width: 95%;
+}
 
 .artist a {
 	text-decoration: none;
@@ -1490,6 +1499,7 @@ header {
 	font-size: 1.2rem;
 	text-align: center;
 	margin: 20px 0;
+	width: 100%;
 }
 
 .artist-list-item a {
