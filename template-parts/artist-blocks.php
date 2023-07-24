@@ -22,12 +22,12 @@
 
     if ( $loop->have_posts() ) { while ( $loop->have_posts() ) { $loop->the_post(); 
                 $name = get_field('name');
-                $image_1 = get_field('image_1');
+                $thumbnail = get_field('thumbnail');
 				$size = 'full';
     ?>
     
         <div class="block artist-block artist">
-            <a href="<?php the_permalink(); ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $image_1, $size ); ?></figure></a>
+            <a href="<?php the_permalink(); ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $thumbnail, $size ); ?></figure></a>
             <a href="<?php the_permalink(); ?>"><h2 class="artist-name"><?php echo $name; ?></h2></a>
         </div>
 
