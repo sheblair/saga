@@ -1820,7 +1820,8 @@ TABLET STYLES
 		margin-bottom: 0;
 	}
 
-	.view-selector {
+	.view-selector.view-selector-all {
+		margin: 0;
 		justify-content: flex-end;
 	}
 
@@ -1872,7 +1873,7 @@ TABLET STYLES
 		width: 48%;
 	}
 
-	.view-selector {
+	.view-selector.view-selector-single {
 		justify-content: center;
 	}
 

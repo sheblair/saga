@@ -65,7 +65,7 @@
 			</div>
 			
 
-			<div class="view-selector">
+			<div class="view-selector view-selector-single">
 				<p id="prints" class="view-option bold">Prints</p>
             	<p id="bio" class="view-option">Biography</p>
 			</div>
