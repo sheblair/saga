@@ -90,7 +90,7 @@
 			
 			<!-- Prints Gallery -->
 			<div id="artist-prints"> 
-				<?php the_content(); ?>å
+				<?php the_content(); ?>
 			</div> <!-- end Prints Gallery -->
 
 		</div> <!-- end Lower Section -->

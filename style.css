@@ -1865,6 +1865,10 @@ TABLET STYLES
 	}
 
 	/* SINGLE ARTIST PAGE - TABLET */
+	.accent-strip.accent-strip-artist {
+		margin-bottom: 30px;
+	}
+
 	.artist-single-upper {
 		display: flex;
 		flex-wrap: wrap;
