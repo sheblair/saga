@@ -7,9 +7,11 @@
  * @package saga
  */
 
+
+
 ?>
 
-<?php 
+<?php
 				$name = get_field('name');
 				$location = get_field('location');
 				$website = get_field('website');
@@ -23,23 +25,6 @@
 				$link_3_label = get_field('link_3_label');
 				$bio = get_field('bio');
 				$artist_statement = get_field('artist_statement');
-				$image_1 = get_field('image_1');
-				$image_2 = get_field('image_2');
-				$image_3 = get_field('image_3');
-				$image_4 = get_field('image_4');
-				$image_5 = get_field('image_5');
-				$image_6 = get_field('image_6');
-				$image_7 = get_field('image_7');
-				$image_8 = get_field('image_8');
-				$image_1_caption = get_field('image_1_caption');
-				$image_2_caption = get_field('image_2_caption');
-				$image_3_caption = get_field('image_3_caption');
-				$image_4_caption = get_field('image_4_caption');
-				$image_5_caption = get_field('image_5_caption');
-				$image_6_caption = get_field('image_6_caption');
-				$image_7_caption = get_field('image_7_caption');
-				$image_8_caption = get_field('image_8_caption');
-				$size = 'full';
 	?>
 
 
@@ -98,85 +83,14 @@
 				<?php endif; ?>
 
 				<?php if ($artist_statement) : ?>
-					<h4>Artist Statement</h4>
+					<h4 class="artist-statement-header">Artist Statement</h4>
 					<?php echo $artist_statement ?>
 				<?php endif; ?>
 			</div>
 			
 			<!-- Prints Gallery -->
 			<div id="artist-prints"> 
-				<?php if ($image_1) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_1, $size ); ?>
-						<?php if ($image_1_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_1_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_2) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_2, $size );?>
-						<?php if ($image_2_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_2_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_3) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_3, $size ); ?>
-						<?php if ($image_3_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_3_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_4) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_4, $size ); ?>
-						<?php if ($image_4_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_4_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-
-				<?php if ($image_5) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_5, $size ); ?>
-						<?php if ($image_5_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_5_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_6) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_6, $size ); ?>
-						<?php if ($image_6_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_6_caption ?>
-						<?php endif; ?>
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_7) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_7, $size ); ?>
-						<?php if ($image_7_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_7_caption ?>
-						<?php endif; ?>	
-					</div>
-				<?php endif; ?>
-
-				<?php if ($image_8) : ?>
-					<div class="artist-print">
-						<?php echo wp_get_attachment_image( $image_8, $size ); ?>
-						<?php if ($image_8_caption) : ?>
-							<p class="caption artist-image-caption"><?php echo $image_8_caption ?>
-						<?php endif; ?>
-					</div>				
-				<?php endif; ?>
+				<?php the_content(); ?>å
 			</div> <!-- end Prints Gallery -->
 
 		</div> <!-- end Lower Section -->

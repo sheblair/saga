@@ -1447,7 +1447,7 @@ header {
 .view-selector {
 	display: flex;
 	justify-content: center;
-	margin: 15px 0;
+	margin: 30px 0 15px 0;
 }
 
 .view-option {
@@ -1587,6 +1587,15 @@ header {
 #artist-bio {
 	flex-direction: column;
 	align-items: center;
+}
+
+#artist-bio p:first-of-type,
+#artist-bio p:last-of-type {
+	margin-bottom: 20px;
+}
+
+.artist-statement-header {
+	margin: 10px 0;
 }
 
 
@@ -1859,6 +1868,7 @@ TABLET STYLES
 	.artist-single-upper {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.artist-featured-image {
@@ -1868,6 +1878,14 @@ TABLET STYLES
 
 	.artist-info {
 		width: 48%;
+	}
+
+	.view-selector {
+		justify-content: center;
+	}
+
+	.view-option {
+		margin: 0 10px;
 	}
 }
 
