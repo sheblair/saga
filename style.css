@@ -1997,6 +1997,32 @@ TABLET STYLES
 	.artist-list-item {
 		font-size: 1.115rem;
 	}
+
+	/* single artist page */
+	.artist-single-upper {
+		margin-top: 50px;
+	}
+
+	.artist-single-lower {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#artist-bio {
+		width: 80%;
+	}
+
+	#artist-prints {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	#artist-prints figure {
+		width: 48%;
+		margin: 5px;
+	}
 }
 
 /* 
