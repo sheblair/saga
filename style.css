@@ -1872,17 +1872,18 @@ TABLET STYLES
 
 	.artist-single-upper {
 		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
 	.artist-featured-image {
 		margin-right: 20px;
-		width: 48%;
+		width: 50%;
 	}
 
 	.artist-info {
-		width: 48%;
+		width: 40%;
 	}
 
 	.view-selector.view-selector-single {
