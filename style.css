@@ -1582,7 +1582,7 @@ header {
 }
 
 .artist-single-link p {
-	margin-bottom: 5px;
+	margin: 10px 0;
 }
 
 /* style prints gallery */
@@ -1602,8 +1602,7 @@ header {
 	align-items: center;
 }
 
-#artist-bio p:first-of-type,
-#artist-bio p:last-of-type {
+#artist-bio p {
 	margin-bottom: 20px;
 }
 
