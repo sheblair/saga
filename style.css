@@ -1521,6 +1521,9 @@ header {
 .artist-container {
 	width: 90%;
 	margin: 0 auto;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* style accent strip */
@@ -1530,7 +1533,7 @@ header {
 
 /* style back to artists link */
 .back-to-artists {
-	margin: 20px 0;
+	margin: 20px 0 20px 10px
 }
 
 .back-to-artists a {
@@ -2004,12 +2007,19 @@ TABLET STYLES
 	}
 
 	/* single artist page */
+	.back-to-artists {
+		margin: 20px 0 20px 20px;
+	}
 	.accent-strip.accent-strip.accent-strip-artist {
 		width: 90%;
 	}
 
 	.artist-single-upper {
 		margin-top: 50px;
+	}
+
+	.artist-featured-image {
+		margin-right: 25px;
 	}
 
 	.artist-single-lower {
@@ -2019,7 +2029,7 @@ TABLET STYLES
 	}
 
 	#artist-bio {
-		width: 80%;
+		width: 70%;
 	}
 
 	#artist-prints {
@@ -2183,9 +2193,52 @@ DESKTOP STYLES
 	.artist-block {
 		width: 100%;
 	}
+
+	/* SINGLE ARTIST PAGE - DESKTOP */
+	.artist-featured-image {
+		width: 38%;
+		margin-right: 30px;
+	}
+
+	.view-selector.view-selector.view-selector-single {
+		margin-top: 70px;
+	}
+
+	#artist-bio {
+		width: 65%;
+	}
+
+	#artist-prints figure {
+		width: 30%;
+		max-width: 30%;
+		margin: 10px;
+	}
+
 }
 
 /* larger desktop styles */
 @media screen and (min-width: 1200px) {
+	.artist-single-upper {
+		width: 80%;
+	}
+
+	.artist-featured-image {
+		width: 45%;
+		margin-right: 40px;
+	}
+
+	.artist-info {
+		width: 40%;
+	}
+
+	#artist-bio {
+		width: 60%;
+	}
+
+	#artist-prints figure {
+		width: 20%;
+		max-width: 20%;
+		margin: 20px;
+	}
 
 }
