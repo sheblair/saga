@@ -83,7 +83,7 @@
 				<?php endif; ?>
 
 				<?php if ($artist_statement) : ?>
-					<h4 class="artist-statement-header">Artist Statement</h4>
+					<h4 class="artist-statement-header align-self-center">Artist Statement</h4>
 					<?php echo $artist_statement ?>
 				<?php endif; ?>
 			</div>
