@@ -2039,9 +2039,9 @@ TABLET STYLES
 	}
 
 	#artist-prints figure {
-		width: 35%;
-		max-width: 48%;
-		margin: 5px;
+		width: 30%;
+		max-width: 30%;
+		margin: 10px;
 		flex-grow: 1;
 	}
 }
@@ -2209,8 +2209,8 @@ DESKTOP STYLES
 	}
 
 	#artist-prints figure {
-		width: 30%;
-		max-width: 30%;
+		width: 25%;
+		max-width: 25%;
 		margin: 10px;
 	}
 
