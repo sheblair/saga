@@ -48,7 +48,7 @@
 				<?php endif; ?>
 
 				<?php if ( $email ) : ?>
-					<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Contact</p></a>
+					<a class="artist-single-link" target="_blank" href="mailto:<?php echo $email?>"><p class="artist-single-email">Email</p></a>
 				<?php endif; ?>
 
 				<?php if ( $link_1 ) : ?>
