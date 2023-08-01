@@ -67,7 +67,7 @@
 
 			<div class="view-selector view-selector-single">
 				<?php if ( get_the_content() ) : ?>
-					<p id="prints" class="view-option bold">Prints</p>
+					<p id="prints" class="view-option bold">Gallery</p>
 				<?php endif; ?>
 				<?php if ( $bio || $artist_statement ) : ?>
             		<p id="bio" class="view-option">Biography</p>
