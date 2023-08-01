@@ -2251,7 +2251,7 @@ DESKTOP STYLES
 
 	/* SINGLE ARTIST PAGE - DESKTOP */
 	.artist-featured-image {
-		width: 38%;
+		width: 50%;
 		margin-right: 30px;
 	}
 
@@ -2278,7 +2278,7 @@ DESKTOP STYLES
 	}
 
 	.artist-featured-image {
-		width: 45%;
+		width: 50%;
 		margin-right: 40px;
 	}
 
@@ -2294,4 +2294,10 @@ DESKTOP STYLES
 		margin: 20px;
 	}
 
+}
+
+@media screen and (min-width: 1600px) {
+	.artist-info {
+		width: 45%;
+	}
 }
