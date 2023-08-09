@@ -21,6 +21,7 @@
     if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); ?>
 
         <div class="block about-page-block">
+            <?php the_post_thumbnail(); ?>
             <?php the_content(); ?>
         </div>
 

@@ -998,7 +998,7 @@ body {
 }
 
 .hide {
-    /* '!important' is to make sure that when we add the class using JS, it takes precendence */
+    /* '!important' is to make sure that when we add the class using JS, it takes precedence */
     display: none !important;
 }
 
@@ -1010,7 +1010,7 @@ body {
 	align-self: center;
 }
 
-/* LIGHTBOX STYLES */
+/* LIGHTBOX STYLES -- all using !important to override plugin stylesheet*/
 /* font styles for print info */
 span.slb_data_title, 
 span.slb_group_status {
@@ -1087,6 +1087,7 @@ header {
 }
 
 /* NAV - MOBILE */
+
 /* general navigation menu styles */
 #header-menu {
 	display: flex;
@@ -1113,6 +1114,7 @@ header {
 }
 
 /* mobile toggle menu styles */
+
 /* nav menu and button styles */
 .main-navigation {
 	display: block;
@@ -1161,6 +1163,7 @@ header {
 }
 
 /* hamburger menu styles */
+
 /* style the spans */
 .main-navigation span {
 	display: block;
@@ -1307,50 +1310,36 @@ header {
 
 /* BASE BLOCK STYLES - MOBILE */
 .block {
-	width: 250px;
-	margin-bottom: 15px;
+	width: 90%;
+	margin: 20px 0;
 }
 
-.block .wp-block-heading {
-	font-size: 1rem;
-	margin-bottom: 10px;
-}
-
-.block a {
+.block * a {
 	color: var(--font-dark);
 }
 
-.block p {
-	margin-bottom: 5px;
+/* front page blocks */
+.block-title {
+	font-size: 1rem;
+	font-weight: 700;
 }
 
-.block-link {
-	margin: 15px 0;
-}
-
-.block-link a {
+.block-additional-link a {
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.block-link a:hover {
+.block-additional-link a:hover {
 	font-weight: normal;
 }
 
-.block-img-container {
-	width: 250px; /* Set the desired width of the figure element */
-  	height: 250px; /* Set the desired height of the figure element */
-  	overflow: hidden;
+.block-blurb {
+	margin: 10px 0;
 }
 
-.block-img-container img {
-	width: 100%; /* Make sure the image takes up the full width of the figure element */
-  	height: 100%; /* Make sure the image takes up the full height of the figure element */
-  	object-fit: cover; /* Crop the image to cover the entire figure while maintaining aspect ratio */
-}
-
+/* blocks container */
 .blocks-container {
 	display: flex;
 	flex-direction: column;
@@ -1358,6 +1347,36 @@ header {
 	width: 100%;
 }
 
+/* ABOUT PAGE - MOBILE */
+
+/* about page blocks */
+.block.about-page-block {
+	width: 80%;
+}
+
+.block.about-page-block * a {
+	text-decoration: none;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.about-page-block figure {
+	margin-bottom: 10px;
+}
+
+/* about page purpose */
+.about-page-purpose {
+	width: 90%;
+	margin: 50px auto;
+}
+
+.about-page-purpose p:first-of-type {
+	margin-bottom: 15px;
+}
+
+/* EXHIBITIONS PAGE - MOBILE */
+
+/* exhibitions page blocks */
 #current-show-blocks.blocks-container,
 #upcoming-show-blocks.blocks-container,
 #past-show-blocks.blocks-container {
@@ -1365,62 +1384,6 @@ header {
 	margin: 0;
 }
 
-/* FRONT PAGE BLOCKS - MOBILE (ratio: 1.060) */
-.block.front-page-block {
-	width: 300px;
-}
-
-.block.front-page-block .block-img-container {
-	width: 300px;
-	height: 283px;
-}
-
-/* ABOUT PAGE BLOCKS - MOBILE (ratio: 1) */
-.block.about-page-block {
-	width: 280px;
-}
-
-.block.about-page-block .block-img-container {
-	width: 280px;
-	height: 280px;
-}
-
-/* EXHIBITIONS BLOCKS - MOBILE (ratio: 1.2727 for current/upcoming, 1.185 for past) */
-.block.current-show-block,
-.block.upcoming-show-block {
-	width: 335px;
-}
-
-.block.current-show-block .block-img-container,
-.block.upcoming-show-block .block-img-container {
-	width: 335px;
-	height: 263px;
-}
-
-.block.past-show-block {
-	width: 275px;
-}
-
-.block.past-show-block .block-img-container {
-	width: 300px;
-	height: 253px;
-}
-
-/* ABOUT PAGE - MOBILE */
-.about-page-block > h2 > a {
-	text-decoration: none;
-}
-
-.about-page-block figure {
-	margin-bottom: 10px;
-}
-
-.about-page-purpose {
-	width: 90%;
-	margin: 50px auto;
-}
-
-/* EXHIBITIONS PAGE - MOBILE */
 #exhibitions > div:not(.block, .partners) {
 	margin: 30px 0;
 }
@@ -1665,54 +1628,6 @@ header {
 	margin: 10px 0;
 }
 
-
-/* smallest phone screen size */
-@media screen and (max-width: 374px) {
-	/* front page blocks */
-	.block.front-page-block {
-		width: 240px;
-	}
-
-	.block.front-page-block .block-img-container {
-		width: 240px;
-		height: 225px;
-	}
-
-	/* about page blocks */
-	.block.about-page-block {
-		width: 240px;
-	}
-
-	.block.about-page-block .block-img-container {
-		width: 240px;
-		height: 240px;
-	}
-
-	/* exhibitions blocks */
-	.block.current-show-block,
-	.block.upcoming-show-block {
-		width: 240px;
-	}
-
-	.block.current-show-block .block-img-container,
-	.block.upcoming-show-block .block-img-container {
-		width: 240px;
-		height: 188px;
-	}
-
-	.block.past-show-block {
-		width: 220px;
-	}
-	
-	.block.past-show-block .block-img-container {
-		width: 220px;
-		height: 185px;
-	}
-
-	/* artist blocks */
-	
-}
-
 /* 
 *
 *
@@ -1807,13 +1722,8 @@ TABLET STYLES
 	/* BLOCK STYLES - TABLET */
 	/* front page blocks */
 	.block.front-page-block {
-		width: 250px;
-		margin: 10px;
-	}
-
-	.block.front-page-block .block-img-container {
-		width: 250px;
-		height: 235px;
+		width: 45%;
+		margin: 20px 10px;
 	}
 
 	#front-page-blocks.blocks-container,
@@ -1826,17 +1736,6 @@ TABLET STYLES
 		align-items: flex-start;
 	}
 
-	/* about page blocks */
-	.block.about-page-block {
-		width: 220px;
-		margin: 20px;
-	}
-
-	.block.about-page-block .block-img-container {
-		width: 220px;
-		height: 220px;
-	}
-
 	/* exhibitions page blocks */
 	#past-show-blocks.blocks-container {
 		width: 100%;
@@ -1845,16 +1744,6 @@ TABLET STYLES
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: flex-start;
-	}
-
-	.block.past-show-block {
-		width: 250px;
-		margin-right: 20px;
-	}
-	
-	.block.past-show-block .block-img-container {
-		width: 250px;
-		height: 211px;
 	}
 
 	/* EXHIBITIONS PAGE - TABLET */
@@ -1961,27 +1850,6 @@ TABLET STYLES
 		margin: 50px 0;
 	}
 
-	.block.front-page-block {
-		width: 300px;
-		margin: 0 20px;
-	}
-
-	.block.front-page-block .block-img-container {
-		width: 300px;
-		height: 283px;
-	}
-
-	/* about page blocks */
-	.block.about-page-block {
-		width: 250px;
-		margin: 20px;
-	}
-
-	.block.about-page-block .block-img-container {
-		width: 250px;
-		height: 250px;
-	}
-
 	/* about page */
 	.about-page-purpose {
 		width: 70%;
@@ -2005,15 +1873,6 @@ TABLET STYLES
 	.block.upcoming-show-block,
 	.block.past-show-block {
 		margin-right: 10px;
-	}
-
-	.block.past-show-block {
-		width: 220px;
-	}
-	
-	.block.past-show-block .block-img-container {
-		width: 220px;
-		height: 185px;
 	}
 
 	/* artists page */
@@ -2168,20 +2027,25 @@ DESKTOP STYLES
 
 	#about-page-blocks.blocks-container,
 	#front-page-blocks.blocks-container {
-		max-width: 1100px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
 	/* GENERAL BLOCK STYLES - DESKTOP */
-	.block.front-page-post .wp-block-heading {
+	.block.front-page-block {
+		width: 30%;
+		margin: 40px 20px;
+	}
+
+	.block-link-title {
 		font-size: 1.125rem;
 	}
 
-	.block p {
+	.block-blurb {
 		font-size: 1rem;
 	}
 
-	.block-link a {
+	.block-link {
 		font-size: .875rem;
 	}
 
@@ -2192,25 +2056,6 @@ DESKTOP STYLES
 	}
 
 	/* exhibition page blocks */
-	.block.current-show-block,
-	.block.upcoming-show-block {
-		width: 419px;
-	}
-
-	.block.current-show-block .block-img-container,
-	.block.upcoming-show-block .block-img-container {
-		width: 419px;
-		height: 303px;
-	}
-
-	.block.past-show-block {
-		width: 275px;
-	}
-
-	.block.past-show-block .block-img-container {
-		width: 275px;
-		height: 232px;
-	}
 
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 		max-width: 10%;

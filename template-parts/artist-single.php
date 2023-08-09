@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying a single Artist Page post
+ * Template part for displaying a single Artist Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
