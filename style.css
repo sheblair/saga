@@ -1010,6 +1010,7 @@ body {
 	align-self: center;
 }
 
+/* centers the heading that displays when a WP query is found empty */
 .oops-nothing-here {
 	margin: 0 auto;
     text-align: center;
@@ -1318,9 +1319,9 @@ header {
 	margin-top: 38px;
 }
 
-/* BASE BLOCK STYLES - MOBILE */
+/* BLOCK STYLES - MOBILE */
 .block {
-	width: 90%;
+	width: 100%;
 	margin: 20px 0;
 }
 
@@ -1328,12 +1329,16 @@ header {
 	color: var(--font-dark);
 }
 
-/* front page blocks */
 .block-title {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-weight: 700;
 }
 
+.block-blurb {
+	margin: 10px 0;
+}
+
+/* style the link that appears after the block blurb */
 .block-additional-link a {
 	text-transform: uppercase;
 	font-size: 1rem;
@@ -1345,8 +1350,20 @@ header {
 	font-weight: normal;
 }
 
-.block-blurb {
-	margin: 10px 0;
+/* about page blocks */
+.block.about-page-block {
+	width: 90%;
+}
+
+/* style the about page block title, which comes from the_content() not from a custom field */
+.block.about-page-block * a {
+	text-decoration: none;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.about-page-block figure {
+	margin-bottom: 10px;
 }
 
 /* blocks container */
@@ -1358,21 +1375,6 @@ header {
 }
 
 /* ABOUT PAGE - MOBILE */
-
-/* about page blocks */
-.block.about-page-block {
-	width: 80%;
-}
-
-.block.about-page-block * a {
-	text-decoration: none;
-	font-size: 1.125rem;
-	font-weight: 700;
-}
-
-.about-page-block figure {
-	margin-bottom: 10px;
-}
 
 /* about page purpose */
 .about-page-purpose {
