@@ -1010,6 +1010,16 @@ body {
 	align-self: center;
 }
 
+.oops-nothing-here {
+	margin: 0 auto;
+    text-align: center;
+}
+
+/* allows embedded youtube player to be aligned to the center */
+.youtube-player {
+	display: inline !important;
+}
+
 /* LIGHTBOX STYLES -- all using !important to override plugin stylesheet*/
 /* font styles for print info */
 span.slb_data_title, 
