@@ -1421,6 +1421,7 @@ header {
 
 .partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 	max-width: 35%;
+	margin: 0 5px;
 }
 
 /*
@@ -2070,37 +2071,40 @@ DESKTOP STYLES
 		margin-right: 60px;
 	}
 
-	/* GENERAL PAGE STYLES - DESKTOP */
 	main {
 		margin: 45px;
 	}
 
-	main#exhibitions {
-		margin: 65px 75px;
+	/* BLOCK STYLES - DESKTOP */
+	.block-title {
+		font-size: 1.125rem;
+	}
+
+	.block.front-page-block {
+		width: 25%;
+		margin: 40px 20px;
+	}
+
+	.block.about-page-block {
+		width: 25%;
+		margin: 25px;
+	}
+
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 40%;
+		margin-right: 40px;
+	}
+
+	.block.past-show-block {
+		width: 30%;
+		margin: 20px 25px 20px 0;
 	}
 
 	#about-page-blocks.blocks-container,
 	#front-page-blocks.blocks-container {
 		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	/* GENERAL BLOCK STYLES - DESKTOP */
-	.block.front-page-block {
-		width: 30%;
-		margin: 40px 20px;
-	}
-
-	.block-link-title {
-		font-size: 1.125rem;
-	}
-
-	.block-blurb {
-		font-size: 1rem;
-	}
-
-	.block-link {
-		font-size: .875rem;
+		margin: 80px auto;
 	}
 
 	/* ABOUT PAGE - DESKTOP */
@@ -2109,7 +2113,10 @@ DESKTOP STYLES
 		margin: 75px auto;
 	}
 
-	/* exhibition page blocks */
+	/* EXHIBITIONS PAGE - DESKTOP */
+	main#exhibitions {
+		margin: 65px 75px;
+	}
 
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 		max-width: 10%;
@@ -2172,6 +2179,23 @@ DESKTOP STYLES
 
 /* larger desktop styles */
 @media screen and (min-width: 1200px) {
+
+	/* EXHIBITIONS PAGE */
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 30%;
+	}
+
+	.block.past-show-block {
+		width: 22%;
+		margin: 20px 35px 20px 0;
+	}
+
+	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
+		max-width: 7%;
+	}
+
+	/* ARTIST PAGES */
 	.artist-single-upper {
 		width: 80%;
 	}
@@ -2196,6 +2220,17 @@ DESKTOP STYLES
 }
 
 @media screen and (min-width: 1600px) {
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 22%;
+		max-width: 22%;
+	}
+
+	.block.past-show-block {
+		width: 15%;
+		max-width: 15%;
+	}
+
 	.artist-info {
 		width: 45%;
 	}
