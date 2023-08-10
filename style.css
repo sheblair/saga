@@ -1732,10 +1732,20 @@ TABLET STYLES
 	}
 
 	/* BLOCK STYLES - TABLET */
-	/* front page blocks */
-	.block.front-page-block {
+	.block.front-page-block,
+	.block.about-page-block {
 		width: 45%;
-		margin: 20px 10px;
+		margin: 10px;
+	}
+
+	.block-title,
+	.block.about-page-block * a {
+		font-size: 1rem;
+	}
+
+	.past-show-block .block-title,
+	.past-show-block .block-blurb {
+		font-size: .875rem;
 	}
 
 	#front-page-blocks.blocks-container,
@@ -1749,6 +1759,16 @@ TABLET STYLES
 	}
 
 	/* exhibitions page blocks */
+	.block.past-show-block {
+		width: 45%;
+		margin: 10px;
+	}
+	
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 60%;
+	}
+
 	#past-show-blocks.blocks-container {
 		width: 100%;
 		display: flex;
