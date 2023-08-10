@@ -1330,7 +1330,7 @@ header {
 }
 
 .block-title {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 700;
 }
 
@@ -1407,7 +1407,7 @@ header {
 }
 
 .shows-title {
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 500;
 }
 
@@ -1738,9 +1738,12 @@ TABLET STYLES
 		margin: 10px;
 	}
 
-	.block-title,
-	.block.about-page-block * a {
+	.block-title {
 		font-size: 1rem;
+	}
+
+	.block.about-page-block * a {
+		font-size: 1.125rem;
 	}
 
 	.past-show-block .block-title,
@@ -1781,6 +1784,10 @@ TABLET STYLES
 	/* EXHIBITIONS PAGE - TABLET */
 	main#exhibitions {
 		margin: 30px;
+	}
+
+	.shows-title {
+		font-size: 1.35rem;
 	}
 
 	.wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
