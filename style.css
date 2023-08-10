@@ -1761,7 +1761,7 @@ TABLET STYLES
 	/* exhibitions page blocks */
 	.block.past-show-block {
 		width: 45%;
-		margin: 10px;
+		margin: 25px 25px 25px 0;
 	}
 	
 	.block.current-show-block,
@@ -1877,22 +1877,42 @@ TABLET STYLES
 		width: 40%;
 		max-width: 40%;
 	}
-	/* front page blocks */
+
 	#front-page {
 		margin: 50px 0;
+	}
+
+	.block.front-page-block {
+		width: 40%;
+		margin: 20px;
+	}
+
+	.block.about-page-block {
+		width: 35%;
+		margin: 15px;
 	}
 
 	/* about page */
 	.about-page-purpose {
 		width: 70%;
 	}
-
-	/* exhibitions page */
 	
 	/* exhibitions page blocks */
+	.block.current-show-block,
+	.block.upcoming-show-block {
+		width: 45%;
+		margin-right: 30px;
+	}
+
+	.block.past-show-block {
+		width: 30%;
+		margin: 20px 20px 20px 0;
+	}
+
 	main#exhibitions {
 		margin: 50px;
 	}
+
 	#upcoming-show-blocks.blocks-container {
 		width: 100%;
 		display: flex;
@@ -1900,11 +1920,6 @@ TABLET STYLES
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: flex-start;
-	}
-
-	.block.upcoming-show-block,
-	.block.past-show-block {
-		margin-right: 10px;
 	}
 
 	/* artists page */
