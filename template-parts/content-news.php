@@ -21,8 +21,8 @@
 		<?php the_title();?>
 	</header>
 
-	<div class="post-content">
+	<div class="post-content post-content-news">
 		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

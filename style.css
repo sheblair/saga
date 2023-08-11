@@ -616,6 +616,18 @@ a:active {
 	outline: 0;
 }
 
+.back-link a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: .875rem;
+	color: var(--font-dark);
+}
+
+.back-link a:hover {
+	text-decoration: underline;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -866,7 +878,7 @@ textarea {
 
 /* Header
 --------------------------------------------- */
-header {
+header#masthead {
 	margin: 10px;
 	display: flex;
 	align-items: center;
@@ -1031,7 +1043,8 @@ main#post {
 	align-self: flex-start;
 }
 
-.wp-element-caption {
+/* center image caption only on news posts */
+.post-content.post-content-news .wp-block-image .wp-element-caption {
 	text-align: center;
 }
 
@@ -1162,6 +1175,10 @@ main#news {
 
 #news .accent-strip {
 	width: 80%;
+}
+
+.back-link.back-to-news {
+	margin-bottom: 15px;
 }
 
 .news-items-heading {
@@ -1330,20 +1347,8 @@ main#news {
 }
 
 /* style back to artists link */
-.back-link {
+.back-link.back-to-artists {
 	margin: 20px 0 20px 10px
-}
-
-.back-link a {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 300;
-	font-size: .875rem;
-	color: var(--font-dark);
-}
-
-.back-link a:hover {
-	text-decoration: underline;
 }
 
 /* style artist featured image and contact info */
@@ -1782,15 +1787,14 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* posts - tablet */
-
-	/* news posts - tablet */
-	.post.category-news {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+	.post {
 		width: 90%;
 	}
 
+	.back-link.back-to-news,
+	.back-link.back-to-exhibitions {
+		margin-bottom: 30px;
+	}
 
 	/* pages - tablet */
 	.page-heading-wrapper {
@@ -1944,6 +1948,23 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		align-items: flex-start;
 	}
 
+	/* posts - intermediate tablet */
+	.post {
+		width: 80%;
+	}
+
+	.post-content.post-content-news .wp-block-image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.post-content .wp-block-image img {
+		width: 80%;
+		max-width: 80%;
+	}
+
 	/* pages - intermediate tablet */
 	#front-page {
 		margin: 50px 0;
@@ -2014,7 +2035,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* single artist - intermediate tablet */
-	.back-link {
+	.back-link.back-link.back-to-artists {
 		margin: 20px 0 20px 20px;
 	}
 	.accent-strip.accent-strip.accent-strip-artist {
@@ -2133,6 +2154,42 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 80px auto;
 	}
 
+	/* posts - desktop */
+	.post-content .wp-block-image img {
+		width: 60%;
+		max-width: 60%;
+	}
+
+	/* exhibition posts */
+	.post-content.post-content-exhibition {
+		align-items: flex-start;
+		width: 90%;
+	}
+
+	.post-content.post-content-exhibition .wp-block-image {
+		align-items: flex-start;
+	}
+
+	/* news posts */
+	article.category-news {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.back-link.back-to-news {
+		align-self: flex-start;
+	}
+
+	.post-content.post-content-news {
+		width: 80%;
+	}
+
+	.post-content.post-content-news p {
+		width: 90%;
+		align-self: center;
+	}
+
 	/* pages - desktop */
 	main {
 		margin: 45px;
@@ -2238,6 +2295,10 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 /* Large Desktop */
 
 @media screen and (min-width: 1200px) {
+	/* posts - large desktop */
+	.post-content p {
+		width: 90%;
+	}
 
 	/* exhibitions - large desktop */
 	.block.current-show-block,
@@ -2254,6 +2315,17 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 7%;
 	}
 
+	/* news - large desktop */
+	.news-items {
+		width: 90%;
+		max-width: 900px;
+	}
+
+	.news-items .wp-block-query ul .post.category-news {
+		width: 100%;
+	}
+
+	/* artists - large desktop */
 	.artists-page-toolbar {
 		width: 80%;
 		max-width: 1100px;

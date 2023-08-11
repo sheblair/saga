@@ -21,7 +21,7 @@
 		<?php the_title();?>
 	</header>
 
-	<div class="post-content">
+	<div class="post-content post-content-exhibition">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
