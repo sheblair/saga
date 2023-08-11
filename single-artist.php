@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<main id="artist-single" class="site-main">
-		<div class="back-to-artists">
+		<div class="back-link back-to-artists">
 			<a href="http://localhost:8888/saga/artists">← Back to artists</a>
 		</div>
 

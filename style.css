@@ -1330,11 +1330,11 @@ main#news {
 }
 
 /* style back to artists link */
-.back-to-artists {
+.back-link {
 	margin: 20px 0 20px 10px
 }
 
-.back-to-artists a {
+.back-link a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 300;
@@ -1342,7 +1342,7 @@ main#news {
 	color: var(--font-dark);
 }
 
-.back-to-artists a:hover {
+.back-link a:hover {
 	text-decoration: underline;
 }
 
@@ -1781,6 +1781,17 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		align-items: flex-start;
 	}
 
+	/* posts - tablet */
+
+	/* news posts - tablet */
+	.post.category-news {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90%;
+	}
+
+
 	/* pages - tablet */
 	.page-heading-wrapper {
 		margin-top: 50px;
@@ -2003,7 +2014,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* single artist - intermediate tablet */
-	.back-to-artists {
+	.back-link {
 		margin: 20px 0 20px 20px;
 	}
 	.accent-strip.accent-strip.accent-strip-artist {
