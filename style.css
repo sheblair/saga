@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Navigation
 	- Header
 	- Footer
+	- Blocks
 	- Posts
 	- Pages
 		- Generic Page
@@ -41,7 +42,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		- News
 		- Artists
 		- Single Artist
-	- Blocks
 	- Widgets
 	- Media
 	- Captions
@@ -944,6 +944,64 @@ header {
 	font-size: 1rem;
 }
 
+/* Blocks
+--------------------------------------------- */
+
+/* general block styles */
+.block {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.block * a {
+	color: var(--font-dark);
+}
+
+.block-title {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.block-blurb {
+	margin: 10px 0;
+}
+
+/* style the link that appears after the block blurb */
+.block-additional-link a {
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.block-additional-link a:hover {
+	font-weight: normal;
+}
+
+/* about page blocks */
+.block.about-page-block {
+	width: 90%;
+}
+
+/* style the about page block title, which comes from the_content() not from a custom field */
+.block.about-page-block * a {
+	text-decoration: none;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.about-page-block figure {
+	margin-bottom: 10px;
+}
+
+/* blocks container */
+.blocks-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
 /* Posts
 --------------------------------------------- */
 main#post {
@@ -1350,64 +1408,6 @@ main#news {
 	margin: 10px 0;
 }
 
-/* Blocks
---------------------------------------------- */
-
-/* general block styles */
-.block {
-	width: 100%;
-	margin: 20px 0;
-}
-
-.block * a {
-	color: var(--font-dark);
-}
-
-.block-title {
-	font-size: 1rem;
-	font-weight: 700;
-}
-
-.block-blurb {
-	margin: 10px 0;
-}
-
-/* style the link that appears after the block blurb */
-.block-additional-link a {
-	text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.block-additional-link a:hover {
-	font-weight: normal;
-}
-
-/* about page blocks */
-.block.about-page-block {
-	width: 90%;
-}
-
-/* style the about page block title, which comes from the_content() not from a custom field */
-.block.about-page-block * a {
-	text-decoration: none;
-	font-size: 1.125rem;
-	font-weight: 700;
-}
-
-.about-page-block figure {
-	margin-bottom: 10px;
-}
-
-/* blocks container */
-.blocks-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
-
 /* Widgets
 --------------------------------------------- */
 .widget {
@@ -1657,7 +1657,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 @media screen and (min-width: 600px) {
 
-	/* HEADER - TABLET */
+	/* header - tablet */
 	header {
 		flex-direction: column;
 		justify-content: center;
@@ -1674,7 +1674,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 60%;
 	}
 
-	/* NAVIGATION - TABLET */
+	/* navigation - tablet */
 	#header-menu {
 		flex-direction: row;
 		padding: 0;
@@ -1704,12 +1704,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 0;
 	}
 
-	/* GENERAL PAGE STYLES - TABLET */
-	.page-heading-wrapper {
-		margin-top: 50px;
-	}
-
-	/* FOOTER - TABLET */
+	/* footer - tablet */
 	.site-footer {
 		margin-top: 40px;
 	}
@@ -1736,7 +1731,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin-top: 30px;
 	}
 
-	/* BLOCK STYLES - TABLET */
+	/* blocks - tablet */
 	.block.front-page-block,
 	.block.about-page-block {
 		width: 45%;
@@ -1786,7 +1781,12 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		align-items: flex-start;
 	}
 
-	/* EXHIBITIONS PAGE - TABLET */
+	/* pages - tablet */
+	.page-heading-wrapper {
+		margin-top: 50px;
+	}
+
+	/* exhibitions - tablet */
 	main#exhibitions {
 		margin: 30px;
 	}
@@ -1803,7 +1803,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 15%;
 	}
 
-	/* NEWS PAGE - TABLET */
+	/* news - tablet */
 	.news-items .wp-block-query ul {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1813,8 +1813,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 90%;
 	}
 
-	/* ARTISTS PAGE - TABLET */
-	/* style the toolbar */
+	/* artists - tablet */
 	.artists-page-toolbar {
 		flex-flow: row wrap;
     	align-items: center;
@@ -1863,7 +1862,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 10px 0;
 	}
 
-	/* SINGLE ARTIST PAGE - TABLET */
+	/* single artist - tablet */
 	.accent-strip.accent-strip-artist {
 		margin-bottom: 30px;
 	}
@@ -1896,15 +1895,14 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 /* Intermediate Tablet */
 
 @media screen and (min-width: 800px) {
+
+	/* header - intermediate tablet */
 	.custom-logo {
 		width: 40%;
 		max-width: 40%;
 	}
 
-	#front-page {
-		margin: 50px 0;
-	}
-
+	/* blocks - intermediate tablet */
 	.block.front-page-block {
 		width: 40%;
 		margin: 20px;
@@ -1915,12 +1913,6 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 15px;
 	}
 
-	/* about page */
-	.about-page-purpose {
-		width: 70%;
-	}
-	
-	/* exhibitions page blocks */
 	.block.current-show-block,
 	.block.upcoming-show-block {
 		width: 45%;
@@ -1932,10 +1924,6 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 20px 20px 20px 0;
 	}
 
-	main#exhibitions {
-		margin: 50px;
-	}
-
 	#upcoming-show-blocks.blocks-container {
 		width: 100%;
 		display: flex;
@@ -1945,7 +1933,22 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		align-items: flex-start;
 	}
 
-	/* news page */
+	/* pages - intermediate tablet */
+	#front-page {
+		margin: 50px 0;
+	}
+
+	/* about - intermediate tablet */
+	.about-page-purpose {
+		width: 70%;
+	}
+	
+	/* exhibitions - intermediate tablet */
+	main#exhibitions {
+		margin: 50px;
+	}
+
+	/* news - intermediate tablet */
 	.new-members-slideshow {
 		width: 75%;
 	}
@@ -1954,7 +1957,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	/* artists page */
+	/* artists - intermediate tablet */
 	#artists-page {
 		display: flex;
 		flex-direction: column;
@@ -1967,7 +1970,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 20px 0;
 	}
 
-	/* blocks view */
+	/* artist blocks */
 	#artists-page-blocks {
 		margin: 20px 0;
 		width: 90%;
@@ -1984,7 +1987,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 90%;
 	}
 
-	/* list view */
+	/* artist list */
 	#artists-page-list {
 		flex-direction: column;
 		align-items: center;
@@ -1999,7 +2002,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		font-size: 1.115rem;
 	}
 
-	/* single artist page */
+	/* single artist - intermediate tablet */
 	.back-to-artists {
 		margin: 20px 0 20px 20px;
 	}
@@ -2042,7 +2045,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 /* Desktop */
 
 @media screen and (min-width: 1000px) {
-	/* HEADER - DESKTOP */
+	/* header - desktop */
 	header {
 		margin-bottom: 50px;
 	}
@@ -2052,7 +2055,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 30%;
 	}
 
-	/* FOOTER - DESKTOP */
+	/* footer - desktop */
 	.footer-upper {
 		margin-top: 60px;
 	}
@@ -2087,11 +2090,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin-right: 60px;
 	}
 
-	main {
-		margin: 45px;
-	}
-
-	/* BLOCK STYLES - DESKTOP */
+	/* blocks - desktop */
 	.block-title {
 		font-size: 1.125rem;
 	}
@@ -2123,13 +2122,18 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 80px auto;
 	}
 
-	/* ABOUT PAGE - DESKTOP */
+	/* pages - desktop */
+	main {
+		margin: 45px;
+	}
+
+	/* about - desktop */
 	.about-page-purpose {
 		width: 55%;
 		margin: 75px auto;
 	}
 
-	/* EXHIBITIONS PAGE - DESKTOP */
+	/* exhibitions - desktop */
 	main#exhibitions {
 		margin: 65px 75px;
 	}
@@ -2138,7 +2142,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 10%;
 	}
 
-	/* NEWS PAGE - DESKTOP */
+	/* news - desktop */
 	.new-members-slideshow {
 		width: 50%;
 		max-width: 1200px;
@@ -2163,8 +2167,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 	
 
-	/* ARTISTS PAGES - DESKTOP */
-
+	/* artists - desktop */
 	.artists-page-toolbar {
 		width: 95%;
 	}
@@ -2199,7 +2202,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		font-size: 1rem;
 	}
 
-	/* SINGLE ARTIST PAGE - DESKTOP */
+	/* single artist - desktop */
 	.artist-featured-image {
 		width: 50%;
 		margin-right: 30px;
@@ -2225,7 +2228,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 @media screen and (min-width: 1200px) {
 
-	/* EXHIBITIONS PAGE */
+	/* exhibitions - large desktop */
 	.block.current-show-block,
 	.block.upcoming-show-block {
 		width: 30%;
@@ -2250,7 +2253,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 1100px;
 	}
 
-	/* ARTIST PAGES */
+	/* single artist - large desktop */
 	.artist-single-upper {
 		width: 80%;
 	}
@@ -2271,12 +2274,13 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	#artist-prints figure {
 		margin: 20px;
 	}
-
 }
 
 /* XL Desktop */
 
 @media screen and (min-width: 1600px) {
+
+	/* blocks - xl desktop */
 	.block.current-show-block,
 	.block.upcoming-show-block {
 		width: 22%;
@@ -2288,6 +2292,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 15%;
 	}
 
+	/* single artist - xl desktop */
 	.artist-info {
 		width: 45%;
 	}
