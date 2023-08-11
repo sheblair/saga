@@ -1466,6 +1466,7 @@ main#news {
 	margin: 0;
 }
 
+/* style the titles of the news posts */
 .news-items * .wp-block-post-title {
 	font-size: 1rem;
 	margin-bottom: 10px;
@@ -2208,11 +2209,27 @@ DESKTOP STYLES
 	/* NEWS PAGE - DESKTOP */
 	.new-members-slideshow {
 		width: 50%;
+		max-width: 50%;
 	}
 
 	.news-items {
-		width: 60%;
+		width: 80%;
+		max-width: 700px;
 	}
+
+	.news-items * .wp-block-post-title {
+		font-size: .875rem;
+		margin-bottom: 10px;
+	}
+
+	.news-items * .wp-block-post-excerpt p {
+		font-size: .875rem;
+	}
+
+	.news-items * .wp-block-post-date time {
+		font-size: .875rem;
+	}
+	
 
 	/* ARTISTS PAGES - DESKTOP */
 
