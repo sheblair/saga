@@ -430,8 +430,9 @@ kept here for record of original color choices made during initial site construc
 }
 
 .hide {
-    /* '!important' is to make sure that when we add the class using JS, it takes precedence */
-    display: none !important;
+    /* I had !important here because I thought it was necessary for the JS view selectors
+	to work but it was interfering with the News view selector so I removed it */
+    display: none;
 }
 
 .bold {

@@ -24,11 +24,19 @@ get_header();
                 </div>
                 <h2 class="new-members-heading">Welcome to our new members!</h2>
             </div>
+            
             <div class="accent-strip"></div>
+
+            <!-- View selector -->
+            <div class="view-selector view-selector-single">
+				<p id="instagram" class="view-option bold">Recent Posts</p>
+            	<p id="news-selector" class="view-option">Recent News</p>
+			</div>
+
             <div class="news-items">
-                <h2 class="news-items-heading">Recent News</h2>
                 <?php the_content(); ?>
             </div>
+
 		</main>
 
 	<?php endwhile; ?>

@@ -6,7 +6,12 @@
  */
 ( function() {
 
-    // Switch view and selector appearance when selectors are clicked
+    // Automatically update copyright year to current year
+	const copyright = document.querySelector('.copyright');
+    const currentYear = new Date().getFullYear();
+    copyright.innerText = `© ${currentYear} Society of American Graphic Artists`;
+
+    // View selectors for Artists page and Single Artist page
     const thumbnailSelector = document.querySelector('#thumbnail');
     const listSelector = document.querySelector('#list');
     const printsSelector = document.querySelector('#prints');
@@ -56,6 +61,34 @@
             bioSelector.classList.add('bold');
         })
     }    
+
+    // View selector for News page
+    const igSelector = document.querySelector('#instagram');
+    const newsSelector = document.querySelector('#news-selector');
+    const igFeed = document.querySelector('#sb_instagram');
+    const newsLoop = document.querySelector('.news-items-loop');
+
+    console.log(igSelector, newsSelector, igFeed, newsLoop);
+
+    if (newsSelector) {
+        newsSelector.addEventListener('click', () => {
+            igFeed.classList.add('hide');
+            newsLoop.classList.remove('hide');
+
+            igSelector.classList.remove('bold');
+            newsSelector.classList.add('bold');
+        })
+    }
+
+    if (igSelector) {
+        igSelector.addEventListener('click', () => {
+            igFeed.classList.remove('hide');
+            newsLoop.classList.add('hide');
+
+            newsSelector.classList.remove('bold');
+            igSelector.classList.add('bold');
+        })
+    }
 
     // Artists page dynamic search
     const filterInput = document.querySelector('#search');

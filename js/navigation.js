@@ -6,12 +6,6 @@
  */
 ( function() {
 
-	// Automatically update copyright year to current year
-	const copyright = document.querySelector('.copyright');
-    const currentYear = new Date().getFullYear();
-    copyright.innerText = `© ${currentYear} Society of American Graphic Artists`;
-
-
 	// Start navigation handling
 	const body = document.querySelector('body');
 	
