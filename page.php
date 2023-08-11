@@ -21,7 +21,7 @@ get_header();
 			<div class="accent-strip"></div>
 		</div>
 
-		<main id="primary" class="site-main">
+		<main id="page" class="site-main">
 
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
