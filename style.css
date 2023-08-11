@@ -1424,6 +1424,70 @@ header {
 	margin: 0 5px;
 }
 
+/* NEWS PAGE - MOBILE */
+main#news {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new-members-slideshow {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new-members-slideshow {
+	margin: 30px 0;
+}
+
+.new-members-heading {
+	font-size: 1.125rem;
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* news items styles */
+.news-items {
+	margin-top: 50px;
+}
+
+#news .accent-strip {
+	width: 80%;
+}
+
+.news-items-heading {
+	margin-bottom: 10px;
+	font-size: 1.125rem;
+	margin-left: 20px;
+}
+
+.wp-block-query ul {
+	margin: 0;
+}
+
+.news-items * .wp-block-post-title {
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+
+.news-items * .wp-block-post-title a {
+	color: var(--font-dark);
+}
+
+/* override default padding on news item blocks */
+.news-items * .wp-block-group {
+	padding-top: 20px !important;
+	padding-right: 20px !important;
+	padding-bottom: 20px !important;
+	padding-left: 20px !important;
+}
+
+/* remove grid gap on news items grid */
+.news-items * :where(.wp-block-post-template.is-layout-grid) {
+	gap: 0em;
+}
+
 /*
 *
 *
@@ -1799,6 +1863,16 @@ TABLET STYLES
 		max-width: 15%;
 	}
 
+	/* NEWS PAGE - TABLET */
+	.news-items .wp-block-query ul {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.news-items,
+	.new-members-slideshow {
+		width: 90%;
+	}
+
 	/* ARTISTS PAGE - TABLET */
 	/* style the toolbar */
 	.artists-page-toolbar {
@@ -1928,6 +2002,15 @@ TABLET STYLES
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items: flex-start;
+	}
+
+	/* news page */
+	.new-members-slideshow {
+		width: 75%;
+	}
+
+	.news-items .wp-block-query ul {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
 	/* artists page */
@@ -2123,17 +2206,8 @@ DESKTOP STYLES
 	}
 
 	/* NEWS PAGE - DESKTOP */
-	main#news {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.new-members-slideshow {
 		width: 50%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	.news-items {
