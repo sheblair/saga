@@ -742,9 +742,9 @@ textarea {
 	display: block;
 }
 
-.post {
+/* .post {
 	margin: 0 0 1.5em;
-}
+} */
 
 .updated:not(.published) {
 	display: none;
@@ -1328,10 +1328,42 @@ main#page {
 	align-items: center;
 }
 
-.entry-content {
+.page-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+/* GENERAL POST STYLES - MOBILE */
+main#post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.accent-strip.post-accent-strip {
+	margin: 10px 0 30px 0;
+}
+
+.post-header {
+	font-weight: 700;
+	font-size: 1.125rem;
+	margin: 10px 0;
+}
+
+.post-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.post-content p {
+	margin: 5px 0;
+	align-self: flex-start;
+}
+
+.wp-element-caption {
+	text-align: center;
 }
 
 /* BLOCK STYLES - MOBILE */
@@ -1479,6 +1511,10 @@ main#news {
 
 .wp-block-query ul {
 	margin: 0;
+}
+
+.news-items * .wp-block-post-date time {
+	font-style: italic;
 }
 
 /* style the titles of the news posts */
