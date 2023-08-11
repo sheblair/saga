@@ -2160,6 +2160,11 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 60%;
 	}
 
+	figure.wp-block-gallery.has-nested-images {
+		width: 80%;
+		max-width: 900px;
+	}
+
 	/* exhibition posts */
 	.post-content.post-content-exhibition {
 		align-items: flex-start;
