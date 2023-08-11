@@ -13,6 +13,6 @@
 
 	<div class="page-content">
 		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+	</div>
 
-</div><!-- #post-<?php the_ID(); ?> -->
+</div>
