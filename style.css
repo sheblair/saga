@@ -2170,7 +2170,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 60%;
 	}
 
-	figure.wp-block-gallery.has-nested-images {
+	figure.wp-block-gallery.has-nested-images:not(.partners-gallery) {
 		width: 80%;
 		max-width: 900px;
 	}
