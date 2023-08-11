@@ -1296,6 +1296,8 @@ header {
 }
 
 /* GENERAL PAGE STYLES - MOBILE */
+
+/* page heading */
 .page-heading-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -1317,6 +1319,19 @@ header {
 	height: 7px;
 	background-color: var(--accent-color);
 	margin-top: 38px;
+}
+
+/* page main */
+main#page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.entry-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* BLOCK STYLES - MOBILE */
