@@ -2122,6 +2122,24 @@ DESKTOP STYLES
 		max-width: 10%;
 	}
 
+	/* NEWS PAGE - DESKTOP */
+	main#news {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.new-members-slideshow {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.news-items {
+		width: 60%;
+	}
+
 	/* ARTISTS PAGES - DESKTOP */
 
 	.artists-page-toolbar {
