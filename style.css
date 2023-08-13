@@ -1084,13 +1084,13 @@ main {
 main#page {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .page-content {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	margin: 20px auto;
 }
 
