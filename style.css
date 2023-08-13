@@ -1161,13 +1161,13 @@ main#news {
 	margin-top: 40px;
 }
 
-.new-members-slideshow {
+#new-members-slideshow {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.new-members-slideshow {
+#new-members-slideshow {
 	margin: 30px 0;
 }
 
@@ -1856,7 +1856,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	.news-items,
-	.new-members-slideshow {
+	#new-members-slideshow {
 		width: 90%;
 	}
 
@@ -2025,7 +2025,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* news - intermediate tablet */
-	.new-members-slideshow {
+	#new-members-slideshow {
 		width: 75%;
 	}
 
@@ -2267,7 +2267,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* news - desktop */
-	.new-members-slideshow {
+	#new-members-slideshow {
 		width: 50%;
 		max-width: 1200px;
 	}
