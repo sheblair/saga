@@ -1441,10 +1441,6 @@ main#news {
 
 /* collector prints */
 
-/* set font size on image captions in collector prints gallery */
-.wp-block-gallery.has-nested-images figure.wp-block-image.collector-print figcaption {
-	font-size: .75rem;
-}
 
 /* Widgets
 --------------------------------------------- */
@@ -1541,6 +1537,14 @@ main#news {
 
 .gallery-caption {
 	display: block;
+}
+
+/* gallery captions */
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	background: var(--font-light);
+	color: var(--font-dark);
+	font-size: .75rem;
+	padding: 5px;
 }
 
 /*--------------------------------------------------------------
