@@ -154,7 +154,8 @@ function create_custom_post_types() {
 }
 add_action( 'init', 'create_custom_post_types' );
 
-
+/* Re-order Single Artist title as First name, Last name (necessary to override Last name, First name
+set-up that ensures correct alphabetical order in the query loop) */
 function custom_artist_title($title) {
     // Check if it's the 'artist' custom post type (singular name)
     if (is_singular('artist')) {
@@ -216,3 +217,62 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Re-order admin menu items */
+
+
+function dgtlnk_custom_menu_order( $menu_ord ) {
+
+     if ( !$menu_ord ) return true;
+
+     return array(
+
+          'index.php', // Dashboard
+
+          'separator1', // First separator
+		
+          'edit.php', // Posts
+
+          'edit.php?post_type=page', // Pages
+
+		  'edit.php?post_type=artist', // Artist Pages
+
+		  'upload.php', // Media
+
+		  'separator2', // Second separator
+
+		  'users.php', // Users
+
+		  'tools.php', // Tools
+
+		  'options-general.php', // Settings
+		  
+		  'themes.php', // Appearance
+
+		  'separator-last', // Last separator
+
+		  'plugins.php', // Plugins
+
+		  'admin.php?page=fonts-plugin', // Fonts Plugin
+		  
+		  'edit.php?post_type=acf-field-group', // ACF
+
+		  'admin.php?page=metaslider', // MetaSlider
+
+		  'admin.php?page=sbi-feed-builder', // Instagram Feed
+
+		  'admin.php?page=cool-plugins-timeline-addon', // Cool Timeline - Timeline Addon
+
+     );
+
+}
+
+add_filter( 'custom_menu_order', 'dgtlnk_custom_menu_order', 10, 1 );
+add_filter( 'menu_order', 'dgtlnk_custom_menu_order', 10, 1 );
+
+
+/* Remove Comments from admin menu */
+function dgtlnk_remove_menus() {
+     remove_menu_page( 'edit-comments.php' );
+}
+
+add_action( 'admin_menu', 'dgtlnk_remove_menus' );
