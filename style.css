@@ -42,7 +42,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		- News
 		- Artists
 		- Single Artist
-		- SAGA Gallery
+		- Internal Pages
+			- SAGA Gallery
+			- Council
+			- History
+			- Archives
+			- Permanent Collection
+			- Collector Prints
 	- Widgets
 	- Media
 	- Captions
@@ -1421,14 +1427,21 @@ main#news {
 	margin: 10px 0;
 }
 
-/* SAGA Gallery
+/* Internal Pages
 --------------------------------------------- */
+
+/* saga gallery */
 .saga-gallery-container {
 	margin: 25px 0;
 }
 
 .saga-gallery-image-gallery {
 	margin-top: 25px;
+}
+
+/* council */
+.council-members {
+	margin: 40px 0;
 }
 
 /* Widgets
@@ -1821,6 +1834,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	.page-content {
 		width: 80%;
+		margin: 40px auto;
 	}
 
 	/* exhibitions - tablet */
@@ -1927,6 +1941,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.view-option {
 		margin: 0 10px;
 	}
+
+	/* internal pages - tablet */
 
 	/* saga gallery - tablet */
 	.saga-gallery-container {
@@ -2104,6 +2120,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 10px;
 		flex-grow: 1;
 	}
+
+	/* internal pages - intermediate tablet */
 }
 
 /* Desktop */
@@ -2332,6 +2350,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 10px;
 	}
 
+	/* internal pages - desktop */
+
 	/* saga gallery - desktop */
 	.saga-gallery-container {
 		display: flex;
@@ -2348,6 +2368,11 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.saga-gallery-image-gallery {
 		width: 60%;
 		margin-top: 0;
+	}
+
+	/* council - desktop */
+	.regional-committee-members {
+		width: 50%;
 	}
 
 }
@@ -2416,6 +2441,22 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	#artist-prints figure {
 		margin: 20px;
+	}
+
+	/* intermediate pages - large desktop */
+
+	/* council - desktop */
+	.page-content.council-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 1100px;
+		margin: 60px auto;
+	}
+
+	.council-wrap-left-group {
+		width: 40%;
 	}
 }
 

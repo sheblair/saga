@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all the SAGA Gallery page
+ * The template for displaying the Council page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -21,8 +21,8 @@ get_header();
 			<div class="accent-strip"></div>
 		</div>
 
-		<main id="saga-gallery" class="site-main">
-            <div class="saga-gallery-container">
+		<main id="council" class="site-main">
+            <div class="page-content council-container">
 			    <?php the_content(); ?>
             </div>
 		</main>
