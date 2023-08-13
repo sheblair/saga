@@ -110,11 +110,11 @@
     }
 
      // Collector Prints dynamic search
+     const collectorPrintsGallery = document.querySelector('#collector-prints-gallery');
+     const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')]; // Spread operator here
      const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
      const allPrints = document.querySelectorAll('.collector-print');
-     const printCaptions = Array.from(document.querySelectorAll('.collector-print-caption')).map(caption => caption.innerText.toLowerCase());
-
-     console.log(collectorPrintsSearch, allPrints, printCaptions)
+     const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
      
      if (collectorPrintsSearch) {
          collectorPrintsSearch.addEventListener('input', function (e) {
