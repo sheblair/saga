@@ -48,7 +48,7 @@ get_header();
 					?>
 
 						<div class="block about-page-block">
-							<figure class="block-img-container"><?php the_post_thumbnail(); ?></figure>
+							<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
 							<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
 						</div>
 

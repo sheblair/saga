@@ -31,7 +31,7 @@ get_header();
 				?>
 
 					<div class="block front-page-block">
-						<figure class="block-img-container"><?php the_post_thumbnail(); ?></figure>
+						<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
 						<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
 						<?php if ( $block_blurb ) : ?>
 							<p class="block-blurb"><?php echo $block_blurb ?></p>
