@@ -661,6 +661,7 @@ textarea {
 	border: none;
 	background-color: #d9d9d9;
 	padding: 5px 10px;
+	outline: none;
 }
 
 input[type="search"]::placeholder {
