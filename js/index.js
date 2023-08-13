@@ -68,8 +68,6 @@
     const igFeed = document.querySelector('#sb_instagram');
     const newsLoop = document.querySelector('.news-items-loop');
 
-    console.log(igSelector, newsSelector, igFeed, newsLoop);
-
     if (newsSelector) {
         newsSelector.addEventListener('click', () => {
             igFeed.classList.add('hide');
@@ -110,6 +108,29 @@
             }
         });
     }
+
+     // Collector Prints dynamic search
+     const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
+     const allPrints = document.querySelectorAll('.collector-print');
+     const printCaptions = Array.from(document.querySelectorAll('.collector-print-caption')).map(caption => caption.innerText.toLowerCase());
+
+     console.log(collectorPrintsSearch, allPrints, printCaptions)
+     
+     if (collectorPrintsSearch) {
+         collectorPrintsSearch.addEventListener('input', function (e) {
+             const userInput = e.target.value.toLowerCase().trim(); // Trim leading and trailing spaces
+         
+             for (let i = 0; i < allPrints.length; i++) {
+                 const printCaptionText = printCaptions[i];
+         
+                 if (printCaptionText.includes(userInput)) {
+                     allPrints[i].classList.remove('hide');
+                 } else {
+                     allPrints[i].classList.add('hide');
+                 }
+             }
+         });
+     }
   
 
 

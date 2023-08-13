@@ -436,10 +436,9 @@ kept here for record of original color choices made during initial site construc
 	overflow: hidden;
 }
 
+/* !important is necessary for dynamic search to work */
 .hide {
-    /* I had !important here because I thought it was necessary for the JS view selectors
-	to work but it was interfering with the News view selector so I removed it */
-    display: none;
+    display: none !important;
 }
 
 .bold {
@@ -1438,6 +1437,13 @@ main#news {
 /* council */
 .council-members {
 	margin: 40px 0;
+}
+
+/* collector prints */
+
+/* set font size on image captions in collector prints gallery */
+.wp-block-gallery.has-nested-images figure.wp-block-image.collector-print figcaption {
+	font-size: .75rem;
 }
 
 /* Widgets
