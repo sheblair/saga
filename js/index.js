@@ -89,7 +89,7 @@
     }
 
     // Artists page dynamic search
-    const filterInput = document.querySelector('#search');
+    const filterInput = document.querySelector('#artists-search');
     const allArtists = document.querySelectorAll('.artist');
     const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.innerText.toLowerCase());
     

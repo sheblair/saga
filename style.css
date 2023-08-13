@@ -658,28 +658,15 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: var(--font-dark);
-	background-color: var(--font-light);
-	padding: 3px;
+	border: none;
+	background-color: #d9d9d9;
+	padding: 5px 10px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: var(--font-dark);
+input[type="search"]::placeholder {
+	font-family: 'Helvetica Neue', sans-serif;
+	text-transform: uppercase;
+	font-size: .75rem;
 }
 
 select {
@@ -1239,20 +1226,10 @@ main#news {
 }
 
 /* style search bar */
-#search {
-	border: none;
-	background-color: #d9d9d9;
-	padding: 5px 10px;
-	outline: none;
+#artists-search {
 	margin-bottom: 10px;
 	height: 40px;
     width: 250px;
-}
-
-#search::placeholder {
-	font-family: 'Helvetica Neue', sans-serif;
-	text-transform: uppercase;
-	font-size: .75rem;
 }
 
 /* style view selector */
@@ -1429,6 +1406,8 @@ main#news {
 }
 
 /* collector prints */
+
+/* center permanent collections button */
 #collector-prints .page-content .wp-block-buttons {
 	align-self: center;
 }
@@ -1440,6 +1419,12 @@ main#news {
 #permanent-collection-button a {
 	text-transform: uppercase;
 	font-size: .875rem;
+}
+
+/* style search bar */
+#wp-block-search__input-2 {
+	width: 250px;
+	margin-bottom: 15px;
 }
 
 /* reposition image captions and stick to bottom of images */
@@ -1889,7 +1874,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 40px;
 	}
 
-	#search {
+	#artists-search {
 		margin-bottom: 0;
 	}
 
