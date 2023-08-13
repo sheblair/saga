@@ -1440,22 +1440,26 @@ main#news {
 }
 
 /* style search bar */
-.collector-prints-search {
+.collector-prints-search,
+.permanent-collection-search {
 	align-self: center;
 }
 
-#wp-block-search__input-2 {
+#wp-block-search__input-2,
+#wp-block-search__input-1 {
 	width: 250px;
 }
 
 /* center prints gallery on page */
-#collector-prints-gallery {
+#collector-prints-gallery,
+#permanent-collection-gallery {
 	margin: 20px auto;
 	max-width: 400px;
 }
 
 /* center individual collector print */
-#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
+#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print
+#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).permanent-collection-print {
 	align-items: center;
 }
 
@@ -2170,6 +2174,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	
 	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
 		width: 45%;
+		max-width: 400px;
 		margin-right: 10px;
 	}
 

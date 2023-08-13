@@ -109,26 +109,59 @@
         });
     }
 
-     // Collector Prints dynamic search
+     // Collector prints dynamic search
      const collectorPrintsGallery = document.querySelector('#collector-prints-gallery');
-     const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
-     const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
-     const allPrints = document.querySelectorAll('.collector-print');
-     const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
-     
-     if (collectorPrintsSearch) {
-         collectorPrintsSearch.addEventListener('input', function (e) {
-             const userInput = e.target.value.toLowerCase().trim();
-         
-             for (let i = 0; i < allPrints.length; i++) {
-                 const printCaptionText = printCaptions[i];
-         
-                 if (printCaptionText.includes(userInput)) {
-                     allPrints[i].classList.remove('hide');
-                 } else {
-                     allPrints[i].classList.add('hide');
-                 }
-             }
-         });
+
+     // check if we are on collector prints page or not
+     if (collectorPrintsGallery) {
+        const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
+        const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
+        const allPrints = document.querySelectorAll('.collector-print');
+        const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
+        
+        if (collectorPrintsSearch) {
+            collectorPrintsSearch.addEventListener('input', function (e) {
+                const userInput = e.target.value.toLowerCase().trim();
+            
+                for (let i = 0; i < allPrints.length; i++) {
+                    const printCaptionText = printCaptions[i];
+            
+                    if (printCaptionText.includes(userInput)) {
+                        allPrints[i].classList.remove('hide');
+                    } else {
+                        allPrints[i].classList.add('hide');
+                    }
+                }
+            });
+        }
      }
+ 
+
+     // Permanent collection prints dynamic search
+     const permanentCollectionGallery = document.querySelector('#permanent-collection-gallery');
+
+     // check if we are on permanent collection page or not
+     if (permanentCollectionGallery) {
+        const permanentFigcaptions = [...permanentCollectionGallery.querySelectorAll('figcaption')];
+        const permanentCollectionSearch = document.querySelector('#wp-block-search__input-1');
+        const allPermanentPrints = document.querySelectorAll('.permanent-collection-print');
+        const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.innerText.toLowerCase());
+        
+        if (permanentCollectionSearch) {
+            permanentCollectionSearch.addEventListener('input', function (e) {
+                const userInput = e.target.value.toLowerCase().trim();
+               
+                for (let i = 0; i < allPermanentPrints.length; i++) {
+                    const printCaptionText = permanentPrintCaptions[i];
+            
+                    if (printCaptionText.includes(userInput)) {
+                        allPermanentPrints[i].classList.remove('hide');
+                    } else {
+                        allPermanentPrints[i].classList.add('hide');
+                    }
+                }
+            });
+        }
+     }
+
 }() );
