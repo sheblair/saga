@@ -1439,6 +1439,11 @@ main#news {
 	font-size: .875rem;
 }
 
+#permanent-collection-button:hover .wp-block-button__link {
+	background: var(--accent-color);
+	color: var(--font-light);
+}
+
 /* style search bar */
 .collector-prints-search,
 .permanent-collection-search {
@@ -2534,6 +2539,11 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		align-items: flex-start;
 		max-width: 1100px;
 	}
+
+	#permanent-collection .page-content {
+		max-width: 1100px;
+	}
+
 	#collector-prints-gallery,
 	#permanent-collection-gallery {
 		width: 100%;
