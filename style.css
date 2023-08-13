@@ -680,6 +680,23 @@ textarea {
 	width: 100%;
 }
 
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { 
+	display: none; width : 0; height: 0; 
+}
+
+input[type=search]::-ms-reveal { 
+	display: none; width : 0; height: 0; 
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+	display: none; 
+}
+
 /* Custom button styles and editing WordPress default styles */
 button, .wp-block-button {
 	background-color: var(--font-light);
@@ -1542,21 +1559,18 @@ main#news {
 
 /* gallery captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	background: var(--font-light);
+	background: none;
 	color: var(--font-dark);
 	font-size: .75rem;
 	padding: 5px;
-	bottom: 20px;
+	bottom: 5px;
+	position: relative;
+
 }
 
 /* reposition image captions and stick to bottom of images */
-.wp-block-gallery.has-nested-images figure.wp-block-image.collector-print {
+.wp-block-gallery.has-nested-images figure.wp-block-image {
 	justify-content: flex-start;
-}
-
-/* remove caption background */
-.wp-block-gallery.has-nested-images figure.wp-block-image.collector-print figcaption {
-	position: relative;
 }
 
 /*--------------------------------------------------------------
@@ -2146,6 +2160,21 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* internal pages - intermediate tablet */
+
+	/* collector prints - intermediate tablet */
+	#collector-prints-gallery {
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 700px;
+	}
+	
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
+		width: 45%;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
+
 }
 
 /* Desktop */
