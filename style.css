@@ -2006,10 +2006,6 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* pages - intermediate tablet */
-	.page {
-		margin-top: 40px;
-	}
-
 	#front-page {
 		margin: 50px 0;
 	}
@@ -2381,6 +2377,15 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 90%;
 	}
 
+	/* pages - large desktop */
+	main#page {
+		align-items: center;
+	}
+
+	.page-content {
+		align-items: center;
+	}
+
 	/* exhibitions - large desktop */
 	.block.current-show-block,
 	.block.upcoming-show-block {
@@ -2442,17 +2447,12 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	/* intermediate pages - large desktop */
 
 	/* council - desktop */
-	.page-content.council-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		max-width: 1100px;
-		margin: 60px auto;
+	.council-container {
+		max-width: 900px;
 	}
 
-	.council-wrap-left-group {
-		width: 40%;
+	.regional-committee-members {
+		width: 100%;
 	}
 }
 
