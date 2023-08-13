@@ -1951,6 +1951,20 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 80%;
 		margin: 0 auto;
 	}
+
+	/* collector prints - tablet */
+	#collector-prints .page-content {
+		width: 90%;
+	}
+
+	.collector-prints-search {
+		align-self: center;
+	}
+
+	#wp-block-search__input-2 {
+		width: 350px;
+		margin-bottom: 15px;
+	}
 }
 
 /* Intermediate Tablet */
