@@ -1451,9 +1451,16 @@ main#news {
 }
 
 /* center prints galleries on page */
-#collector-prints-gallery,
-#permanent-collection-gallery {
+#collector-prints-gallery {
 	margin: 20px auto;
+}
+
+#permanent-collection-gallery {
+	margin: 20px 0;
+}
+
+main#permanent-collection .page-content {
+	align-items: center;
 }
 
 /* center individual collector print and individual permanent collection print */
@@ -1985,8 +1992,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 0 auto;
 	}
 
-	/* collector prints - tablet */
-	#collector-prints .page-content {
+	/* collector prints and permanent collection - tablet */
+	#collector-prints .page-content,
+	#permanent-collection .page-content {
 		width: 90%;
 	}
 
@@ -2165,19 +2173,20 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	/* internal pages - intermediate tablet */
 
-	/* collector prints - intermediate tablet */
-	#collector-prints-gallery {
+	/* collector prints and permanent collection - intermediate tablet */
+	#collector-prints-gallery,
+	#permanent-collection-gallery {
 		flex-direction: row;
 		flex-wrap: wrap;
 		max-width: 700px;
 	}
 	
-	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print,
+	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).permanent-collection-print  {
 		width: 45%;
 		max-width: 400px;
 		margin-right: 10px;
 	}
-
 
 }
 
@@ -2523,14 +2532,16 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	/* collector prints - large desktop */
 	#collector-prints .page-content {
 		align-items: flex-start;
-		max-width: 1000px;
+		max-width: 1100px;
 	}
-	#collector-prints-gallery {
+	#collector-prints-gallery,
+	#permanent-collection-gallery {
 		width: 100%;
-		max-width: 1000px;
+		max-width: 1100px;
 	}
 	
-	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print,
+	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).permanent-collection-print {
 		width: 30%
 	}
 
@@ -2538,7 +2549,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin-top: 20px;
 	}
 
-	.collector-prints-search {
+	.collector-prints-search,
+	.permanent-collection-search {
 		align-self: flex-start;
 		margin-top: 50px;
 	}
