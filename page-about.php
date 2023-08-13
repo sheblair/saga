@@ -37,11 +37,19 @@ get_header();
 
 					if ( $loop -> have_posts() ) { 
 					
-					while ( $loop -> have_posts() ) { $loop -> the_post(); ?>
+					while ( $loop -> have_posts() ) { $loop -> the_post(); 
+					
+					$block_title_url = get_field('block_title_url');
+					$block_title = get_field('block_title');
+					$block_blurb = get_field('block_blurb');
+					$block_additional_link = get_field('block_additional_link');
+					$block_additional_link_label = get_field('block_additional_link_label');
+					
+					?>
 
 						<div class="block about-page-block">
-							<?php the_post_thumbnail(); ?>
-							<?php the_content(); ?>
+							<figure class="block-img-container"><?php the_post_thumbnail(); ?></figure>
+							<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
 						</div>
 
 				<?php }

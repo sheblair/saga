@@ -33,10 +33,14 @@ get_header();
 					<div class="block front-page-block">
 						<figure class="block-img-container"><?php the_post_thumbnail(); ?></figure>
 						<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
-						<p class="block-blurb"><?php echo $block_blurb ?></p>
-						<p class="block-link block-additional-link">
-							<a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
-						</p>
+						<?php if ( $block_blurb ) : ?>
+							<p class="block-blurb"><?php echo $block_blurb ?></p>
+						<?php endif; ?> 
+						<?php if ( $block_additional_link ) : ?>
+							<p class="block-link block-additional-link">
+								<a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
+							</p>
+						<?php endif; ?>
 					</div>
 
 			<?php }
