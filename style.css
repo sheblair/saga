@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		- News
 		- Artists
 		- Single Artist
+		- SAGA Gallery
 	- Widgets
 	- Media
 	- Captions
@@ -1420,6 +1421,16 @@ main#news {
 	margin: 10px 0;
 }
 
+/* SAGA Gallery
+--------------------------------------------- */
+.saga-gallery-container {
+	margin: 25px 0;
+}
+
+.saga-gallery-image-gallery {
+	margin-top: 25px;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
@@ -1916,6 +1927,12 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.view-option {
 		margin: 0 10px;
 	}
+
+	/* saga gallery - tablet */
+	.saga-gallery-container {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 
 /* Intermediate Tablet */
@@ -2175,7 +2192,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 60%;
 	}
 
-	figure.wp-block-gallery.has-nested-images:not(.partners-gallery) {
+	figure.wp-block-gallery.has-nested-images:not(.partners-gallery, .saga-gallery-image-gallery) {
 		width: 80%;
 		max-width: 900px;
 	}
@@ -2313,6 +2330,24 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 25%;
 		max-width: 25%;
 		margin: 10px;
+	}
+
+	/* saga gallery - desktop */
+	.saga-gallery-container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		width: 90%;
+		max-width: 1000px;
+	}
+
+	.saga-gallery-description {
+		width: 35%;
+	}
+
+	.saga-gallery-image-gallery {
+		width: 60%;
+		margin-top: 0;
 	}
 
 }

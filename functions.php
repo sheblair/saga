@@ -218,8 +218,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /* Re-order admin menu items */
-
-
 function dgtlnk_custom_menu_order( $menu_ord ) {
 
      if ( !$menu_ord ) return true;
