@@ -2170,8 +2170,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	
 	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
 		width: 45%;
-		margin-right: 5px;
-		margin-left: 5px;
+		margin-right: 10px;
 	}
 
 
@@ -2514,6 +2513,29 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	.regional-committee-members {
 		width: 100%;
+	}
+
+	/* collector prints - large desktop */
+	#collector-prints .page-content {
+		align-items: flex-start;
+		max-width: 1000px;
+	}
+	#collector-prints-gallery {
+		width: 100%;
+		max-width: 1000px;
+	}
+	
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print {
+		width: 30%
+	}
+
+	#permanent-collection-button {
+		margin-top: 20px;
+	}
+
+	.collector-prints-search {
+		align-self: flex-start;
+		margin-top: 50px;
 	}
 }
 
