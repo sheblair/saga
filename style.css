@@ -615,10 +615,6 @@ a:active {
 	color: var(--font-dark);
 }
 
-a:focus {
-	outline: thin dotted;
-}
-
 a:hover,
 a:active {
 	outline: 0;
