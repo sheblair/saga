@@ -1474,6 +1474,14 @@ main#permanent-collection .page-content {
 	align-items: center;
 }
 
+/* archives */
+.archive-block .block-link a {
+	text-decoration: none;
+}
+
+.archive-block .block-img-container {
+	margin: 0;
+}
 
 /* Widgets
 --------------------------------------------- */
