@@ -164,4 +164,30 @@
         }
      }
 
+     // Catalogs dynamic search
+     const exhibitionCatalogsList = document.querySelector('#exhibition-catalogs-list');
+
+     if (exhibitionCatalogsList) {
+        const catalogTitles = [...exhibitionCatalogsList.querySelectorAll('a')];
+        const catalogsSearch = document.querySelector('#wp-block-search__input-1');
+        const allCatalogs = [...exhibitionCatalogsList.querySelectorAll('.wp-block-file')];
+        const catalogTitleTexts = catalogTitles.map(title => title.innerText.toLowerCase());
+
+        if (catalogsSearch) {
+            catalogsSearch.addEventListener('input', function (e) {
+                const userInput = e.target.value.toLowerCase().trim();
+
+                for (let i = 0; i < allCatalogs.length; i++) {
+                    const catalogTitleText = catalogTitleTexts[i];
+
+                    if(catalogTitleText.includes(userInput)) {
+                        allCatalogs[i].classList.remove('hide');
+                    } else {
+                        allCatalogs[i].classList.add('hide');
+                    }
+                }
+            });
+        }
+    }
+
 }() );
