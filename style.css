@@ -1011,6 +1011,19 @@ header#masthead {
 	width: 100%;
 }
 
+/* archives blocks */
+.archive-block .block-link a {
+	text-decoration: none;
+}
+
+.archive-block .block-img-container {
+	margin: 0;
+}
+
+.block.archive-block {
+	max-width: 406px;
+}
+
 /* Posts
 --------------------------------------------- */
 main#post {
@@ -1479,17 +1492,10 @@ main#permanent-collection .page-content {
 }
 
 /* archives */
-.archive-block .block-link a {
-	text-decoration: none;
+.back-link.back-to-archives {
+	margin: 20px 0;
 }
 
-.archive-block .block-img-container {
-	margin: 0;
-}
-
-.block.archive-block {
-	max-width: 406px;
-}
 
 /* Widgets
 --------------------------------------------- */
