@@ -1111,6 +1111,20 @@ main#post {
 	gap: 15px;
 }
 
+/* 404 post */
+#error-404 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 700px;
+	margin: 40px auto;
+	width: 80%;
+}
+
+#error-404 .accent-strip.post-accent-strip {
+	margin: 20px 0;
+}
+
 /* Pages
 --------------------------------------------- */
 main {
