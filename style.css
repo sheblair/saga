@@ -1540,6 +1540,15 @@ main#permanent-collection .page-content {
 	margin: 20px 0;
 }
 
+/* history */
+#history-timeline * .story-details::before {
+	display: none;
+}
+
+.cool-vertical-timeline-body.one-sided.left .timeline-content.icon-false .timeline-block-icon {
+    left: 11px;
+}
+
 
 /* Widgets
 --------------------------------------------- */
@@ -2089,7 +2098,15 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 }
 
+
 /* Intermediate Tablet */
+
+@media screen and (min-width: 768px) {
+	/* history - intermediate tablet */
+	.cool-vertical-timeline-body.one-sided.left .timeline-content.icon-false .timeline-block-icon {
+		left: 0px;
+	}
+}
 
 @media screen and (min-width: 800px) {
 	/* search bars - intermediate tablet */
