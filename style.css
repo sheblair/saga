@@ -1483,6 +1483,10 @@ main#permanent-collection .page-content {
 	margin: 0;
 }
 
+.block.archive-block {
+	max-width: 406px;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
@@ -2201,6 +2205,13 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin-right: 10px;
 	}
 
+	/* archives - intermediate tablet */
+	#archives-blocks.blocks-container {
+		align-items: flex-start;
+		width: 90%;
+		margin: 0 auto;
+	}
+
 }
 
 /* Desktop */
@@ -2531,7 +2542,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin: 20px;
 	}
 
-	/* intermediate pages - large desktop */
+	/* internal pages - large desktop */
 
 	/* council - desktop */
 	.council-container {
@@ -2571,6 +2582,19 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.permanent-collection-search {
 		align-self: flex-start;
 		margin-top: 50px;
+	}
+
+	/* archives - large desktop */
+	#archives-blocks.blocks-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 90%;
+		max-width: 1100px;
+	}
+
+	.block.archive-block {
+		width: 30%;
 	}
 }
 
