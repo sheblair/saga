@@ -2481,8 +2481,16 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 @media screen and (min-width: 1200px) {
 	/* posts - large desktop */
+	.post {
+		max-width: 1100px;
+	}
+
 	.post-content p {
 		width: 90%;
+	}
+
+	.post {
+		max-width: 900px;
 	}
 
 	/* pages - large desktop */
