@@ -1019,6 +1019,10 @@ main#post {
 	align-items: center;
 }
 
+.post {
+	width: 90%;
+}
+
 .accent-strip.post-accent-strip {
 	margin: 10px 0 30px 0;
 }
