@@ -21,7 +21,7 @@
 		<?php the_title();?>
 	</header>
 
-	<div class="post-content post-content-news">
+	<div class="post-content post-content-archives">
 		<?php the_content(); ?>
 	</div>
 

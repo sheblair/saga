@@ -2588,13 +2588,13 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	#archives-blocks.blocks-container {
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		width: 90%;
 		max-width: 1100px;
 	}
 
 	.block.archive-block {
-		width: 30%;
+		width: 50%;
 	}
 }
 
