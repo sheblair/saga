@@ -1062,6 +1062,24 @@ main#post {
 	text-align: center;
 }
 
+/* archives posts */
+#past-presidents-list .wp-block-group__inner-container p {
+	margin: 10px 0;
+}
+
+/* set full width to the grid container */
+#past-members-list {
+	width: 100%;
+}
+
+/* set the grid to fluid columns that autofill based on space available */
+#past-members-list .wp-block-group__inner-container {
+	display: grid;
+	/* This is better for small screens, once min() is better supported */
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	gap: 5px;
+}
+
 /* Pages
 --------------------------------------------- */
 main {
@@ -2088,6 +2106,13 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.post-content .wp-block-image img {
 		width: 80%;
 		max-width: 80%;
+	}
+
+	/* archives posts */
+
+	/* use standard fluid column setup once we are no longer on a small screen */
+	#past-members-list .wp-block-group__inner-container {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	}
 
 	/* pages - intermediate tablet */
