@@ -20,7 +20,7 @@ get_header();
 		<main id="news" class="site-main">
             <div id="new-members-slideshow">
                 <div class="slideshow-container">
-                    <?php echo do_shortcode('[metaslider id="4359"]'); ?>
+                    <?php echo do_shortcode('[metaslider id="5345"]'); ?>
                 </div>
                 <h2 class="new-members-heading">Welcome to our new members!</h2>
             </div>
