@@ -2580,6 +2580,18 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 50%;
 	}
 
+	/* archives - desktop */
+	#archives-blocks.blocks-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 90%;
+		max-width: 1100px;
+	}
+
+	.block.archive-block {
+		width: 40%;
+	}
 }
 
 /* Large Desktop */
@@ -2704,17 +2716,10 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* archives - large desktop */
-	#archives-blocks.blocks-container {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		width: 90%;
-		max-width: 1100px;
-	}
-
 	.block.archive-block {
 		width: 50%;
 	}
+
 }
 
 /* XL Desktop */
