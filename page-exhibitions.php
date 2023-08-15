@@ -70,7 +70,7 @@ get_header();
                                         <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                         <p class="block-blurb"><?php echo $block_blurb ?></p>
                                         <p class="block-link block-additional-link">
-                                            <a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
+                                            <a href="<?php echo $block_additional_link ?>" target="_blank"><?php echo $block_additional_link_label ?></a>
                                         </p>
                                     </div>
                                 <?php } ?>
@@ -102,7 +102,7 @@ get_header();
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
-                                        <a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
+                                        <a href="<?php echo $block_additional_link ?>" target="_blank"><?php echo $block_additional_link_label ?></a>
                                     </p>
                                 </div>
                             <?php } ?>
@@ -134,7 +134,7 @@ get_header();
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
-                                        <a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
+                                        <a href="<?php echo $block_additional_link ?>" target="_blank"><?php echo $block_additional_link_label ?></a>
                                     </p>
                                 </div>
                             <?php } ?>         

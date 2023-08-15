@@ -38,7 +38,7 @@ get_header();
 						<?php endif; ?> 
 						<?php if ( $block_additional_link ) : ?>
 							<p class="block-link block-additional-link">
-								<a href="<?php echo $block_additional_link ?>"><?php echo $block_additional_link_label ?></a>
+								<a href="<?php echo $block_additional_link ?>" target="_blank"><?php echo $block_additional_link_label ?></a>
 							</p>
 						<?php endif; ?>
 					</div>
