@@ -992,6 +992,13 @@ header#masthead {
 	font-weight: normal;
 }
 
+/* change additional link styles for exhibitions page */
+.block.current-show-block .block-additional-link a,
+.block.upcoming-show-block .block-additional-link a,
+.block.past-show-block .block-additional-link a {
+	font-size: .75rem;
+}
+
 /* about page blocks */
 .block.about-page-block {
 	width: 90%;
