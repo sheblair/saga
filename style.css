@@ -905,14 +905,16 @@ header#masthead {
 	align-items: center;
 }
 
-.footer-upper, .footer-lower, .donate-button-wrapper {
+.footer-upper, 
+.footer-lower, 
+.donate-button-wrapper {
 	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.contact-info {
+.contact-info .wp-block-group__inner-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -923,15 +925,15 @@ header#masthead {
 	font-size: .875rem;
 }
 
-.footer-email-link {
+.footer-email-link a {
 	color: var(--font-light);
 	cursor: pointer;
 }
 
-.donate-button {
+.donate-button a {
 	width: 121px;
 	height: 53px;
-	padding: 20px;
+	padding: 15px;
 }
 
 .copyright {
@@ -1904,6 +1906,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	.contact-info {
 		margin-left: 40px;
+	}
+
+	.contact-info .wp-block-group__inner-container {
 		align-items: flex-start;
 	}
 
@@ -2362,10 +2367,11 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		margin-left: 60px;
 	}
 
-	.donate-button {
+	.donate-button a {
 		font-size: 1rem;
 		width: 131px;
 		height: 58px;
+		padding: 17px;
 	}
 
 	.donate-button-wrapper {
