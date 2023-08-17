@@ -2325,8 +2325,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		max-width: 700px;
 	}
 	
-	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print,
-	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).permanent-collection-print  {
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image),
+	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image)  {
 		width: 45%;
 		max-width: 400px;
 		margin-right: 10px;
@@ -2675,22 +2675,22 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	/* collector prints - large desktop */
 	#collector-prints .page-content {
 		align-items: flex-start;
-		max-width: 1100px;
+		max-width: 1000px;
 	}
 
 	#permanent-collection .page-content {
-		max-width: 1100px;
+		max-width: 1000px;
 	}
 
 	#collector-prints-gallery,
 	#permanent-collection-gallery {
 		width: 100%;
-		max-width: 1100px;
+		max-width: 1000px;
 	}
 	
-	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).collector-print,
-	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image).permanent-collection-print {
-		width: 30%
+	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image),
+	#permanent-collection-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
+		width: 30%;
 	}
 
 	#permanent-collection-button {

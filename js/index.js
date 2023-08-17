@@ -116,7 +116,7 @@
      if (collectorPrintsGallery) {
         const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
         const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
-        const allPrints = document.querySelectorAll('.collector-print');
+        const allPrints = [...collectorPrintsGallery.querySelectorAll('figure')];
         const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
         
         if (collectorPrintsSearch) {
@@ -144,7 +144,7 @@
      if (permanentCollectionGallery) {
         const permanentFigcaptions = [...permanentCollectionGallery.querySelectorAll('figcaption')];
         const permanentCollectionSearch = document.querySelector('#wp-block-search__input-1');
-        const allPermanentPrints = document.querySelectorAll('.permanent-collection-print');
+        const allPermanentPrints = [...permanentCollectionGallery.querySelectorAll('figure')];
         const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.innerText.toLowerCase());
         
         if (permanentCollectionSearch) {
