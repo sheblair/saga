@@ -2675,17 +2675,17 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	/* collector prints - large desktop */
 	#collector-prints .page-content {
 		align-items: flex-start;
-		max-width: 1000px;
+		max-width: 900px;
 	}
 
 	#permanent-collection .page-content {
-		max-width: 1000px;
+		max-width: 900px;
 	}
 
 	#collector-prints-gallery,
 	#permanent-collection-gallery {
 		width: 100%;
-		max-width: 1000px;
+		max-width: 900px;
 	}
 	
 	#collector-prints-gallery.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image),
