@@ -1005,6 +1005,7 @@ header#masthead {
 /* about page blocks */
 .block.about-page-block {
 	width: 90%;
+	max-width: 315px;
 }
 
 /* style the about page block title, which comes from the_content() not from a custom field */
