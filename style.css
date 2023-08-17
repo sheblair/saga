@@ -625,6 +625,7 @@ a:active {
 	font-weight: 300;
 	font-size: .875rem;
 	color: var(--font-dark);
+	letter-spacing: .05em;
 }
 
 .back-link a:hover {
