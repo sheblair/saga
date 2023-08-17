@@ -1445,7 +1445,7 @@ main#news {
 
 /* style back to artists link */
 .back-link.back-to-artists {
-	margin: 20px 0 20px 10px
+	margin: 0 20px 30px 20px;
 }
 
 /* style artist featured image and contact info */
@@ -2115,6 +2115,10 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* single artist - tablet */
+	.back-link.back-to-artists {
+		margin: 30px 45px;
+	}
+
 	.accent-strip.accent-strip-artist {
 		margin-bottom: 30px;
 	}
@@ -2304,8 +2308,8 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* single artist - intermediate tablet */
-	.back-link.back-link.back-to-artists {
-		margin: 20px 0 20px 20px;
+	.back-link.back-to-artists {
+		margin: 50px 40px 0px 40px;
 	}
 	.accent-strip.accent-strip.accent-strip-artist {
 		width: 90%;
@@ -2667,6 +2671,15 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* single artist - large desktop */
+	.artist-container {
+		width: 80%;
+		max-width: 1100px;
+	}
+
+	.back-link.back-to-artists {
+		margin: 50px 40px 0px 80px;
+	}
+
 	.artist-single-upper {
 		width: 80%;
 	}
