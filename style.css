@@ -1677,9 +1677,15 @@ main#permanent-collection .page-content {
 
 /* gallery captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size: .75rem;
+}
+
+/* captions on collector prints and permanent collection prints galleries */
+
+#collector-prints-gallery.wp-block-gallery.has-nested-images figure.wp-block-image figcaption,
+#permanent-collection-gallery.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	background: none;
 	color: var(--font-dark);
-	font-size: .75rem;
 	padding: 5px;
 	bottom: 5px;
 	position: relative;
@@ -1687,7 +1693,8 @@ main#permanent-collection .page-content {
 }
 
 /* reposition image captions and stick to bottom of images */
-.wp-block-gallery.has-nested-images figure.wp-block-image {
+#collector-prints-gallery.wp-block-gallery.has-nested-images figure.wp-block-image,
+#permanent-collection-gallery.wp-block-gallery.has-nested-images figure.wp-block-image {
 	justify-content: flex-start;
 }
 
@@ -2143,6 +2150,13 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	/* search bars - intermediate tablet */
 	input[type="search"] {
 		width: 300px;
+	}
+
+	/* galleries - intermediate tablet */
+
+	/* increase font size of gallery captions */
+	.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+		font-size: .875rem;
 	}
 
 	/* header - intermediate tablet */
