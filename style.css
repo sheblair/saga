@@ -1582,6 +1582,10 @@ main#permanent-collection .page-content {
 	margin: 20px 0;
 }
 
+#permanent-collection .back-link.back-to-archives {
+	margin: 30px 10px;
+}
+
 /* history */
 #history-timeline * .story-details::before {
 	display: none;
@@ -2151,6 +2155,11 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	#collector-prints .page-content,
 	#permanent-collection .page-content {
 		width: 90%;
+	}
+
+	/* archives - tablet */
+	#permanent-collection .back-link.back-to-archives {
+		margin: 40px;
 	}
 }
 
