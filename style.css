@@ -1482,6 +1482,10 @@ main#news {
 	width: 100%;
 }
 
+#artist-prints figcaption {
+	display: none;
+}
+
 /* style artist bio */
 #artist-bio {
 	flex-direction: column;
