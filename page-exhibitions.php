@@ -66,7 +66,7 @@ get_header();
                                     ?>
 
                                     <div class="block current-show-block">
-                                        <figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure>
+                                        <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
                                         <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                         <p class="block-blurb"><?php echo $block_blurb ?></p>
                                         <p class="block-link block-additional-link">
@@ -98,7 +98,7 @@ get_header();
                                 ?>
 
                                 <div class="block upcoming-show-block">
-                                    <figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure>
+                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
@@ -130,7 +130,7 @@ get_header();
                                 ?>
 
                                 <div class="block past-show-block">
-                                    <figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure>
+                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
