@@ -1260,6 +1260,19 @@ main#news {
 	text-align: center;
 }
 
+.wp-block-query.news-items-loop {
+	margin: 0 auto;
+}
+
+.wp-block-query.news-items-loop ul {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.wp-block-query.news-items-loop ul li {
+	width: 100%;
+}
+
 /* news items styles */
 .news-items {
 	margin-top: 30px;
@@ -2034,6 +2047,10 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* news - tablet */
+	.wp-block-query.news-items-loop ul {
+		width: 100%;
+	}
+
 	.news-items .wp-block-query ul {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
