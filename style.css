@@ -1230,6 +1230,7 @@ main#page {
 .partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 	max-width: 35%;
 	margin: 0 5px;
+	justify-content: center;
 }
 
 /* news page */
