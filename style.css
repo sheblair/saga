@@ -1071,13 +1071,13 @@ main#post {
 	align-self: flex-start;
 }
 
-/* center image caption only on news posts */
-.post-content.post-content-news .wp-block-image .wp-element-caption {
+/* center image captions on posts */
+.post-content.post-content-news .wp-block-image .wp-element-caption,
+.post-content.post-content-exhibition .wp-block-image .wp-element-caption {
 	text-align: center;
 }
 
 /* archives posts */
-
 /* set full width to the containers */
 #past-members-list,
 #past-presidents-list,
@@ -2187,16 +2187,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 		width: 80%;
 	}
 
-	.post-content.post-content-news .wp-block-image {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.post-content .wp-block-image img {
-		width: 80%;
-		max-width: 80%;
+	.post-content figure.wp-block-image {
+		width: 60%;
+		max-width: 60%;
 	}
 
 	/* pages - intermediate tablet */
@@ -2416,9 +2409,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* posts - desktop */
-	.post-content .wp-block-image img {
-		width: 60%;
-		max-width: 60%;
+	.post-content figure.wp-block-image {
+		width: 50%;
+		max-width: 50%;
 	}
 
 	figure.wp-block-gallery.has-nested-images:not(.partners-gallery, .saga-gallery-image-gallery) {
@@ -2427,33 +2420,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	}
 
 	/* exhibition posts */
-	.post-content.post-content-exhibition {
-		width: 90%;
-	}
-
-	.post-content.post-content-exhibition .wp-block-image {
-		align-items: flex-start;
-	}
-
-	/* news posts */
-	article.category-news {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.back-link.back-to-news {
-		align-self: flex-start;
-	}
-
+	.post-content.post-content-exhibition,
 	.post-content.post-content-news {
-		align-items: center;
-		width: 80%;
-	}
-
-	.post-content.post-content-news p {
 		width: 90%;
-		align-self: center;
 	}
 
 	/* pages - desktop */
