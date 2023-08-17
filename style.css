@@ -1225,6 +1225,11 @@ main#page {
 	margin: 70px 0;
 }
 
+.partners-gallery {
+	display: flex;
+	justify-content: center;
+}
+
 .partners-gallery figure.wp-block-gallery.has-nested-images {
 	justify-content: center;
 }
@@ -2648,10 +2653,6 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	.block.past-show-block {
 		width: 20%;
 		margin: 20px 35px 20px 0;
-	}
-
-	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
-		max-width: 7%;
 	}
 
 	/* news - large desktop */
