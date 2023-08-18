@@ -56,7 +56,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Plugins
 	- Slideshows (MetaSlider)
 	- Simple Lightbox
-	- Jetpack Infinite Scroll
 # Utilities
 	- Accessibility
 	- Alignments
@@ -417,7 +416,7 @@ CSS variables commented out here and instead included as "Additional CSS" in the
 kept here for record of original color choices made during initial site construction, July 2023
 
 :root {
-	--accent-color: #2726261a;
+	--accent-color: #006D5B;
 	--font-dark: #000000;
 	--font-light: #F8F8F8;
 	--background-color: white;
@@ -1743,7 +1742,18 @@ main#permanent-collection .page-content {
 --------------------------------------------------------------*/
 /* Slideshows (MetaSlider)
 --------------------------------------------- */
+.metaslider .caption {
+	font-size: .75rem;
+	font-family: 'Helvetica Neue', sans-serif !important;
+}
 
+.metaslider .caption-wrap {
+	position: unset !important;
+	background: var(--font-light) !important;
+    color: var(--font-dark) !important;
+    opacity: 1 !important;
+	line-height: 1em !important;
+}
 
 /* Simple Lightbox
 All styles must have !important to override plugin stylesheet
@@ -1882,6 +1892,15 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	input[type="search"] {
 		width: 350px;
 		margin-bottom: 15px;
+	}
+
+	/* slideshows - tablet */
+	.metaslider .caption {
+		font-size: .875rem !important;
+	}
+
+	.metaslider .caption-wrap {
+		position: absolute !important;
 	}
 
 	/* header - tablet */
@@ -2188,9 +2207,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 }
 
 @media screen and (min-width: 800px) {
-	/* search bars - intermediate tablet */
-	/* input[type="search"] {
-		width: 400px;
+	/* slideshows - intermediate tablet */
+	/* .metaslider .caption {
+		font-size: .9rem !important;
 	} */
 
 	/* galleries - intermediate tablet */
