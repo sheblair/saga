@@ -54,8 +54,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Captions
 	- Galleries
 # Plugins
-	- Jetpack Infinite Scroll
+	- Slideshows (MetaSlider)
 	- Simple Lightbox
+	- Jetpack Infinite Scroll
 # Utilities
 	- Accessibility
 	- Alignments
@@ -1740,6 +1741,9 @@ main#permanent-collection .page-content {
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+/* Slideshows (MetaSlider)
+--------------------------------------------- */
+
 
 /* Simple Lightbox
 All styles must have !important to override plugin stylesheet
@@ -1790,21 +1794,6 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 	background: url(./lightbox-assets/close.png) center no-repeat !important;
 	opacity: 1 !important;
 } */
-
-
-/* Jetpack Infinite Scroll
---------------------------------------------- */
-
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
 
 /*--------------------------------------------------------------
 # Utilities
