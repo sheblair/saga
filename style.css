@@ -1556,6 +1556,7 @@ main#news {
 #permanent-collection-button:hover .wp-block-button__link {
 	background: var(--accent-color);
 	color: var(--font-light);
+	border: 1px solid var(--font-light);
 }
 
 /* style search bar */
