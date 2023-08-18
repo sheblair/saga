@@ -659,14 +659,16 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	border: none;
-	background-color: #d9d9d9;
+	border: 2px solid var(--accent-color);
+	border-radius: 5px;
+	color: var(--font-dark);
+	background-color: var(--font-light);
 	padding: 5px 10px;
 	outline: none;
 }
 
 input[type="search"] {
-	width: 200px;
+	width: 250px;
 }
 
 
@@ -674,6 +676,10 @@ input[type="search"]::placeholder {
 	font-family: 'Helvetica Neue', sans-serif;
 	text-transform: uppercase;
 	font-size: .75rem;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+	opacity: 0;
 }
 
 select {
@@ -1877,7 +1883,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	/* search bars - tablet */
 	input[type="search"] {
-		width: 250px;
+		width: 350px;
 		margin-bottom: 15px;
 	}
 
@@ -2186,9 +2192,9 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 @media screen and (min-width: 800px) {
 	/* search bars - intermediate tablet */
-	input[type="search"] {
-		width: 300px;
-	}
+	/* input[type="search"] {
+		width: 400px;
+	} */
 
 	/* galleries - intermediate tablet */
 
