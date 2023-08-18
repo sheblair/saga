@@ -20,7 +20,7 @@ get_header();
             <!-- Search form here -->
             <div class="search-bar">
                 <label for="search"></label>
-                <input type="search" id="artists-search" name="search" placeholder="Search by name" />
+                <input type="search" id="artists-search" name="search" placeholder="Search artists" />
             </div>
 
             <!-- Thumbnails or List selection here -->
