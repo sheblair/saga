@@ -1766,8 +1766,13 @@ All styles must have !important to override plugin stylesheet
 span.slb_data_title, 
 span.slb_group_status {
 	font-family: 'Helvetica Neue', sans-serif !important;
-    font-size: 1rem !important;
+    font-size: .875rem !important;
     margin-right: 15px !important;
+}
+
+/* hide group status (1 of 3 or whatever) */
+#slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
+	display: none !important;
 }
 
 /* add a margin to the top of the print info */
