@@ -912,13 +912,21 @@ header#masthead {
 	align-items: center;
 }
 
-.footer-upper, 
+.footer-upper,
 .footer-lower, 
 .donate-button-wrapper {
-	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.footer-upper {
+	margin-top: 30px;
+}
+
+.footer-lower,
+.donate-button-wrapper {
+	margin-top: 40px;
 }
 
 .contact-info .wp-block-group__inner-container {
@@ -964,7 +972,7 @@ header#masthead {
 #menu-footer-menu a {
 	color: var(--font-light);
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 1.3rem;
 }
 
 /* Blocks
