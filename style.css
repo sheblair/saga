@@ -1755,6 +1755,10 @@ main#permanent-collection .page-content {
 	line-height: 1em !important;
 }
 
+#news * .metaslider .caption {
+	text-align: center !important;
+}
+
 /* Simple Lightbox
 All styles must have !important to override plugin stylesheet
 --------------------------------------------- */
@@ -1896,7 +1900,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 
 	/* slideshows - tablet */
 	.metaslider .caption {
-		font-size: .875rem !important;
+		font-size: .875rem;
 	}
 
 	.metaslider .caption-wrap {
@@ -2207,10 +2211,7 @@ span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control 
 }
 
 @media screen and (min-width: 800px) {
-	/* slideshows - intermediate tablet */
-	/* .metaslider .caption {
-		font-size: .9rem !important;
-	} */
+
 
 	/* galleries - intermediate tablet */
 
