@@ -552,7 +552,7 @@ hr {
 
 ul,
 ol {
-	margin: 0;
+	margin: 0 0 1.5em 3em;
 }
 
 ul {
@@ -561,6 +561,10 @@ ul {
 
 ol {
 	list-style: decimal;
+}
+
+li {
+	margin-bottom: 1em;
 }
 
 li > ul,
