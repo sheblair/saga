@@ -726,7 +726,7 @@ button:hover:not(.donate-button) .wp-block-button__link,
 .wp-block-button:hover:not(.donate-button) .wp-block-button__link {
 	background: var(--accent-color);
 	color: var(--font-light);
-	border: 1px solid var(--font-light);
+	border-radius: 20px;
 }
 
 .wp-block-button__link {
