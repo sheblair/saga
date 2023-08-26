@@ -419,9 +419,9 @@ kept here for record of original color choices made during initial site construc
 	--accent-color: #006D5B;
 	--font-dark: #000000;
 	--font-light: #F8F8F8;
-	--background-color: white;
-	--link-color: blue;
-	--link-visited: purple;
+	--background-color: #FFFFFF;
+	--link-color: #000000;
+	--link-visited: #000000;
 }
 
 */
@@ -605,17 +605,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: var(--font-dark);
+	color: var(--link-color);
 }
 
 a:visited {
-	color: var(--font-dark);
+	color: var(--link-visited);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: var(--font-dark);
+	color: var(--link-color);
 }
 
 a:hover,
@@ -628,7 +628,7 @@ a:active {
 	text-transform: uppercase;
 	font-weight: 300;
 	font-size: .875rem;
-	color: var(--font-dark);
+	color: var(--link-color);
 	letter-spacing: .05em;
 }
 
@@ -696,7 +696,7 @@ textarea {
 	width: 100%;
 }
 
-/* clears the ‘X’ from Internet Explorer */
+/* clears the 'X' from Internet Explorer search bar */
 input[type=search]::-ms-clear { 
 	display: none; width : 0; height: 0; 
 }
@@ -705,7 +705,7 @@ input[type=search]::-ms-reveal {
 	display: none; width : 0; height: 0; 
 }
 
-/* clears the ‘X’ from Chrome */
+/* clears the 'X' from Chrome search bar */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
