@@ -718,17 +718,26 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* Custom button styles and editing WordPress default styles */
-button, .wp-block-button {
+button:not(.donate-button), .wp-block-button:not(.donate-button) {
 	background-color: var(--font-light);
 	border-radius: 30px;
-	border: none;
+	border: 2px solid var(--accent-color);
 	font-size: .875rem;
 	cursor: pointer;
+}
+
+button:hover:not(.donate-button) .wp-block-button__link,
+.wp-block-button:hover:not(.donate-button) .wp-block-button__link {
+	background: var(--accent-color);
+	color: var(--font-light);
+	border: 1px solid var(--font-light);
 }
 
 .wp-block-button__link {
 	color: var(--font-dark);
 	background-color: var(--font-light);
+	text-transform: uppercase;
+	font-size: .875rem;
 }
 
 
@@ -1564,21 +1573,6 @@ main#news {
 /* center visit permanent collection button */
 #collector-prints .page-content .wp-block-buttons {
 	align-self: center;
-}
-
-#permanent-collection-button {
-	border: 2px solid var(--accent-color);
-}
-
-#permanent-collection-button a {
-	text-transform: uppercase;
-	font-size: .875rem;
-}
-
-#permanent-collection-button:hover .wp-block-button__link {
-	background: var(--accent-color);
-	color: var(--font-light);
-	border: 1px solid var(--font-light);
 }
 
 /* style search bar */
