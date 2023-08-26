@@ -148,7 +148,7 @@ function create_custom_post_types() {
 			'show_in_rest' => true,
             'rewrite' => array( 'slug' => 'artists' ),
 			'menu_position' => 5,
-			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'supports' => array( 'title', 'editor' ),
         )
     );
 }
