@@ -1874,6 +1874,14 @@ div.slb_viewer_overlay {
 /* Media Queries
 --------------------------------------------- */
 
+/* Smallest Screen Sizes */
+@media screen and (max-width: 280px) {
+	#header-menu li {
+		font-size: .7rem;
+		margin: 10px 0;
+	}
+}
+
 /* Tablet */
 
 @media screen and (min-width: 600px) {
