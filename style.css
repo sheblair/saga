@@ -1790,9 +1790,15 @@ div.slb_viewer_overlay {
 	background-color: var(--font-light) !important;
 }
 
-/* hide slideshow control button */
-span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control {
+/* hide slideshow control button and modal close button */
+span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control,
+#slb_viewer_wrap .slb_theme_slb_default .slb_controls .slb_close .slb_template_tag {
 	display: none !important;
+}
+
+
+#slb_viewer_wrap .slb_theme_slb_baseline .slb_loading {
+	background: url(./lightbox-assets/loading.gif) center center no-repeat !important;
 }
 
 /* replace previous button image */
