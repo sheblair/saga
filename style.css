@@ -1264,7 +1264,7 @@ main#page {
 
 .partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 	max-width: 35%;
-	margin: 0 5px;
+	margin: 10px;
 	justify-content: center;
 }
 
@@ -1736,12 +1736,6 @@ main#permanent-collection .page-content {
 	justify-content: flex-start;
 }
 
-
-/* figure.wp-block-gallery.has-nested-images:not(.saga-gallery-image-gallery) {
-	width: 90%;
-	max-width: 900px;
-} */
-
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -2082,6 +2076,7 @@ div.slb_viewer_overlay {
 
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 		max-width: 25%;
+		margin: 0 5px;
 	}
 
 	/* news - tablet */
@@ -2280,6 +2275,10 @@ div.slb_viewer_overlay {
 	/* exhibitions - intermediate tablet */
 	main#exhibitions {
 		margin: 50px;
+	}
+
+	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
+		max-width: 20%;
 	}
 
 	/* news - intermediate tablet */
@@ -2503,6 +2502,12 @@ div.slb_viewer_overlay {
 	.page-content {
 		width: 90%;
 		max-width: 850px;
+	}
+
+	/* galleries - desktop */
+	figure.wp-block-gallery.has-nested-images:not(.saga-gallery-image-gallery, .partners-gallery) {
+		width: 90%;
+		max-width: 900px;
 	}
 
 	/* about - desktop */
