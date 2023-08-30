@@ -115,7 +115,7 @@
      // check if we are on collector prints page or not
      if (collectorPrintsGallery) {
         const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
-        const collectorPrintsSearch = document.querySelector('#wp-block-search__input-2');
+        const collectorPrintsSearch = document.querySelector('.collector-prints-search');
         const allPrints = [...collectorPrintsGallery.querySelectorAll('figure')];
         const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
         
@@ -143,7 +143,7 @@
      // check if we are on permanent collection page or not
      if (permanentCollectionGallery) {
         const permanentFigcaptions = [...permanentCollectionGallery.querySelectorAll('figcaption')];
-        const permanentCollectionSearch = document.querySelector('#wp-block-search__input-1');
+        const permanentCollectionSearch = document.querySelector('.permanent-collection-search');
         const allPermanentPrints = [...permanentCollectionGallery.querySelectorAll('figure')];
         const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.innerText.toLowerCase());
         
@@ -169,7 +169,7 @@
 
      if (exhibitionCatalogsList) {
         const catalogTitles = [...exhibitionCatalogsList.querySelectorAll('a')];
-        const catalogsSearch = document.querySelector('#wp-block-search__input-1');
+        const catalogsSearch = document.querySelector('.catalogs-search');
         const allCatalogs = [...exhibitionCatalogsList.querySelectorAll('.wp-block-file')];
         const catalogTitleTexts = catalogTitles.map(title => title.innerText.toLowerCase());
 
