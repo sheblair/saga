@@ -22,7 +22,9 @@ get_header();
 		</div>
 
 		<main id="collector-prints" class="site-main">
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<div class="page-content">
+				<?php the_content(); ?>
+			</div>
 		</main>
 
 	<?php endwhile; ?>

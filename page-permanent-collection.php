@@ -25,7 +25,9 @@ get_header();
 			<div class="back-link back-to-archives">
 				<a href="http://localhost:8888/saga/archives">← Back to archives</a>
 			</div>
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<div class="page-content">
+				<?php the_content(); ?>
+			</div>
 		</main>
 
 	<?php endwhile; ?>
