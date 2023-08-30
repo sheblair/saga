@@ -1565,6 +1565,16 @@ main#news {
 	margin: 40px 0;
 }
 
+/* remove underline and highlight council names on hover */
+.council-members p a,
+.council-leadership p a{
+	text-decoration: none;
+}
+
+.council-members p a:hover,
+.council-leadership p a:hover {
+	text-decoration: underline;
+}
 /* collector prints and permanent collection */
 
 /* center visit permanent collection button */
