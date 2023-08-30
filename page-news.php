@@ -29,8 +29,8 @@ get_header();
 
             <!-- View selector -->
             <div class="view-selector view-selector-single">
-				<p id="instagram" class="view-option bold">Recent Posts</p>
-            	<p id="news-selector" class="view-option">Recent News</p>
+            	<p id="news-selector" class="view-option bold">Member News</p>
+                <p id="instagram" class="view-option">Latest Posts</p>
 			</div>
 
             <div class="news-items">

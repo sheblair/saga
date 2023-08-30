@@ -70,8 +70,8 @@
 
     if (newsSelector) {
         newsSelector.addEventListener('click', () => {
-            igFeed.classList.add('hide');
-            newsLoop.classList.remove('hide');
+            igFeed.style.display = 'none';
+            newsLoop.style.display = 'block';
 
             igSelector.classList.remove('bold');
             newsSelector.classList.add('bold');
@@ -80,8 +80,8 @@
 
     if (igSelector) {
         igSelector.addEventListener('click', () => {
-            igFeed.classList.remove('hide');
-            newsLoop.classList.add('hide');
+            igFeed.style.display = 'block';
+            newsLoop.style.display = 'none';
 
             newsSelector.classList.remove('bold');
             igSelector.classList.add('bold');
