@@ -190,4 +190,29 @@
         }
     }
 
+    // Past members dynamic search
+    const pastMembersList = document.querySelector('#past-members-list');
+
+     if (pastMembersList) {
+        const pastMembersElements = [...pastMembersList.querySelectorAll('p')];
+        const pastMembersSearch = document.querySelector('.past-members-search');
+        const pastMembersNames = pastMembersElements.map(title => title.innerText.toLowerCase());
+
+        if (pastMembersSearch) {
+            pastMembersSearch.addEventListener('input', function (e) {
+                const userInput = e.target.value.toLowerCase().trim();
+
+                for (let i = 0; i < pastMembersElements.length; i++) {
+                    const pastMemberName = pastMembersNames[i];
+
+                    if(pastMemberName.includes(userInput)) {
+                        pastMembersElements[i].classList.remove('hide');
+                    } else {
+                        pastMembersElements[i].classList.add('hide');
+                    }
+                }
+            });
+        }
+    }
+
 }() );
