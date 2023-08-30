@@ -1295,6 +1295,12 @@ main#news {
 	text-align: center;
 }
 
+/* hide the IG feed by default */
+#sb_instagram {
+	display: none;
+}
+
+
 .wp-block-query.news-items-loop {
 	margin: 0 auto;
 }
