@@ -1769,11 +1769,6 @@ span.slb_group_status {
     margin-right: 15px !important;
 }
 
-/* hide group status (1 of 3 or whatever) */
-#slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
-	display: none !important;
-}
-
 /* add a margin to the top of the print info */
 div.slb_data_content {
 	margin-top: 10px !important;
@@ -1790,34 +1785,15 @@ div.slb_viewer_overlay {
 	background-color: var(--font-light) !important;
 }
 
-/* hide slideshow control button and modal close button */
-span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_slideshow_control,
+/* hide modal close button */
 #slb_viewer_wrap .slb_theme_slb_default .slb_controls .slb_close .slb_template_tag {
 	display: none !important;
 }
 
-
+/* change loading gif */
 #slb_viewer_wrap .slb_theme_slb_baseline .slb_loading {
 	background: url(./lightbox-assets/loading.gif) center center no-repeat !important;
 }
-
-/* replace previous button image */
-/* span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_nav_prev {
-	background-image: url(./lightbox-assets/prev.png) !important;
-	opacity: 1 !important;
-} */
-
-/* replace next button image */
-/* span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_nav_next {
-	background-image: url(./lightbox-assets/next.png) !important;
-	opacity: 1 !important;
-} */
-
-/* replace close modal button image */
-/* span.slb_template_tag.slb_template_tag_ui.slb_template_tag_ui_close {
-	background: url(./lightbox-assets/close.png) center no-repeat !important;
-	opacity: 1 !important;
-} */
 
 /*--------------------------------------------------------------
 # Utilities
