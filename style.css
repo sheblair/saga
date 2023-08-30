@@ -2664,15 +2664,6 @@ div.slb_viewer_overlay {
 		max-width: 900px;
 	}
 
-	/* pages - large desktop */
-	main#page {
-		align-items: center;
-	}
-
-	.page-content {
-		align-items: center;
-	}
-
 	/* exhibitions - large desktop */
 	.block.current-show-block,
 	.block.upcoming-show-block {
