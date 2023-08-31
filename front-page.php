@@ -33,7 +33,7 @@ get_header();
 				?>
 
 					<div class="block front-page-block">
-						<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php wp_get_attachment_image( $block_thumbnail, $size ) ?></figure></a>
+						<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $block_thumbnail, $size ) ?></figure></a>
 						<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
 						<?php if ( $block_blurb ) : ?>
 							<p class="block-blurb"><?php echo $block_blurb ?></p>
