@@ -42,11 +42,13 @@ get_header();
                         $block_blurb = get_field('block_blurb');
                         $block_additional_link = get_field('block_additional_link');
                         $block_additional_link_label = get_field('block_additional_link_label');
+                        $block_thumbnail = get_field('block_thumbnail');
+					    $size = 'full';
                         
                         ?>
 
                             <div class="block archive-block">
-                                <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
+                                <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $block_thumbnail, $size ) ?></figure></a>
                                 <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                             </div>
 
