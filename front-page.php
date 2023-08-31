@@ -27,11 +27,13 @@ get_header();
 				$block_blurb = get_field('block_blurb');
 				$block_additional_link = get_field('block_additional_link');
 				$block_additional_link_label = get_field('block_additional_link_label');
+				$block_thumbnail = get_field('block_thumbnail');
+				$size = 'full';
 
 				?>
 
 					<div class="block front-page-block">
-						<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php the_post_thumbnail(); ?></figure></a>
+						<a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php wp_get_attachment_image( $block_thumbnail, $size ) ?></figure></a>
 						<p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
 						<?php if ( $block_blurb ) : ?>
 							<p class="block-blurb"><?php echo $block_blurb ?></p>
