@@ -60,13 +60,13 @@ get_header();
                                     $block_blurb = get_field('block_blurb');
                                     $block_additional_link = get_field('block_additional_link');
                                     $block_additional_link_label = get_field('block_additional_link_label');
-                                    $exhibition_thumbnail = get_field('exhibition_thumbnail');
+                                    $current_exhibition_thumbnail = get_field('current_exhibition_thumbnail');
                                     $size = 'full';
 
                                     ?>
 
                                     <div class="block current-show-block">
-                                        <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
+                                        <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $current_exhibition_thumbnail, $size ) ?></figure></a>
                                         <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                         <p class="block-blurb"><?php echo $block_blurb ?></p>
                                         <p class="block-link block-additional-link">
@@ -92,13 +92,13 @@ get_header();
                                 $block_blurb = get_field('block_blurb');
                                 $block_additional_link = get_field('block_additional_link');
                                 $block_additional_link_label = get_field('block_additional_link_label');
-                                $exhibition_thumbnail = get_field('exhibition_thumbnail');
+                                $current_exhibition_thumbnail = get_field('current_exhibition_thumbnail');
                                 $size = 'full';
                                 
                                 ?>
 
                                 <div class="block upcoming-show-block">
-                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
+                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $current_exhibition_thumbnail, $size ) ?></figure></a>
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
@@ -124,13 +124,13 @@ get_header();
                                 $block_blurb = get_field('block_blurb');
                                 $block_additional_link = get_field('block_additional_link');
                                 $block_additional_link_label = get_field('block_additional_link_label');
-                                $exhibition_thumbnail = get_field('exhibition_thumbnail');
+                                $block_thumbnail = get_field('block_thumbnail');
                                 $size = 'full';
 
                                 ?>
 
                                 <div class="block past-show-block">
-                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $exhibition_thumbnail, $size ) ?></figure></a>
+                                    <a href="<?php echo $block_title_url ?>"><figure class="block-img-container"><?php echo wp_get_attachment_image( $block_thumbnail, $size ) ?></figure></a>
                                     <p class="block-link block-title"><a href="<?php echo $block_title_url ?>"><?php echo $block_title ?></a></p>
                                     <p class="block-blurb"><?php echo $block_blurb ?></p>
                                     <p class="block-link block-additional-link">
