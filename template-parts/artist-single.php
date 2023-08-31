@@ -24,8 +24,7 @@
 				$link_2_label = get_field('link_2_label');
 				$link_3_label = get_field('link_3_label');
 				$bio = get_field('bio');
-				$artist_statement = get_field('artist_statement');
-				$featured_image = get_field('featured_image');
+				$block_thumbnail = get_field('block_thumbnail');
 				$size = 'full';
 	?>
 
@@ -35,7 +34,7 @@
 		<!-- Upper Section -->
 		<div class="artist-single-upper">
 			<div class="artist-featured-image">
-				<?php echo wp_get_attachment_image( $featured_image, $size ) ?>
+				<?php echo wp_get_attachment_image( $block_thumbnail, $size ) ?>
 			</div>
 
 			<div class="artist-info">
@@ -71,7 +70,7 @@
 				<?php if ( get_the_content() ) : ?>
 					<p id="prints" class="view-option bold">Prints</p>
 				<?php endif; ?>
-				<?php if ( $bio || $artist_statement ) : ?>
+				<?php if ( $bio ) : ?>
             		<p id="bio" class="view-option">Biography</p>
 				<?php endif; ?>
 			</div>
@@ -84,14 +83,7 @@
 		<div class="artist-single-lower">
 			<!-- Conditionally render either the images or the bio -->
 			<div id="artist-bio">
-				<?php if ($bio) : ?>
-					<?php echo $bio ?>
-				<?php endif; ?>
-
-				<?php if ($artist_statement) : ?>
-					<h4 class="artist-statement-header align-self-center">Artist Statement</h4>
-					<?php echo $artist_statement ?>
-				<?php endif; ?>
+				<?php echo $bio ?>
 			</div>
 			
 			<!-- Prints Gallery -->
