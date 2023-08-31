@@ -2538,7 +2538,7 @@ div.slb_viewer_overlay {
 	}
 
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
-		max-width: 18%;
+		max-width: 15%;
 	}
 
 	figure.partners-gallery.wp-block-gallery.has-nested-images:not(.saga-gallery-image-gallery) {
@@ -2689,10 +2689,6 @@ div.slb_viewer_overlay {
 	.block.past-show-block {
 		width: 20%;
 		margin: 20px 35px 20px 0;
-	}
-
-	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
-		max-width: 18%;
 	}
 
 	figure.partners-gallery.wp-block-gallery.has-nested-images:not(.saga-gallery-image-gallery) {
