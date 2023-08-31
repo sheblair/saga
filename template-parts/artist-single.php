@@ -24,7 +24,7 @@
 				$link_2_label = get_field('link_2_label');
 				$link_3_label = get_field('link_3_label');
 				$bio = get_field('bio');
-				$block_thumbnail = get_field('block_thumbnail');
+				$artist_thumbnail = get_field('artist_thumbnail');
 				$size = 'full';
 	?>
 
@@ -34,7 +34,7 @@
 		<!-- Upper Section -->
 		<div class="artist-single-upper">
 			<div class="artist-featured-image">
-				<?php echo wp_get_attachment_image( $block_thumbnail, $size ) ?>
+				<?php echo wp_get_attachment_image( $artist_thumbnail, $size ) ?>
 			</div>
 
 			<div class="artist-info">
