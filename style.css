@@ -1065,7 +1065,7 @@ header#masthead {
 }
 
 .block.archive-block {
-	max-width: 406px;
+	max-width: 430px;
 }
 
 /* Posts
@@ -2024,6 +2024,11 @@ div.slb_viewer_overlay {
 		align-items: flex-start;
 	}
 
+	/* archives blocks - tablet */
+	.block.archive-block {
+		width: 80%;
+	}
+
 	/* exhibitions page blocks */
 	.block.past-show-block {
 		width: 45%;
@@ -2268,6 +2273,20 @@ div.slb_viewer_overlay {
 		align-items: flex-start;
 	}
 
+	/* archives blocks - intermediate tablet */
+	#archives-blocks.blocks-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 95%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.block.archive-block {
+		width: 40%;
+	}
+
 	/* posts - intermediate tablet */
 	.post {
 		width: 80%;
@@ -2408,13 +2427,6 @@ div.slb_viewer_overlay {
 		margin-right: 10px;
 	}
 
-	/* archives - intermediate tablet */
-	#archives-blocks.blocks-container {
-		align-items: flex-start;
-		width: 90%;
-		margin: 0 auto;
-	}
-
 }
 
 /* Desktop */
@@ -2496,6 +2508,16 @@ div.slb_viewer_overlay {
 	#front-page-blocks.blocks-container {
 		max-width: 1200px;
 		margin: 80px auto;
+	}
+
+	/* archives blocks - desktop */
+	#archives-blocks.blocks-container {
+		justify-content: center;
+	}
+
+	.block.archive-block {
+		width: 38%;
+		margin: 20px;
 	}
 
 	/* posts - desktop */
@@ -2649,19 +2671,7 @@ div.slb_viewer_overlay {
 	.regional-committee-members {
 		width: 50%;
 	}
-
-	/* archives - desktop */
-	#archives-blocks.blocks-container {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		width: 90%;
-		max-width: 1100px;
-	}
-
-	.block.archive-block {
-		width: 40%;
-	}
+	
 }
 
 /* Large Desktop */
@@ -2788,7 +2798,9 @@ div.slb_viewer_overlay {
 
 	/* archives - large desktop */
 	.block.archive-block {
-		width: 50%;
+		width: 32%;
+		max-width: 450px;
+		margin: 0 30px 30px 30px;
 	}
 
 }
