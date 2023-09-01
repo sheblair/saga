@@ -2683,12 +2683,12 @@ div.slb_viewer_overlay {
 	/* exhibitions - large desktop */
 	.block.current-show-block,
 	.block.upcoming-show-block {
-		width: 30%;
+		width: 32%;
 	}
 
 	.block.past-show-block {
-		width: 20%;
-		margin: 20px 35px 20px 0;
+		width: 22%;
+		margin: 20px 30px 20px 0;
 	}
 
 	figure.partners-gallery.wp-block-gallery.has-nested-images:not(.saga-gallery-image-gallery) {
