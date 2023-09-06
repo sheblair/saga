@@ -1671,6 +1671,11 @@ main#permanent-collection .page-content {
 /* Galleries
 --------------------------------------------- */
 
+/* no gallery should exceed a width of 900px */
+figure.wp-block-gallery.has-nested-images {
+	max-width: 900px;
+}
+
 /* center individual gallery item */
 .wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
 	align-items: center;
@@ -2480,7 +2485,6 @@ div.slb_viewer_overlay {
 	/* galleries - desktop */
 	figure.wp-block-gallery.has-nested-images.columns-1:not(.saga-gallery-image-gallery, .partners-gallery, #collector-prints-gallery, #permanent-collection-gallery) {
 		width: 90%;
-		max-width: 900px;
 	}
 
 	/* about - desktop */
