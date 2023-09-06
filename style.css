@@ -1670,10 +1670,6 @@ main#permanent-collection .page-content {
 
 /* Galleries
 --------------------------------------------- */
-figure.wp-block-gallery {
-	margin-bottom: 1.5em;
-	gap: 2em;
-}
 
 /* center individual gallery item */
 .wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
