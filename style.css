@@ -1540,11 +1540,6 @@ main#news {
 }
 
 /* style artist bio */
-#artist-bio {
-	flex-direction: column;
-	align-items: flex-start;
-}
-
 #artist-bio p {
 	margin-bottom: 20px;
 }

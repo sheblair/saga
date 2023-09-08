@@ -55,7 +55,7 @@
     if (bioSelector) {
         bioSelector.addEventListener('click', () => {
             artistPrints.style.display = 'none';
-            artistBio.style.display = 'flex';
+            artistBio.style.display = 'block';
             
             printsSelector.classList.remove('bold');
             bioSelector.classList.add('bold');
