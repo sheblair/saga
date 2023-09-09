@@ -1,6 +1,6 @@
 /*!
 Theme Name: saga
-Theme URI: 
+Theme URI:
 Author: Sheila Blair
 Author URI: https://www.sheilablair.com
 Description: Custom WordPress theme for the Society of American Graphic Artists
@@ -697,20 +697,20 @@ textarea {
 }
 
 /* clears the 'X' from Internet Explorer search bar */
-input[type=search]::-ms-clear { 
-	display: none; width : 0; height: 0; 
+input[type=search]::-ms-clear {
+	display: none; width : 0; height: 0;
 }
 
-input[type=search]::-ms-reveal { 
-	display: none; width : 0; height: 0; 
+input[type=search]::-ms-reveal {
+	display: none; width : 0; height: 0;
 }
 
 /* clears the 'X' from Chrome search bar */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { 
-	display: none; 
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
 }
 
 /* Custom button styles and editing WordPress default styles */
@@ -841,8 +841,8 @@ button:hover:not(.donate-button) .wp-block-button__link,
 	z-index: 3;
 	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-				opacity 0.55s ease; 
-				
+				opacity 0.55s ease;
+
 	cursor: pointer;
 }
 
@@ -872,7 +872,7 @@ button:hover:not(.donate-button) .wp-block-button__link,
 	transform: rotate(45deg) translate(0, 0);
 	top: 30px;
  }
- 
+
  /* third one goes opposite direction */
 .main-navigation.toggled span:nth-child(4) {
 	transform: rotate(-45deg) translate(0, 0);
@@ -927,7 +927,7 @@ header#masthead {
 }
 
 .footer-upper,
-.footer-lower, 
+.footer-lower,
 .donate-button-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -1379,6 +1379,11 @@ main#news {
 	display: none;
 }
 
+/* artist bio max width */
+#artist-bio {
+	max-width: 1200px;
+}
+
 /* style upper toolbar of artists page */
 .artists-page-toolbar {
 	display: flex;
@@ -1731,7 +1736,7 @@ be styled by the WordPress defaults and will not be mobile-responsive. */
 All styles must have !important to override plugin stylesheet
 --------------------------------------------- */
 /* font styles for print info */
-span.slb_data_title, 
+span.slb_data_title,
 span.slb_group_status {
 	font-family: 'Helvetica Neue', sans-serif !important;
     font-size: .875rem !important;
@@ -1871,7 +1876,7 @@ div.slb_viewer_overlay {
 	}
 
 	/* galleries - tablet */
-	.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {		
+	.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
 		width: 45%;
 	}
 
@@ -1993,7 +1998,7 @@ div.slb_viewer_overlay {
 		width: 45%;
 		margin: 25px 25px 25px 0;
 	}
-	
+
 	.block.current-show-block,
 	.block.upcoming-show-block {
 		width: 60%;
@@ -2261,7 +2266,7 @@ div.slb_viewer_overlay {
 	.about-page-purpose {
 		width: 70%;
 	}
-	
+
 	/* exhibitions - intermediate tablet */
 	main#exhibitions {
 		margin: 50px;
@@ -2349,7 +2354,7 @@ div.slb_viewer_overlay {
 	}
 
 	#artist-bio {
-		width: 70%;
+		width: 75%;
 	}
 
 	#artist-prints {
@@ -2364,7 +2369,7 @@ div.slb_viewer_overlay {
 		margin: 10px;
 		flex-grow: 1;
 	}
-	
+
 }
 
 /* Desktop */
@@ -2384,7 +2389,7 @@ div.slb_viewer_overlay {
 	.footer-upper {
 		margin-top: 60px;
 	}
-	
+
 	.footer-lower {
 		margin-top: 0;
 	}
@@ -2396,7 +2401,7 @@ div.slb_viewer_overlay {
 	#menu-footer-menu a {
 		font-size: 1.5rem;
 	}
-	
+
 	.copyright {
 		font-size: .875rem;
 	}
@@ -2523,7 +2528,7 @@ div.slb_viewer_overlay {
 	.news-items * .wp-block-post-date time {
 		font-size: .875rem;
 	}
-	
+
 
 	/* artists - desktop */
 	.artists-page-toolbar,
@@ -2570,7 +2575,7 @@ div.slb_viewer_overlay {
 	}
 
 	#artist-bio {
-		width: 65%;
+		width: 70%;
 	}
 
 	#artist-prints figure {
@@ -2603,7 +2608,7 @@ div.slb_viewer_overlay {
 	.regional-committee-members {
 		width: 50%;
 	}
-	
+
 }
 
 /* Large Desktop */
@@ -2679,7 +2684,7 @@ div.slb_viewer_overlay {
 	}
 
 	#artist-bio {
-		width: 60%;
+		width: 65%;
 	}
 
 	#artist-prints figure {
