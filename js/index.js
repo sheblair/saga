@@ -42,7 +42,9 @@
         })
     }
 
-    if (printsSelector) {
+    if (!bioSelector && printsSelector) {
+        printsSelector.style.cursor = 'auto';
+    } else if (bioSelector && printsSelector) {
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
             artistPrints.style.display = 'flex';
