@@ -2,7 +2,7 @@
  * File index.js.
  *
  * Handles miscellaneous JS necessities.
- * 
+ *
  */
 ( function() {
 
@@ -25,42 +25,47 @@
         thumbnailSelector.addEventListener('click', () => {
             artistList.style.display = 'none';
             artistBlocks.style.display = 'flex';
-            
+
             listSelector.classList.remove('bold');
             thumbnailSelector.classList.add('bold');
-        })    
+        })
     }
-  
+
 
     if (listSelector) {
         listSelector.addEventListener('click', () => {
             artistList.style.display = 'flex';
             artistBlocks.style.display = 'none';
-    
+
             listSelector.classList.add('bold');
             thumbnailSelector.classList.remove('bold');
-        })   
+        })
     }
 
     if (printsSelector) {
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
             artistPrints.style.display = 'flex';
-            
+
             bioSelector.classList.remove('bold');
             printsSelector.classList.add('bold');
         })
     }
 
-    if (bioSelector) {
+    if (!printsSelector && bioSelector) {
+        bioSelector.classList.add('bold');
+        bioSelector.style.cursor = 'auto';
+        artistBio.style.display = 'block';
+
+    } else if (printsSelector && bioSelector) {
         bioSelector.addEventListener('click', () => {
             artistPrints.style.display = 'none';
             artistBio.style.display = 'block';
-            
+
             printsSelector.classList.remove('bold');
             bioSelector.classList.add('bold');
         })
-    }    
+    }
 
     // View selector for News page
     const igSelector = document.querySelector('#instagram');
@@ -92,14 +97,14 @@
     const filterInput = document.querySelector('#artists-search');
     const allArtists = document.querySelectorAll('.artist');
     const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.innerText.toLowerCase());
-    
+
     if (filterInput) {
         filterInput.addEventListener('input', function (e) {
             const userInput = e.target.value.toLowerCase().trim(); // Trim leading and trailing spaces
-        
+
             for (let i = 0; i < allArtists.length; i++) {
                 const artistNameText = artistNames[i];
-        
+
                 if (artistNameText.includes(userInput)) {
                     allArtists[i].classList.remove('hide');
                 } else {
@@ -118,14 +123,14 @@
         const collectorPrintsSearch = document.querySelector('.collector-prints-search');
         const allPrints = [...collectorPrintsGallery.querySelectorAll('figure')];
         const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
-        
+
         if (collectorPrintsSearch) {
             collectorPrintsSearch.addEventListener('input', function (e) {
                 const userInput = e.target.value.toLowerCase().trim();
-            
+
                 for (let i = 0; i < allPrints.length; i++) {
                     const printCaptionText = printCaptions[i];
-            
+
                     if (printCaptionText.includes(userInput)) {
                         allPrints[i].classList.remove('hide');
                     } else {
@@ -135,7 +140,7 @@
             });
         }
      }
- 
+
 
      // Permanent collection prints dynamic search
      const permanentCollectionGallery = document.querySelector('#permanent-collection-gallery');
@@ -146,14 +151,14 @@
         const permanentCollectionSearch = document.querySelector('.permanent-collection-search');
         const allPermanentPrints = [...permanentCollectionGallery.querySelectorAll('figure')];
         const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.innerText.toLowerCase());
-        
+
         if (permanentCollectionSearch) {
             permanentCollectionSearch.addEventListener('input', function (e) {
                 const userInput = e.target.value.toLowerCase().trim();
-               
+
                 for (let i = 0; i < allPermanentPrints.length; i++) {
                     const printCaptionText = permanentPrintCaptions[i];
-            
+
                     if (printCaptionText.includes(userInput)) {
                         allPermanentPrints[i].classList.remove('hide');
                     } else {
