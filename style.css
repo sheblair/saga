@@ -1732,6 +1732,10 @@ be styled by the WordPress defaults and will not be mobile-responsive. */
 	text-align: center !important;
 }
 
+.metaslider .flexslider .flex-direction-nav li a.flex-next {
+	display: none;
+}
+
 /* Simple Lightbox
 All styles must have !important to override plugin stylesheet
 --------------------------------------------- */
@@ -1766,7 +1770,7 @@ div.slb_viewer_overlay {
 
 /* change loading gif */
 #slb_viewer_wrap .slb_theme_slb_baseline .slb_loading {
-	background: url(./lightbox-assets/loading.gif) center center no-repeat !important;
+	background: url(./assets/lightbox/loading.gif) center center no-repeat !important;
 }
 
 /*--------------------------------------------------------------
