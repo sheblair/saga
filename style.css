@@ -2354,11 +2354,11 @@ div.slb_viewer_overlay {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
+		width: 90%;
 	}
 
 	#artist-prints figure {
-		width: 30%;
-		max-width: 30%;
+		flex-basis: 25%;
 		margin: 10px;
 		flex-grow: 1;
 	}
@@ -2572,8 +2572,6 @@ div.slb_viewer_overlay {
 	}
 
 	#artist-prints figure {
-		width: 25%;
-		max-width: 25%;
 		margin: 10px;
 	}
 
