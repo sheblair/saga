@@ -1733,7 +1733,13 @@ be styled by the WordPress defaults and will not be mobile-responsive. */
 }
 
 .metaslider .flexslider .flex-direction-nav li a.flex-next {
-	display: none;
+	background-image: url('./assets/metaslider/metaslider-next.png') !important;
+	background-repeat: no-repeat !important;
+}
+
+.metaslider .flexslider .flex-direction-nav li a.flex-prev {
+	background-image: url('./assets/metaslider/metaslider-prev.png') !important;
+	background-repeat: no-repeat !important;
 }
 
 /* Simple Lightbox
