@@ -1659,37 +1659,19 @@ figure.wp-block-gallery.has-nested-images {
 	max-width: 900px;
 }
 
-/* adjust font size for all gallery captions */
+/* style all gallery captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	font-size: .75rem;
-}
-
-/* These styles only apply to SINGLE-COLUMN galleries. All other galleries will
-be styled by the WordPress defaults and will not be mobile-responsive. */
-
-/* center individual gallery item */
-.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
-	align-items: center;
-}
-
-/* gallery captions for single-column galleries */
-.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image figcaption {
-	background: none;
+	background-color: var(--font-light);
 	color: var(--font-dark);
-	padding: 5px 0 0 0;
-	bottom: 5px;
-	position: relative;
+	background: var(--font-light);
+	padding: 10px;
 	text-align: left;
 }
 
-/* reposition image captions and stick to bottom of images */
-.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image,
-.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image figcaption {
-	justify-content: flex-start;
-}
-
-.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image>a, .wp-block-gallery.has-nested-images figure.wp-block-image>div {
-	flex-grow: 0;
+/* if user does not select "crop images", this will make sure the gallery images are centered in their containers */
+.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+	align-items: center;
 }
 
 
