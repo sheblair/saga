@@ -227,7 +227,7 @@ function dgtlnk_custom_menu_order( $menu_ord ) {
           'index.php', // Dashboard
 
           'separator1', // First separator
-		
+
           'edit.php', // Posts
 
           'edit.php?post_type=page', // Pages
@@ -243,7 +243,7 @@ function dgtlnk_custom_menu_order( $menu_ord ) {
 		  'tools.php', // Tools
 
 		  'options-general.php', // Settings
-		  
+
 		  'themes.php', // Appearance
 
 		  'separator-last', // Last separator
@@ -251,7 +251,7 @@ function dgtlnk_custom_menu_order( $menu_ord ) {
 		  'plugins.php', // Plugins
 
 		  'admin.php?page=fonts-plugin', // Fonts Plugin
-		  
+
 		  'edit.php?post_type=acf-field-group', // ACF
 
 		  'admin.php?page=metaslider', // MetaSlider
@@ -274,3 +274,26 @@ function dgtlnk_remove_menus() {
 }
 
 add_action( 'admin_menu', 'dgtlnk_remove_menus' );
+
+/* Remove support for Comments, Excerpt, and Thumbnail on all Posts and Pages,
+remove support for Page Attributes on all Pages */
+function remove_support_from_posts() {
+    // Remove support for comments/discussion
+    remove_post_type_support('post', 'comments');
+	remove_post_type_support('post', 'trackbacks');
+	remove_post_type_support('page', 'comments');
+
+    // Remove support for excerpts
+    remove_post_type_support('post', 'excerpt');
+	remove_post_type_support('page', 'excerpt');
+
+    // Remove support for featured images
+    remove_post_type_support('post', 'thumbnail');
+	remove_post_type_support('page', 'thumbnail');
+
+	// Remove support for page attributes
+	remove_post_type_support('page', 'page-attributes');
+
+}
+add_action('init', 'remove_support_from_posts');
+
