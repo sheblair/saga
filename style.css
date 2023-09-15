@@ -1069,19 +1069,21 @@ main#post {
 
 .post-header {
 	font-weight: 500;
-	font-size: 1.5rem;
-	margin: 10px 0;
+	font-size: 1.3rem;
+	margin: 30px 0;
+	display: flex;
+	align-items: center;
 }
 
 .post-content {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .post-content p {
 	margin: 5px 0;
-	align-self: flex-start;
 }
 
 /* center image captions on posts */
@@ -2011,9 +2013,8 @@ div.slb_viewer_overlay {
 		width: 90%;
 	}
 
-	.back-link.back-to-news,
-	.back-link.back-to-exhibitions {
-		margin-bottom: 30px;
+	.back-link {
+		margin-bottom: 60px;
 	}
 
 	/* archives posts - tablet */
@@ -2245,7 +2246,12 @@ div.slb_viewer_overlay {
 		width: 80%;
 	}
 
-	.post-content figure.wp-block-image {
+	.post-header {
+		font-size: 1.5rem;
+	}
+
+	.post-content figure.wp-block-image,
+	.post-content .wp-block-image figure {
 		width: 60%;
 		max-width: 60%;
 	}
@@ -2457,14 +2463,13 @@ div.slb_viewer_overlay {
 	}
 
 	/* posts - desktop */
-	.post-content figure.wp-block-image {
+	.post-content figure.wp-block-image,
+	.post-content .wp-block-image figure {
 		width: 50%;
 		max-width: 50%;
 	}
 
-	/* exhibition posts */
-	.post-content.post-content-exhibition,
-	.post-content.post-content-news {
+	.post-content {
 		width: 90%;
 	}
 
