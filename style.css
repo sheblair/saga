@@ -593,7 +593,8 @@ img {
 	max-width: 100%;
 }
 
-figure {
+figure,
+.wp-block-media-text .wp-block-media-text__media {
 	margin: 1em 0;
 }
 
@@ -728,6 +729,12 @@ button:hover:not(.donate-button) .wp-block-button__link,
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
+/* Media and Text */
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: 0 10px;
+}
 
 /* Navigation
 --------------------------------------------- */
@@ -1834,6 +1841,11 @@ div.slb_viewer_overlay {
 /* Tablet */
 
 @media screen and (min-width: 600px) {
+
+	/* media and text - tablet */
+	.wp-block-media-text .wp-block-media-text__content {
+		padding: 0 2em;
+	}
 
 	/* search bars - tablet */
 	input[type="search"] {
