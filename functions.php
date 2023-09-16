@@ -288,10 +288,6 @@ function remove_support_from_posts() {
     remove_post_type_support('post', 'excerpt');
 	remove_post_type_support('page', 'excerpt');
 
-    // Remove support for featured images
-    remove_post_type_support('post', 'thumbnail');
-	remove_post_type_support('page', 'thumbnail');
-
 	// Remove support for page attributes
 	remove_post_type_support('page', 'page-attributes');
 
