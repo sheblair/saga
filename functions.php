@@ -268,9 +268,10 @@ add_filter( 'custom_menu_order', 'dgtlnk_custom_menu_order', 10, 1 );
 add_filter( 'menu_order', 'dgtlnk_custom_menu_order', 10, 1 );
 
 
-/* Remove Comments from admin menu */
+/* Remove Comments and Links from admin menu */
 function dgtlnk_remove_menus() {
      remove_menu_page( 'edit-comments.php' );
+	 remove_menu_page( 'link-manager.php' );
 }
 
 add_action( 'admin_menu', 'dgtlnk_remove_menus' );
