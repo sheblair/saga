@@ -1362,12 +1362,12 @@ main#news {
 
 /* style the titles of the news posts */
 .news-items * .wp-block-post-title {
-	font-size: 1.2rem;
-	margin-bottom: 10px;
+	font-size: 1.15rem;
 }
 
 .news-items * .wp-block-post-title a {
 	color: var(--font-dark);
+	text-decoration: none;
 }
 
 /* override default padding on news item blocks */
@@ -2527,8 +2527,7 @@ div.slb_viewer_overlay {
 	}
 
 	.news-items * .wp-block-post-title {
-		font-size: .875rem;
-		margin-bottom: 10px;
+		font-size: 1rem;
 	}
 
 	.news-items * .wp-block-post-excerpt p {
