@@ -64,9 +64,9 @@
 					<a class="artist-single-link" target="_blank" href="<?php echo $link_3 ?>"><p class="artist-single-link-label"><?php echo $link_3_label ?> </p></a>
 				<?php endif; ?>
 			</div>
-			
 
-			<div class="view-selector view-selector-single">
+
+			<div class="view-selector view-selector-artist-single">
 				<?php if ( get_the_content() ) : ?>
 					<p id="prints" class="view-option bold">Prints</p>
 				<?php endif; ?>
@@ -85,9 +85,9 @@
 			<div id="artist-bio">
 				<?php echo $bio ?>
 			</div>
-			
+
 			<!-- Prints Gallery -->
-			<div id="artist-prints"> 
+			<div id="artist-prints">
 				<?php the_content(); ?>
 			</div> <!-- end Prints Gallery -->
 

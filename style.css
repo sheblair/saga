@@ -1160,6 +1160,24 @@ main {
 	margin: 20px;
 }
 
+/* style view selectors */
+.view-selector {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0 15px 0;
+}
+
+.view-option {
+	margin-right: 20px;
+	cursor: pointer;
+	color: var(--font-dark);
+	font-size: 1rem;
+	letter-spacing: 0.0425rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
 /* page heading */
 .page-heading-wrapper {
 	display: flex;
@@ -1266,7 +1284,13 @@ main#news {
 }
 
 #news .view-selector {
-	margin-top: 40px;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px 0;
+}
+
+#news .view-selector .view-option {
+	margin: 15px 0;
 }
 
 #new-members-slideshow {
@@ -1310,7 +1334,7 @@ main#news {
 
 /* news items styles */
 .news-items {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #news .accent-strip {
@@ -1338,7 +1362,7 @@ main#news {
 
 /* style the titles of the news posts */
 .news-items * .wp-block-post-title {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	margin-bottom: 10px;
 }
 
@@ -1391,18 +1415,6 @@ main#news {
 	margin-bottom: 10px;
 	height: 40px;
     width: 250px;
-}
-
-/* style view selector */
-.view-selector {
-	display: flex;
-	justify-content: center;
-	margin: 50px 0 15px 0;
-}
-
-.view-option {
-	margin-right: 20px;
-	cursor: pointer;
 }
 
 /* style blocks view of artists */
@@ -1508,7 +1520,7 @@ main#news {
 	margin-bottom: 15px;
 }
 
-.artist-single-link, .view-option {
+.artist-single-link {
 	color: var(--font-dark);
 	font-size: 0.875rem;
 	letter-spacing: 0.0225rem;
@@ -1852,6 +1864,12 @@ div.slb_viewer_overlay {
 		padding: 0 2em;
 	}
 
+	/* view selectors - tablet */
+	.view-option {
+		font-size: 0.875rem;
+		letter-spacing: 0.0225rem;
+	}
+
 	/* search bars - tablet */
 	input[type="search"] {
 		width: 350px;
@@ -2079,7 +2097,7 @@ div.slb_viewer_overlay {
 		margin-bottom: 0;
 	}
 
-	.view-selector.view-selector-all {
+	.view-selector.view-selector-artists-all {
 		margin: 0;
 		justify-content: flex-end;
 	}
@@ -2141,7 +2159,7 @@ div.slb_viewer_overlay {
 		width: 40%;
 	}
 
-	.view-selector.view-selector-single {
+	.view-selector.view-selector-artist-single {
 		justify-content: center;
 	}
 
@@ -2562,7 +2580,7 @@ div.slb_viewer_overlay {
 		margin-right: 30px;
 	}
 
-	.view-selector.view-selector-single {
+	.view-selector.view-selector-artist-single {
 		margin-top: 70px;
 	}
 

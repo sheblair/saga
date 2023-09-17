@@ -14,7 +14,7 @@ get_header();
 			<h1 class="page-heading"><?php the_title(); ?></h1>
 			<div class="accent-strip"></div>
 	</div>
-	
+
 	<main id="artists-page" class="site-main">
         <div class="artists-page-toolbar">
             <!-- Search form here -->
@@ -24,7 +24,7 @@ get_header();
             </div>
 
             <!-- Thumbnails or List selection here -->
-            <div class="view-selector view-selector-all">
+            <div class="view-selector view-selector-artists-all">
                 <p id="thumbnail" class="view-option bold">Thumbnails</p>
                 <p id="list" class="view-option">List</p>
             </div>
