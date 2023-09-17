@@ -1380,7 +1380,7 @@ main#news {
 
 /* remove flex gap on news items lists - Member News and In Memoriam */
 :where(.wp-block-columns.is-layout-flex) {
-	gap: 0em;
+	gap: 1em;
 }
 
 /* artists page */
@@ -2072,12 +2072,25 @@ div.slb_viewer_overlay {
 	}
 
 	/* news - tablet */
-	.wp-block-query.member-news-loop ul {
-		width: 100%;
+	#news .view-selector {
+		flex-direction: row;
+		margin: 50px 0 15px 0;
 	}
 
-	.news-items .wp-block-query ul {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+	#news .view-selector .view-option {
+		margin: 0 20px 0 0;
+	}
+
+	:where(.wp-block-columns.is-layout-flex) {
+		gap: 2em;
+	}
+
+	.news-items {
+		margin-top: 30px;
+	}
+
+	.wp-block-query.member-news-loop ul {
+		width: 100%;
 	}
 
 	.news-items,
