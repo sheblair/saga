@@ -1378,8 +1378,8 @@ main#news {
 	padding-left: 20px !important;
 }
 
-/* remove grid gap on news items grid */
-.news-items * :where(.wp-block-post-template.is-layout-grid) {
+/* remove flex gap on news items lists - Member News and In Memoriam */
+:where(.wp-block-columns.is-layout-flex) {
 	gap: 0em;
 }
 
