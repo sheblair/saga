@@ -71,28 +71,43 @@
 
     // View selector for News page
     const igSelector = document.querySelector('#instagram');
-    const newsSelector = document.querySelector('#news-selector');
+    const memberNewsSelector = document.querySelector('#member-news');
+    const inMemoriamSelector = document.querySelector('#in-memoriam');
     const igFeed = document.querySelector('#sb_instagram');
-    const newsLoop = document.querySelector('.news-items-loop');
+    const memberNewsLoop = document.querySelector('.member-news-loop');
+    const inMemoriamLoop = document.querySelector('.in-memoriam-loop');
 
-    if (newsSelector) {
-        newsSelector.addEventListener('click', () => {
+    if (igSelector && memberNewsSelector && inMemoriamSelector) {
+        memberNewsSelector.addEventListener('click', () => {
+            memberNewsLoop.style.display = 'block';
             igFeed.style.display = 'none';
-            newsLoop.style.display = 'block';
+            inMemoriamLoop.style.display = 'none';
 
+            memberNewsSelector.classList.add('bold');
             igSelector.classList.remove('bold');
-            newsSelector.classList.add('bold');
+            inMemoriamSelector.classList.remove('bold');
         })
-    }
 
-    if (igSelector) {
         igSelector.addEventListener('click', () => {
             igFeed.style.display = 'block';
-            newsLoop.style.display = 'none';
+            inMemoriamLoop.style.display = 'none';
+            memberNewsLoop.style.display = 'none';
 
-            newsSelector.classList.remove('bold');
             igSelector.classList.add('bold');
+            inMemoriamSelector.classList.remove('bold');
+            memberNewsSelector.classList.remove('bold');
         })
+
+        inMemoriamSelector.addEventListener('click', () => {
+            inMemoriamLoop.style.display = 'block';
+            igFeed.style.display = 'none';
+            memberNewsLoop.style.display = 'none';
+
+            inMemoriamSelector.classList.add('bold');
+            igSelector.classList.remove('bold');
+            memberNewsSelector.classList.remove('bold');
+        })
+
     }
 
     // Artists page dynamic search

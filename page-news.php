@@ -24,13 +24,14 @@ get_header();
                 </div>
                 <h2 class="new-members-heading">Welcome to our new members!</h2>
             </div>
-            
+
             <div class="accent-strip"></div>
 
             <!-- View selector -->
             <div class="view-selector view-selector-single">
-            	<p id="news-selector" class="view-option bold">Member News</p>
+            	<p id="member-news" class="view-option bold">Member News</p>
                 <p id="instagram" class="view-option">Latest Posts</p>
+                <p id="in-memoriam" class="view-option">In Memoriam</p>
 			</div>
 
             <div class="news-items">

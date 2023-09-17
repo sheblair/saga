@@ -1285,22 +1285,26 @@ main#news {
 	text-align: center;
 }
 
-/* hide the IG feed by default */
-#sb_instagram {
+/* hide the IG feed and the In Memoriam Loop by default */
+#sb_instagram,
+.in-memoriam-loop {
 	display: none;
 }
 
 
-.wp-block-query.news-items-loop {
+.wp-block-query.member-news-loop,
+.wp-block-query.in-memoriam-loop {
 	margin: 0 auto;
 }
 
-.wp-block-query.news-items-loop ul {
+.wp-block-query.member-news-loop ul,
+.wp-block-query.in-memoriam-loop ul {
 	margin: 0 auto;
 	width: 90%;
 }
 
-.wp-block-query.news-items-loop ul li {
+.wp-block-query.member-news-loop ul li,
+.wp-block-query.in-memoriam-loop ul li {
 	width: 100%;
 }
 
@@ -2050,7 +2054,7 @@ div.slb_viewer_overlay {
 	}
 
 	/* news - tablet */
-	.wp-block-query.news-items-loop ul {
+	.wp-block-query.member-news-loop ul {
 		width: 100%;
 	}
 
