@@ -111,8 +111,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-size: 2rem;
+	margin: 0.67rem 0;
 }
 
 /* Grouping content
@@ -134,7 +134,7 @@ hr {
  */
 pre {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /* Text-level semantics
@@ -173,7 +173,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /**
@@ -1091,9 +1091,10 @@ main#post {
 	align-self: flex-start;
 }
 
-/* center image captions on posts */
+/* style image captions on posts */
 .post-content .wp-block-image .wp-element-caption {
 	text-align: center;
+	font-size: .875rem;
 }
 
 /* archives posts */
