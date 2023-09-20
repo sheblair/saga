@@ -9,7 +9,7 @@
     // Automatically update copyright year to current year
 	const copyright = document.querySelector('.copyright');
     const currentYear = new Date().getFullYear();
-    copyright.innerText = `© ${currentYear} Society of American Graphic Artists`;
+    copyright.innerText = `©${currentYear} Society of American Graphic Artists |`;
 
     // View selectors for Artists page and Single Artist page
     const thumbnailSelector = document.querySelector('#thumbnail');
