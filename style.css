@@ -1108,8 +1108,13 @@ main#post {
 
 /* style image captions on posts */
 .post-content .wp-block-image .wp-element-caption {
-	text-align: center;
-	font-size: .875rem;
+	font-size: .75rem;
+	background-color: var(--font-light);
+	color: var(--font-dark);
+	background: var(--font-light);
+	padding: 10px;
+	text-align: left;
+	margin: 0;
 }
 
 /* archives posts */
@@ -1890,6 +1895,11 @@ div.slb_viewer_overlay {
 	.view-option {
 		font-size: 0.875rem;
 		letter-spacing: 0.0225rem;
+	}
+
+	/* captions - tablet */
+	.post-content .wp-block-image .wp-element-caption {
+		font-size: .875rem;
 	}
 
 	/* search bars - tablet */
