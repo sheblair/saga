@@ -2553,7 +2553,7 @@ div.slb_viewer_overlay {
 
 	.page-content {
 		width: 90%;
-		max-width: 850px;
+		max-width: 750px;
 	}
 
 	/* galleries - desktop */
@@ -2773,10 +2773,10 @@ div.slb_viewer_overlay {
 	/* collector prints - large desktop */
 	#collector-prints .page-content {
 		align-items: flex-start;
-		max-width: 900px;
 	}
 
-	#permanent-collection .page-content {
+	#permanent-collection .page-content,
+	#collector-prints .page-content {
 		max-width: 900px;
 	}
 
