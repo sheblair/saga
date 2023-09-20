@@ -1416,9 +1416,8 @@ main#news {
 
 /* style search bar */
 #artists-search {
-	margin-bottom: 10px;
+	margin: 10px 0;
 	height: 40px;
-    width: 250px;
 }
 
 /* style blocks view of artists */
@@ -1598,6 +1597,10 @@ main#news {
 .collector-prints-search,
 .permanent-collection-search {
 	align-self: center;
+}
+
+.collector-prints-search {
+	margin-bottom: 10px;
 }
 
 /* center prints galleries on page */
@@ -1876,7 +1879,7 @@ div.slb_viewer_overlay {
 
 	/* search bars - tablet */
 	input[type="search"] {
-		width: 350px;
+		width: 300px;
 		margin-bottom: 15px;
 	}
 
