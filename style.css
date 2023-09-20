@@ -1370,6 +1370,10 @@ main#news {
 	text-decoration: none;
 }
 
+.news-items * .wp-block-post-title a:hover {
+	text-decoration: underline;
+}
+
 /* override default padding on news item blocks */
 .news-items * .wp-block-group {
 	padding-top: 20px !important;
