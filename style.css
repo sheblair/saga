@@ -1113,7 +1113,7 @@ main#post {
 
 /* style image captions on posts */
 .post-content .wp-block-image .wp-element-caption {
-	font-size: .75rem;
+	font-size: .875rem;
 	background-color: var(--font-light);
 	color: var(--font-dark);
 	background: var(--font-light);
@@ -1719,7 +1719,7 @@ figure.wp-block-gallery.has-nested-images {
 
 /* style all gallery captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	font-size: .75rem;
+	font-size: .875rem;
 	background-color: var(--font-light);
 	color: var(--font-dark);
 	background: var(--font-light);
@@ -1902,11 +1902,6 @@ div.slb_viewer_overlay {
 	.view-option {
 		font-size: 0.875rem;
 		letter-spacing: 0.0225rem;
-	}
-
-	/* captions - tablet */
-	.post-content .wp-block-image .wp-element-caption {
-		font-size: .875rem;
 	}
 
 	/* search bars - tablet */
@@ -2260,13 +2255,6 @@ div.slb_viewer_overlay {
 }
 
 @media screen and (min-width: 800px) {
-
-
-	/* galleries - intermediate tablet */
-	/* increase font size of gallery captions */
-	.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-		font-size: .875rem;
-	}
 
 	/* header - intermediate tablet */
 	.custom-logo {
