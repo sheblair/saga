@@ -2494,6 +2494,11 @@ div.slb_viewer_overlay {
 		margin-right: 60px;
 	}
 
+	/* galleries - desktop */
+	figure.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
+		max-width: 400px;
+	}
+
 	/* blocks - desktop */
 	.block-title {
 		font-size: 1.125rem;
@@ -2688,7 +2693,6 @@ div.slb_viewer_overlay {
 	/* galleries - large desktop */
 		figure.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
 			width: 30%;
-			max-width: 400px;
 		}
 
 	/* posts - large desktop */
