@@ -2565,6 +2565,7 @@ div.slb_viewer_overlay {
 	.about-page-purpose {
 		width: 55%;
 		margin: 75px auto;
+		max-width: 650px;
 	}
 
 	/* exhibitions - desktop */
