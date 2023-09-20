@@ -122,10 +122,10 @@
             for (let i = 0; i < allArtists.length; i++) {
                 const artistNameText = artistNames[i];
 
-                if (artistNameText.includes(userInput)) {
-                    allArtists[i].classList.remove('hide');
-                } else {
+                if (!artistNameText.includes(userInput)) {
                     allArtists[i].classList.add('hide');
+                } else {
+                    allArtists[i].classList.remove('hide');
                 }
             }
         });
@@ -148,10 +148,10 @@
                 for (let i = 0; i < allPrints.length; i++) {
                     const printCaptionText = printCaptions[i];
 
-                    if (printCaptionText.includes(userInput)) {
-                        allPrints[i].classList.remove('hide');
-                    } else {
+                    if (!printCaptionText.includes(userInput)) {
                         allPrints[i].classList.add('hide');
+                    } else {
+                        allPrints[i].classList.remove('hide');
                     }
                 }
             });
@@ -176,10 +176,10 @@
                 for (let i = 0; i < allPermanentPrints.length; i++) {
                     const printCaptionText = permanentPrintCaptions[i];
 
-                    if (printCaptionText.includes(userInput)) {
-                        allPermanentPrints[i].classList.remove('hide');
-                    } else {
+                    if (!printCaptionText.includes(userInput)) {
                         allPermanentPrints[i].classList.add('hide');
+                    } else {
+                        allPermanentPrints[i].classList.remove('hide');
                     }
                 }
             });
@@ -202,10 +202,10 @@
                 for (let i = 0; i < allCatalogs.length; i++) {
                     const catalogTitleText = catalogTitleTexts[i];
 
-                    if(catalogTitleText.includes(userInput)) {
-                        allCatalogs[i].classList.remove('hide');
-                    } else {
+                    if(!catalogTitleText.includes(userInput)) {
                         allCatalogs[i].classList.add('hide');
+                    } else {
+                        allCatalogs[i].classList.remove('hide');
                     }
                 }
             });
@@ -227,10 +227,10 @@
                 for (let i = 0; i < pastMembersElements.length; i++) {
                     const pastMemberName = pastMembersNames[i];
 
-                    if(pastMemberName.includes(userInput)) {
-                        pastMembersElements[i].classList.remove('hide');
-                    } else {
+                    if(!pastMemberName.includes(userInput)) {
                         pastMembersElements[i].classList.add('hide');
+                    } else {
+                        pastMembersElements[i].classList.remove('hide');
                     }
                 }
             });
