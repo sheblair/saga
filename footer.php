@@ -33,7 +33,8 @@
 		<div class="footer-lower">
 			<?php wp_nav_menu( array( 'footer-menu' => 'footer-menu' ) ); ?>
 			<div class="copyright-wrap">
-				<p class="copyright">©2023 Society of American Graphic Artists | </p>
+				<p class="copyright">©2023 Society of American Graphic Artists</p>
+				<p class="copyright-divider"> | </p>
 				<p class="dev-credit">Developed by <a href="https://www.sheilablair.com/" target="_blank">Sheila Blair</a></p>
 			</div>
 		</div>

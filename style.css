@@ -955,10 +955,6 @@ header#masthead {
 	padding: 15px;
 }
 
-.copyright, .dev-credit {
-	font-size: .8rem;
-}
-
 /* footer menu */
 #menu-footer-menu {
 	list-style-type: none;
@@ -983,6 +979,15 @@ header#masthead {
 	align-items: center;
 	margin-top: 5px;
 	margin-bottom: 10px;
+}
+
+.copyright-divider {
+	display: none;
+}
+
+.copyright, .dev-credit {
+	font-size: .8rem;
+	margin: 0;
 }
 
 .dev-credit a {
@@ -2005,8 +2010,9 @@ div.slb_viewer_overlay {
 		flex-wrap: wrap;
 	}
 
-	.dev-credit {
-		margin-left: 5px;
+	.copyright-divider {
+		display: block;
+		margin: 0 5px;
 	}
 
 	/* blocks - tablet */
