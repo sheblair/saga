@@ -1630,15 +1630,17 @@ main#news {
 
 /* center prints galleries on page */
 #collector-prints-gallery {
-	margin: 20px auto;
+	margin: 20px 0;
 }
 
 #permanent-collection-gallery {
 	margin: 20px 0;
 }
 
-main#permanent-collection .page-content {
-	align-items: center;
+/* align prints to show up directly underneath search bar when searching */
+main#permanent-collection .page-content,
+main#collector-prints .page-content {
+	align-items: flex-start;
 }
 
 /* archives */
@@ -2686,6 +2688,7 @@ div.slb_viewer_overlay {
 	/* galleries - large desktop */
 		figure.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
 			width: 30%;
+			max-width: 400px;
 		}
 
 	/* posts - large desktop */
