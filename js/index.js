@@ -126,7 +126,7 @@
     // Check if we are on Artists page and if the search input exists
     if (artistsSearch) {
         // Add event listener for user input
-        artistsSearch.addEventListener('input', function (e) {
+        artistsSearch.addEventListener('input', (e) => {
             // Convert user input to lowercase and trim leading and trailing spaces
             const userInput = e.target.value.toLowerCase().trim();
             // Loop through all artists and show/hide based on user input
@@ -154,8 +154,13 @@
 
         // Check if the search input exists
         if (collectorPrintsSearch) {
+            // Prevent form submission to prevent triggering a global search
+            collectorPrintsSearch.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
             // Add event listener for user input
-            collectorPrintsSearch.addEventListener('input', function (e) {
+            collectorPrintsSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
@@ -186,8 +191,13 @@
 
         // Check if search input exists
         if (permanentCollectionSearch) {
+            // Prevent form submission to prevent triggering a global search
+            permanentCollectionSearch.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
             // Add event listener for user input
-            permanentCollectionSearch.addEventListener('input', function (e) {
+            permanentCollectionSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
@@ -217,7 +227,12 @@
 
         // Check if search input exists
         if (catalogsSearch) {
-            catalogsSearch.addEventListener('input', function (e) {
+            // Prevent form submission to prevent triggering a global search
+            catalogsSearch.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
+            catalogsSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
@@ -246,8 +261,13 @@
 
         // Check if search input exists
         if (pastMembersSearch) {
+            // Prevent form submission to prevent triggering a global search
+            pastMembersSearch.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
             // Add event listener to track user input in search input
-            pastMembersSearch.addEventListener('input', function (e) {
+            pastMembersSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
@@ -262,7 +282,6 @@
                     }
                 }
             });
-
         }
     }
 
