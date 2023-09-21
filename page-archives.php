@@ -25,18 +25,18 @@ get_header();
 
             <div id="archives-blocks" class="blocks-container">
                     <?php
-                        $args = array( 
+                        $args = array(
                             'post_type'      => 'post',
-                            'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
-                            'category_name' => 'archives' 
+                            'posts_per_page' => -1, // -1 to display all posts
+                            'category_name' => 'archives'
                         );
-                        
+
                         $loop = new WP_Query( $args );
 
-                        if ( $loop -> have_posts() ) { 
-                        
-                        while ( $loop -> have_posts() ) { $loop -> the_post(); 
-                        
+                        if ( $loop -> have_posts() ) {
+
+                        while ( $loop -> have_posts() ) { $loop -> the_post();
+
                         $block_title_url = get_field('block_title_url');
                         $block_title = get_field('block_title');
                         $block_blurb = get_field('block_blurb');
@@ -44,7 +44,7 @@ get_header();
                         $block_additional_link_label = get_field('block_additional_link_label');
                         $block_thumbnail = get_field('block_thumbnail');
 					    $size = 'full';
-                        
+
                         ?>
 
                             <div class="block archive-block">

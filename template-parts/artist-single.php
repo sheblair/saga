@@ -81,10 +81,12 @@
 
 		<!-- Lower Section - prints or biography -->
 		<div class="artist-single-lower">
-			<!-- Conditionally render either the images or the bio -->
+			<!-- Conditionally render either the prints or the bio -->
+
+			<!-- Biography -->
 			<div id="artist-bio">
 				<?php echo $bio ?>
-			</div>
+			</div> <!-- end Biography -->
 
 			<!-- Prints Gallery -->
 			<div id="artist-prints">

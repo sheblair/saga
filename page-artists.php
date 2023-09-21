@@ -30,7 +30,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Use JS to conditionally display either one of these: -->
+        <!-- Use JS to conditionally display either thumbnails or list -->
 		<div id="artists-page-blocks">
             <div class="artists-page-blocks-grid">
 			    <?php get_template_part( 'template-parts/artist', 'blocks' ); ?>

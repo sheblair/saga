@@ -23,22 +23,22 @@ get_header();
 
 		<main id="exhibitions" class="site-main">
 
-        <?php 
+        <?php
                 $current_args = array(
                     'post_type'      => 'post',
-                    'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
+                    'posts_per_page' => -1, // -1 to display all posts
                     'tag'            => 'current-show',
                 );
 
                 $upcoming_args = array(
                     'post_type'      => 'post',
-                    'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
+                    'posts_per_page' => -1, // -1 to display all posts
                     'tag'            => 'upcoming-show',
                 );
 
                 $past_args = array(
                     'post_type'      => 'post',
-                    'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
+                    'posts_per_page' => -1, // -1 to display all posts
                     'tag'            => 'past-show',
                 );
 
@@ -52,9 +52,9 @@ get_header();
                     <div class="current-shows">
                         <h2 class="shows-title">Current</h2>
                             <div id="current-show-blocks" class="blocks-container">
-        
-                                <?php while ( $current_loop-> have_posts() ) { $current_loop -> the_post(); 
-                
+
+                                <?php while ( $current_loop-> have_posts() ) { $current_loop -> the_post();
+
                                     $block_title_url = get_field('block_title_url');
                                     $block_title = get_field('block_title');
                                     $block_blurb = get_field('block_blurb');
@@ -77,14 +77,14 @@ get_header();
                             </div>
                     </div>
                 <?php } ?>
-                
+
                 <!-- If the upcoming-show tag has any posts, display them -->
                 <?php if ( $upcoming_loop -> have_posts() ) { ?>
-        
+
                     <div class="upcoming-shows">
                         <h2 class="shows-title">Upcoming</h2>
                             <div id="upcoming-show-blocks" class="blocks-container">
-    
+
                             <?php while ( $upcoming_loop -> have_posts() ) { $upcoming_loop -> the_post();
 
                                 $block_title_url = get_field('block_title_url');
@@ -94,7 +94,7 @@ get_header();
                                 $block_additional_link_label = get_field('block_additional_link_label');
                                 $exhibition_thumbnail_image = get_field('exhibition_thumbnail_image');
                                 $size = 'full';
-                                
+
                                 ?>
 
                                 <div class="block upcoming-show-block">
@@ -117,8 +117,8 @@ get_header();
                         <h2 class="shows-title">Past Exhibitions</h2>
                             <div id="past-show-blocks" class="blocks-container">
 
-                            <?php while ( $past_loop -> have_posts() ) { $past_loop -> the_post(); 
-                                
+                            <?php while ( $past_loop -> have_posts() ) { $past_loop -> the_post();
+
                                 $block_title_url = get_field('block_title_url');
                                 $block_title = get_field('block_title');
                                 $block_blurb = get_field('block_blurb');
@@ -137,19 +137,20 @@ get_header();
                                         <a href="<?php echo $block_additional_link ?>" target="_blank"><?php echo $block_additional_link_label ?></a>
                                     </p>
                                 </div>
-                            <?php } ?>         
+                            <?php } ?>
                         </div>
-                    
+
                     <!-- If there are no shows listed, display this message -->
                     <?php } else { ?>
                         <h2 class="oops-nothing-here">Oops! Looks like there's nothing here.</h2>
                     <?php } wp_reset_postdata(); ?>
-                
+
+            <!-- Display the 'Our Partners' post that contains corporate sponsor logos -->
             <?php
                     $args = array( 'tag' => 'partners', );
                     $loop = new WP_Query($args);
 
-                    if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); ?>
+                    if ( $loop->have_posts() ) { while ( $loop->have_posts() ) { $loop->the_post(); ?>
 
                         <div class="partners">
                             <h2 class="shows-title"><?php the_title(); ?></h2>

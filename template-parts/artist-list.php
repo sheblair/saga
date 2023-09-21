@@ -10,16 +10,16 @@
 ?>
 
 <?php
-    $args = array( 
+    $args = array(
         'post_type'      => 'artist',
-        'posts_per_page' => -1, // -1 to display all posts, you can set a specific number if you prefer
+        'posts_per_page' => -1, // -1 to display all posts
         'orderby' => 'title',
         'order'   => 'ASC',
     );
-    
-    $loop = new WP_Query($args);
 
-    if ($loop->have_posts()) { while ($loop->have_posts()) { $loop->the_post(); 
+    $loop = new WP_Query( $args );
+
+    if ( $loop->have_posts() ) { while ( $loop->have_posts() ) { $loop->the_post();
                     $name = get_field('name');
                     $location = get_field('location');
                     $website = get_field('website');
@@ -53,7 +53,7 @@
         <li class="artist-list-item artist">
             <a href="<?php the_permalink(); ?>" ><p class="artist-name"><?php echo $name; ?></p></a>
         </li>
-   
+
 
 <?php }
         wp_reset_postdata();

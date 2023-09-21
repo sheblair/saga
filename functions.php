@@ -1,6 +1,6 @@
 <?php
 /**
- * saga functions and definitions
+ * SAGA functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -135,45 +135,6 @@ function saga_widgets_init() {
 }
 add_action( 'widgets_init', 'saga_widgets_init' );
 
-/* Register Artist Page post type */
-function create_custom_post_types() {
-    register_post_type( 'artist',
-        array(
-            'labels' => array(
-                'name' => __( 'Artist Pages' ),
-                'singular_name' => __( 'Artist Page' )
-            ),
-            'public' => true,
-            'has_archive' => false,
-			'show_in_rest' => true,
-            'rewrite' => array( 'slug' => 'artists' ),
-			'menu_position' => 5,
-			'supports' => array( 'title', 'editor' ),
-        )
-    );
-}
-add_action( 'init', 'create_custom_post_types' );
-
-/* Re-order Single Artist title as First name, Last name (necessary to override Last name, First name
-set-up that ensures correct alphabetical order in the query loop) */
-function custom_artist_title($title) {
-    // Check if it's the 'artist' custom post type (singular name)
-    if (is_singular('artist')) {
-        // Get the custom field value for "name"
-        $artist_name = get_post_meta(get_the_ID(), 'name', true);
-
-        if ($artist_name) {
-            // Replace the title with the artist name
-            $title = $artist_name . ' - Society of American Graphic Artists';
-        }
-    }
-
-    return $title;
-}
-
-add_filter('pre_get_document_title', 'custom_artist_title');
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -216,6 +177,50 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+* Above this comment is everything that came included with _s,
+* (except for edits I made to the enqueue scripts and styles function).
+* Below this comment is everything I added.
+**/
+
+/* Register Artist Page post type */
+function create_custom_post_types() {
+    register_post_type( 'artist',
+        array(
+            'labels' => array(
+                'name' => __( 'Artist Pages' ),
+                'singular_name' => __( 'Artist Page' )
+            ),
+            'public' => true,
+            'has_archive' => false,
+			'show_in_rest' => true,
+            'rewrite' => array( 'slug' => 'artists' ),
+			'menu_position' => 5,
+			'supports' => array( 'title', 'editor' ),
+        )
+    );
+}
+add_action( 'init', 'create_custom_post_types' );
+
+/* Re-order Single Artist title as First name, Last name (necessary to override Last name, First name
+set-up that ensures correct alphabetical order in the query loop) */
+function custom_artist_title($title) {
+    // Check if it's the 'artist' custom post type (singular name)
+    if (is_singular('artist')) {
+        // Get the custom field value for "name"
+        $artist_name = get_post_meta(get_the_ID(), 'name', true);
+
+        if ($artist_name) {
+            // Replace the title with the artist name
+            $title = $artist_name . ' - Society of American Graphic Artists';
+        }
+    }
+
+    return $title;
+}
+
+add_filter('pre_get_document_title', 'custom_artist_title');
 
 /* Re-order admin menu items */
 function dgtlnk_custom_menu_order( $menu_ord ) {
@@ -276,8 +281,10 @@ function dgtlnk_remove_menus() {
 
 add_action( 'admin_menu', 'dgtlnk_remove_menus' );
 
-/* Remove support for Comments, Excerpt, and Thumbnail on all Posts and Pages,
-remove support for Page Attributes on all Pages */
+/**
+* Remove support for Comments and Excerpt on all Posts and Pages,
+* remove support for Page Attributes on all Pages
+*/
 function remove_support_from_posts() {
     // Remove support for comments/discussion
     remove_post_type_support('post', 'comments');
