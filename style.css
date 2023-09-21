@@ -2576,7 +2576,7 @@ div.slb_viewer_overlay {
 
 }
 
-/* Large Desktop */
+/* LARGE DESKTOP */
 
 @media screen and (min-width: 1200px) {
 	/* galleries - large desktop */
@@ -2687,7 +2687,7 @@ div.slb_viewer_overlay {
 
 }
 
-/* XL Desktop */
+/* XL DESKTOP */
 
 @media screen and (min-width: 1600px) {
 
