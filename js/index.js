@@ -48,15 +48,13 @@
     // If only prints and no bio, make the prints selector appear unclickable by setting cursor to auto instead of pointer
     if (!bioSelector && printsSelector) {
         printsSelector.style.cursor = 'auto';
-    /* If bio but no prints, bold bio selector, make it appear unclickable by setting cursor to auto,
-        and make the biography section display by default */
+    // If bio but no prints, bold bio selector, make it appear unclickable by setting cursor to auto, and make the bio section display by default
     } else if (!printsSelector && bioSelector) {
         bioSelector.classList.add('bold');
         bioSelector.style.cursor = 'auto';
         artistBio.style.display = 'block';
     }
-    /* Otherwise, deliver full functionality to both bio selector and prints selector
-        to show/hide and add/remove bold class upon user click */
+    // Otherwise deliver full functionality to both bio selector and prints selector to show/hide and add/remove bold class upon user click
      else if (bioSelector && printsSelector) {
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
