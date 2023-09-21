@@ -113,7 +113,7 @@
     // Artists page dynamic search
     const filterInput = document.querySelector('#artists-search');
     const allArtists = document.querySelectorAll('.artist');
-    const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.innerText.toLowerCase());
+    const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.textContent.toLowerCase());
 
     if (filterInput) {
         filterInput.addEventListener('input', function (e) {
@@ -139,7 +139,7 @@
         const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
         const collectorPrintsSearch = document.querySelector('.collector-prints-search');
         const allPrints = [...collectorPrintsGallery.querySelectorAll('figure')];
-        const printCaptions = figcaptions.map(caption => caption.innerText.toLowerCase());
+        const printCaptions = figcaptions.map(caption => caption.textContent.toLowerCase());
 
         if (collectorPrintsSearch) {
             collectorPrintsSearch.addEventListener('input', function (e) {
@@ -167,7 +167,7 @@
         const permanentFigcaptions = [...permanentCollectionGallery.querySelectorAll('figcaption')];
         const permanentCollectionSearch = document.querySelector('.permanent-collection-search');
         const allPermanentPrints = [...permanentCollectionGallery.querySelectorAll('figure')];
-        const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.innerText.toLowerCase());
+        const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.textContent.toLowerCase());
 
         if (permanentCollectionSearch) {
             permanentCollectionSearch.addEventListener('input', function (e) {
@@ -193,7 +193,7 @@
         const catalogTitles = [...exhibitionCatalogsList.querySelectorAll('a')];
         const catalogsSearch = document.querySelector('.catalogs-search');
         const allCatalogs = [...exhibitionCatalogsList.querySelectorAll('.wp-block-file')];
-        const catalogTitleTexts = catalogTitles.map(title => title.innerText.toLowerCase());
+        const catalogTitleTexts = catalogTitles.map(title => title.textContent.toLowerCase());
 
         if (catalogsSearch) {
             catalogsSearch.addEventListener('input', function (e) {
@@ -218,7 +218,7 @@
      if (pastMembersList) {
         const pastMembersElements = [...pastMembersList.querySelectorAll('p')];
         const pastMembersSearch = document.querySelector('.past-members-search');
-        const pastMembersNames = pastMembersElements.map(title => title.innerText.toLowerCase());
+        const pastMembersNames = pastMembersElements.map(title => title.textContent.toLowerCase());
 
         if (pastMembersSearch) {
             pastMembersSearch.addEventListener('input', function (e) {
