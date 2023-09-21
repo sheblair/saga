@@ -21,7 +21,9 @@
     const artistPrints = document.querySelector('#artist-prints');
     const artistBio = document.querySelector('#artist-bio');
 
+    // Check if thumbnails selector exists
     if (thumbnailSelector) {
+        // Add event listener to display thumbnails view and bold thumbnails selector when it is clicked
         thumbnailSelector.addEventListener('click', () => {
             artistList.style.display = 'none';
             artistBlocks.style.display = 'flex';
@@ -31,8 +33,9 @@
         })
     }
 
-
+    // Check if list selector exists
     if (listSelector) {
+        // Add event listener to display list view and bold list selector when it is clicked
         listSelector.addEventListener('click', () => {
             artistList.style.display = 'flex';
             artistBlocks.style.display = 'none';
@@ -42,31 +45,34 @@
         })
     }
 
+    // If only prints and no bio, make the prints selector appear unclickable by setting cursor to auto instead of pointer
     if (!bioSelector && printsSelector) {
         printsSelector.style.cursor = 'auto';
-    } else if (bioSelector && printsSelector) {
+    /* If bio but no prints, bold bio selector, make it appear unclickable by setting cursor to auto,
+        and make the biography section display by default */
+    } else if (!printsSelector && bioSelector) {
+        bioSelector.classList.add('bold');
+        bioSelector.style.cursor = 'auto';
+        artistBio.style.display = 'block';
+    }
+    /* Otherwise, deliver full functionality to both bio selector and prints selector
+        to show/hide and add/remove bold class upon user click */
+     else if (bioSelector && printsSelector) {
         printsSelector.addEventListener('click', () => {
             artistBio.style.display = 'none';
             artistPrints.style.display = 'flex';
 
             bioSelector.classList.remove('bold');
             printsSelector.classList.add('bold');
-        })
-    }
+        });
 
-    if (!printsSelector && bioSelector) {
-        bioSelector.classList.add('bold');
-        bioSelector.style.cursor = 'auto';
-        artistBio.style.display = 'block';
-
-    } else if (printsSelector && bioSelector) {
         bioSelector.addEventListener('click', () => {
-            artistPrints.style.display = 'none';
             artistBio.style.display = 'block';
+            artistPrints.style.display = 'none';
 
-            printsSelector.classList.remove('bold');
             bioSelector.classList.add('bold');
-        })
+            printsSelector.classList.remove('bold');
+        });
     }
 
     // View selector for News page
@@ -77,7 +83,9 @@
     const memberNewsLoop = document.querySelector('.member-news-loop');
     const inMemoriamLoop = document.querySelector('.in-memoriam-loop');
 
+    // Check if we are on the News page by checking for all of the selectors
     if (igSelector && memberNewsSelector && inMemoriamSelector) {
+        // Add event listener for selector to view Member News tab
         memberNewsSelector.addEventListener('click', () => {
             memberNewsLoop.style.display = 'block';
             igFeed.style.display = 'none';
@@ -86,8 +94,8 @@
             memberNewsSelector.classList.add('bold');
             igSelector.classList.remove('bold');
             inMemoriamSelector.classList.remove('bold');
-        })
-
+        });
+        // Add event listener for selector to view Latest Posts tab
         igSelector.addEventListener('click', () => {
             igFeed.style.display = 'block';
             inMemoriamLoop.style.display = 'none';
@@ -96,8 +104,8 @@
             igSelector.classList.add('bold');
             inMemoriamSelector.classList.remove('bold');
             memberNewsSelector.classList.remove('bold');
-        })
-
+        });
+        // Add event listener for selector to view In Memoriam tab
         inMemoriamSelector.addEventListener('click', () => {
             inMemoriamLoop.style.display = 'block';
             igFeed.style.display = 'none';
@@ -106,19 +114,22 @@
             inMemoriamSelector.classList.add('bold');
             igSelector.classList.remove('bold');
             memberNewsSelector.classList.remove('bold');
-        })
+        });
 
     }
 
     // Artists page dynamic search
-    const filterInput = document.querySelector('#artists-search');
+    const artistsSearch = document.querySelector('#artists-search');
     const allArtists = document.querySelectorAll('.artist');
     const artistNames = Array.from(document.querySelectorAll('.artist-name')).map(name => name.textContent.toLowerCase());
 
-    if (filterInput) {
-        filterInput.addEventListener('input', function (e) {
-            const userInput = e.target.value.toLowerCase().trim(); // Trim leading and trailing spaces
-
+    // Check if we are on Artists page and if the search input exists
+    if (artistsSearch) {
+        // Add event listener for user input
+        artistsSearch.addEventListener('input', function (e) {
+            // Convert user input to lowercase and trim leading and trailing spaces
+            const userInput = e.target.value.toLowerCase().trim();
+            // Loop through all artists and show/hide based on user input
             for (let i = 0; i < allArtists.length; i++) {
                 const artistNameText = artistNames[i];
 
@@ -134,17 +145,21 @@
      // Collector prints dynamic search
      const collectorPrintsGallery = document.querySelector('#collector-prints-gallery');
 
-     // check if we are on collector prints page or not
+     // Check if we are on collector prints page
      if (collectorPrintsGallery) {
         const figcaptions = [...collectorPrintsGallery.querySelectorAll('figcaption')];
         const collectorPrintsSearch = document.querySelector('.collector-prints-search');
         const allPrints = [...collectorPrintsGallery.querySelectorAll('figure')];
         const printCaptions = figcaptions.map(caption => caption.textContent.toLowerCase());
 
+        // Check if the search input exists
         if (collectorPrintsSearch) {
+            // Add event listener for user input
             collectorPrintsSearch.addEventListener('input', function (e) {
+                // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
+                // Loop through all prints and show/hide based on user input
                 for (let i = 0; i < allPrints.length; i++) {
                     const printCaptionText = printCaptions[i];
 
@@ -159,20 +174,24 @@
      }
 
 
-     // Permanent collection prints dynamic search
+     // Permanent Collection prints dynamic search
      const permanentCollectionGallery = document.querySelector('#permanent-collection-gallery');
 
-     // check if we are on permanent collection page or not
+     // Check if we are on Permanent Collection page
      if (permanentCollectionGallery) {
         const permanentFigcaptions = [...permanentCollectionGallery.querySelectorAll('figcaption')];
         const permanentCollectionSearch = document.querySelector('.permanent-collection-search');
         const allPermanentPrints = [...permanentCollectionGallery.querySelectorAll('figure')];
         const permanentPrintCaptions = permanentFigcaptions.map(caption => caption.textContent.toLowerCase());
 
+        // Check if search input exists
         if (permanentCollectionSearch) {
+            // Add event listener for user input
             permanentCollectionSearch.addEventListener('input', function (e) {
+                // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
+                // Loop through all prints and show/hide based on user input
                 for (let i = 0; i < allPermanentPrints.length; i++) {
                     const printCaptionText = permanentPrintCaptions[i];
 
@@ -189,16 +208,20 @@
      // Catalogs dynamic search
      const exhibitionCatalogsList = document.querySelector('#exhibition-catalogs-list');
 
+     // Check if we are on Annual Members Exhibitions page
      if (exhibitionCatalogsList) {
         const catalogTitles = [...exhibitionCatalogsList.querySelectorAll('a')];
         const catalogsSearch = document.querySelector('.catalogs-search');
         const allCatalogs = [...exhibitionCatalogsList.querySelectorAll('.wp-block-file')];
         const catalogTitleTexts = catalogTitles.map(title => title.textContent.toLowerCase());
 
+        // Check if search input exists
         if (catalogsSearch) {
             catalogsSearch.addEventListener('input', function (e) {
+                // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
+                // Loop over all catalogs and show/hide based on user input
                 for (let i = 0; i < allCatalogs.length; i++) {
                     const catalogTitleText = catalogTitleTexts[i];
 
@@ -215,15 +238,20 @@
     // Past members dynamic search
     const pastMembersList = document.querySelector('#past-members-list');
 
-     if (pastMembersList) {
+    // Check if we are on Past Members page
+    if (pastMembersList) {
         const pastMembersElements = [...pastMembersList.querySelectorAll('p')];
         const pastMembersSearch = document.querySelector('.past-members-search');
         const pastMembersNames = pastMembersElements.map(title => title.textContent.toLowerCase());
 
+        // Check if search input exists
         if (pastMembersSearch) {
+            // Add event listener to track user input in search input
             pastMembersSearch.addEventListener('input', function (e) {
+                // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
 
+                // Loop over past members and show/hide based on user input
                 for (let i = 0; i < pastMembersElements.length; i++) {
                     const pastMemberName = pastMembersNames[i];
 
@@ -234,6 +262,7 @@
                     }
                 }
             });
+
         }
     }
 
