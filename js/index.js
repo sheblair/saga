@@ -23,7 +23,7 @@
 
     // Check if thumbnails selector exists
     if (thumbnailSelector) {
-        // Add event listener to display thumbnails view and bold thumbnails selector when it is clicked
+        // Add event listener to display thumbnails and bold thumbnails selector when it is clicked
         thumbnailSelector.addEventListener('click', () => {
             artistList.style.display = 'none';
             artistBlocks.style.display = 'flex';
@@ -35,7 +35,7 @@
 
     // Check if list selector exists
     if (listSelector) {
-        // Add event listener to display list view and bold list selector when it is clicked
+        // Add event listener to display list and bold list selector when it is clicked
         listSelector.addEventListener('click', () => {
             artistList.style.display = 'flex';
             artistBlocks.style.display = 'none';
@@ -48,7 +48,7 @@
     // If only prints and no bio, make the prints selector appear unclickable by setting cursor to auto instead of pointer
     if (!bioSelector && printsSelector) {
         printsSelector.style.cursor = 'auto';
-    // If bio but no prints, bold bio selector, make it appear unclickable by setting cursor to auto, and make the bio section display by default
+    // If only bio and no prints, bold bio selector, make it appear unclickable by setting cursor to auto, and make the bio section display by default
     } else if (!printsSelector && bioSelector) {
         bioSelector.classList.add('bold');
         bioSelector.style.cursor = 'auto';
@@ -152,12 +152,10 @@
 
         // Check if the search input exists
         if (collectorPrintsSearch) {
-            // Prevent form submission to prevent triggering a global search
-            collectorPrintsSearch.addEventListener('submit', (e) => {
-                e.preventDefault();
-            });
+            // Prevent form submission triggering a global search
+            collectorPrintsSearch.addEventListener( 'submit', (e) => e.preventDefault() );
 
-            // Add event listener for user input
+            // Add event listener to track user input
             collectorPrintsSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
@@ -189,12 +187,10 @@
 
         // Check if search input exists
         if (permanentCollectionSearch) {
-            // Prevent form submission to prevent triggering a global search
-            permanentCollectionSearch.addEventListener('submit', (e) => {
-                e.preventDefault();
-            });
+            // Prevent form submission triggering a global search
+            permanentCollectionSearch.addEventListener( 'submit', (e) => e.preventDefault() );
 
-            // Add event listener for user input
+            // Add event listener to track user input
             permanentCollectionSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
@@ -225,11 +221,10 @@
 
         // Check if search input exists
         if (catalogsSearch) {
-            // Prevent form submission to prevent triggering a global search
-            catalogsSearch.addEventListener('submit', (e) => {
-                e.preventDefault();
-            });
+            // Prevent form submission triggering a global search
+            catalogsSearch.addEventListener( 'submit', (e) => e.preventDefault() );
 
+            // Add event listener to track user input
             catalogsSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
@@ -248,7 +243,7 @@
         }
     }
 
-    // Past members dynamic search
+    // Past Members dynamic search
     const pastMembersList = document.querySelector('#past-members-list');
 
     // Check if we are on Past Members page
@@ -259,12 +254,10 @@
 
         // Check if search input exists
         if (pastMembersSearch) {
-            // Prevent form submission to prevent triggering a global search
-            pastMembersSearch.addEventListener('submit', (e) => {
-                e.preventDefault();
-            });
+            // Prevent form submission triggering a global search
+            pastMembersSearch.addEventListener( 'submit', (e) => e.preventDefault() );
 
-            // Add event listener to track user input in search input
+            // Add event listener to track user input
             pastMembersSearch.addEventListener('input', (e) => {
                 // Convert user input to lowercase and trim leading and trailing spaces
                 const userInput = e.target.value.toLowerCase().trim();
