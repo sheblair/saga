@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<div class="accent-strip post-accent-strip"></div>
 
     <div class="back-link back-to-archives">

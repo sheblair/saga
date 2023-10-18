@@ -249,13 +249,17 @@ select {
 
 /**
  * correct the inability to style clickable types in iOS and safari.
+ * This also came included in _s and I commented it out because VS Code
+ * warns -webkit-appearance is deprecated. It didn't appear to actually
+ * break anything, but another webkit-appearance property did, so I decided
+ * remove this just to be on the safe side.
  */
-button,
+/* button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
-}
+} */
 
 /**
  * remove the inner border and padding in firefox.
@@ -335,11 +339,13 @@ textarea {
 /**
  * 1. correct the odd appearance in chrome and safari.
  * 2. correct the outline style in safari.
+ * This came included with _s but I commented it out because it breaks the border-radius
+ * by forcing a rounded appearance on search bars on mobile (at least on iPhone, that's all I was able to test).
  */
-[type="search"] {
+/* [type="search"] {
 	-webkit-appearance: textfield;
 	outline-offset: -2px;
-}
+} */
 
 /**
  * remove the inner padding in chrome and safari on macOS.
@@ -671,6 +677,7 @@ textarea {
 
 input[type="search"] {
 	width: 250px;
+	height: 45px;
 }
 
 
@@ -936,18 +943,18 @@ header#masthead {
 }
 
 /* footer menu - social media icons */
-#menu-footer-menu {
+#menu-footer-nav {
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
 	margin: 0;
 }
 
-#menu-footer-menu li {
+#menu-footer-nav li {
 	margin: 0 10px;
 }
 
-#menu-footer-menu a {
+#menu-footer-nav a {
 	color: var(--font-light);
 	cursor: pointer;
 	font-size: 1.3rem;
@@ -1078,6 +1085,7 @@ main#post {
 	font-weight: 500;
 	font-size: 1.5rem;
 	margin: 10px 0;
+	line-height: 1.8rem;
 }
 
 .post-content {
@@ -1099,6 +1107,7 @@ main#post {
 	background: var(--font-light);
 	padding: 10px;
 	text-align: left;
+	line-height: 1.3rem;
 	margin: 0;
 }
 
@@ -1132,7 +1141,7 @@ main#post {
 }
 
 #exhibition-catalogs-list .wp-block-group__inner-container .wp-block-file a {
-	font-size: .875rem;
+	font-size: 1rem;
 }
 
 #exhibition-catalogs-list .wp-block-group__inner-container .wp-block-file a:hover {
@@ -1336,6 +1345,7 @@ main#news {
 .wp-block-query.member-news-loop ul li,
 .wp-block-query.in-memoriam-loop ul li {
 	width: 100%;
+	margin-bottom: 2em;
 }
 
 /* news items styles */
@@ -1364,6 +1374,7 @@ main#news {
 .news-items * .wp-block-post-title a {
 	color: var(--font-dark);
 	text-decoration: none;
+	font-size: 1rem;
 }
 
 .news-items * .wp-block-post-title a:hover {
@@ -1380,7 +1391,7 @@ main#news {
 
 /* remove flex gap on news items lists - Member News and In Memoriam */
 :where(.wp-block-columns.is-layout-flex) {
-	gap: 1em;
+	gap: 0;
 }
 
 /* artists page */
@@ -1413,7 +1424,6 @@ main#news {
 /* style search bar */
 #artists-search {
 	margin: 10px 0;
-	height: 40px;
 }
 
 /* style blocks view of artists */
@@ -1680,6 +1690,7 @@ figure.wp-block-gallery.has-nested-images {
 	background: var(--font-light);
 	padding: 10px;
 	text-align: left;
+	line-height: 1.3rem;
 }
 
 /* if user does not select "crop images", this will make sure the gallery images are centered in their containers */
@@ -2030,11 +2041,6 @@ div.slb_viewer_overlay {
 
 	/* archives posts - tablet */
 
-	/* catalogs - tablet */
-	#exhibition-catalogs-list .wp-block-group__inner-container .wp-block-file a {
-		font-size: 1rem;
-	}
-
 	/* members - tablet */
 	/* use standard fluid column setup once we are no longer on a small screen */
 	#past-members-list .wp-block-group__inner-container {
@@ -2076,13 +2082,12 @@ div.slb_viewer_overlay {
 		margin: 0 20px 0 0;
 	}
 
-	/* add back in the flex gap in the query loops in the WP editor for the news page */
-	:where(.wp-block-columns.is-layout-flex) {
-		gap: 2em;
-	}
-
 	.news-items {
 		margin-top: 30px;
+	}
+
+	.news-items * .wp-block-post-title {
+		font-size: 1.5rem;
 	}
 
 	.wp-block-query.member-news-loop ul {
@@ -2280,6 +2285,10 @@ div.slb_viewer_overlay {
 		width: 75%;
 	}
 
+	.news-items * .wp-block-post-title {
+		font-size: 1rem;
+	}
+
 	/* artists - intermediate tablet */
 	#artists-page {
 		display: flex;
@@ -2362,7 +2371,7 @@ div.slb_viewer_overlay {
 	#artist-prints figure {
 		flex-basis: 20%;
 		margin: 10px;
-		flex-grow: 1;
+		flex-grow: .5;
 	}
 
 }
@@ -2393,7 +2402,7 @@ div.slb_viewer_overlay {
 		font-size: 1rem;
 	}
 
-	#menu-footer-menu a {
+	#menu-footer-nav a {
 		font-size: 1.5rem;
 	}
 
@@ -2503,11 +2512,22 @@ div.slb_viewer_overlay {
 		margin: 65px 75px;
 	}
 
+	.past-show-block .block-title,
+	.past-show-block .block-blurb {
+		font-size: 1rem;
+	}
+
 	.partners-gallery .wp-block-gallery.has-nested-images:not(.is-cropped) figure.wp-block-image:not(#individual-image) {
 		max-width: 15%;
 	}
 
 	/* news - desktop */
+
+	/* add back in the flex gap in the query loops in the WP editor for the news page */
+	:where(.wp-block-columns.is-layout-flex) {
+		gap: 2em;
+	}
+
 	#new-members-slideshow {
 		width: 50%;
 		max-width: 1200px;
@@ -2516,10 +2536,6 @@ div.slb_viewer_overlay {
 	.news-items {
 		width: 80%;
 		max-width: 800px;
-	}
-
-	.news-items * .wp-block-post-title {
-		font-size: 1rem;
 	}
 
 	/* artists - desktop */
