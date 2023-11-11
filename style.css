@@ -1102,14 +1102,15 @@ main#post {
 /* style image captions on posts */
 .post-content .wp-block-image .wp-element-caption {
 	font-size: .875rem;
-	background-color: var(--font-light);
+	background: none;
 	color: var(--font-dark);
-	background: var(--font-light);
-	padding: 10px;
+	padding: 8px 0;
 	text-align: left;
 	line-height: 1.3rem;
 	margin: 0;
 }
+
+
 
 /* archives posts */
 
@@ -1685,12 +1686,13 @@ figure.wp-block-gallery.has-nested-images {
 /* style all gallery captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
 	font-size: .875rem;
-	background-color: var(--font-light);
+	background: none;
 	color: var(--font-dark);
-	background: var(--font-light);
-	padding: 10px;
+	padding: 8px 0;
 	text-align: left;
 	line-height: 1.3rem;
+	position: unset;
+	max-height: 20%;
 }
 
 /* if user does not select "crop images", this will make sure the gallery images are centered in their containers */
