@@ -1099,17 +1099,6 @@ main#post {
 	align-self: flex-start;
 }
 
-/* style image captions on posts */
-.post-content .wp-block-image .wp-element-caption {
-	font-size: .875rem;
-	background: none;
-	color: var(--font-dark);
-	padding: 8px 0;
-	text-align: left;
-	line-height: 1.3rem;
-	margin: 0;
-}
-
 /* archives posts */
 
 /* set full width to the containers */
@@ -1673,6 +1662,19 @@ main#collector-prints .page-content {
 	text-align: center;
 }
 
+/* style all gallery captions */
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size: .875rem;
+	background: none;
+	color: var(--font-dark);
+	padding: 5px 0;
+	margin: 0;
+	text-align: left;
+	line-height: 1.3rem;
+	position: unset;
+	max-height: 20%;
+}
+
 /* galleries
 --------------------------------------------- */
 
@@ -1681,17 +1683,6 @@ figure.wp-block-gallery.has-nested-images {
 	max-width: 900px;
 }
 
-/* style all gallery captions */
-.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
-	font-size: .875rem;
-	background: none;
-	color: var(--font-dark);
-	padding: 8px 0;
-	text-align: left;
-	line-height: 1.3rem;
-	position: unset;
-	max-height: 20%;
-}
 
 /* if user does not select "crop images", this will make sure the gallery images are centered in their containers */
 .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
