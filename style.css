@@ -1312,6 +1312,14 @@ main#news {
 	text-align: center;
 }
 
+.member-news-text-area {
+	margin-top: 20px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 /* hide the IG feed and the in memoriam loop by default */
 #sb_instagram,
 .in-memoriam-loop {

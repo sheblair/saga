@@ -10,7 +10,11 @@
 
 get_header();
 ?>
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php
+
+        $member_news_text_area = get_field('member_news_text_area');
+
+        while ( have_posts() ) : the_post(); ?>
 
 		<div class="page-heading-wrapper">
 			<h1 class="page-heading"><?php the_title(); ?></h1>
@@ -26,6 +30,10 @@ get_header();
             </div>
 
             <div class="accent-strip"></div>
+
+            <div class="member-news-text-area">
+                <?php echo $member_news_text_area ?>
+            </div>
 
             <!-- View selector -->
             <div class="view-selector view-selector-single">
